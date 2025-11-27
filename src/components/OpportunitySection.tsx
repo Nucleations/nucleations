@@ -54,7 +54,7 @@ export const OpportunitySection = () => {
               >
                 <div className="flex justify-center mb-6">
                   <Icon 
-                    className="w-12 h-12 text-green/40 transition-all duration-500 group-hover:text-green/60 group-hover:scale-105" 
+                    className="w-12 h-12 text-accent transition-all duration-500 group-hover:scale-105" 
                     strokeWidth={1.5}
                   />
                 </div>
