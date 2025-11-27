@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ParticleAnimation } from './ParticleAnimation';
 import logo from '@/assets/nucleations-logo-transparent.png';
 
 export const HeroSection = () => {
@@ -17,8 +16,6 @@ export const HeroSection = () => {
         backgroundVariant === 'light' ? 'hero-gradient-light' : 'hero-gradient-purple'
       }`}
     >
-      <ParticleAnimation />
-      
       {/* Background Toggle Button */}
       <button
         onClick={() => setBackgroundVariant(prev => prev === 'light' ? 'purple' : 'light')}
