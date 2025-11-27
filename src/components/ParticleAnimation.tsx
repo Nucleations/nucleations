@@ -44,7 +44,9 @@ export const ParticleAnimation = () => {
         const img = document.createElement('img');
         img.src = particle.type === 'circle' ? circleImg : particle.type === 'diamond' ? diamondImg : starImg;
         img.alt = '';
-        img.className = 'w-full h-full object-contain';
+        img.className = 'w-full h-full object-cover';
+        img.style.width = '20px';
+        img.style.height = '20px';
         
         // Calculate random direction for radial burst pattern
         const angle = Math.random() * Math.PI * 2;
