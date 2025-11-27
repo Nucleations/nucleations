@@ -61,38 +61,25 @@ export const OurApproachSection = () => {
           {beliefs.map((belief, index) => (
             <div
               key={index}
-              className="bg-card rounded-3xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in space-y-4"
+              className="bg-card rounded-3xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in space-y-4 relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative w-16 h-16 mb-4">
-                {belief.iconPattern === 'two-orbiting' && (
-                  <>
-                    <img src={circleImg} alt="" className="absolute top-0 left-0 w-10 h-10 object-contain opacity-60" />
-                    <img src={circleImg} alt="" className="absolute bottom-0 right-0 w-10 h-10 object-contain opacity-80" />
-                  </>
-                )}
-                {belief.iconPattern === 'rising' && (
-                  <img src={diamondImg} alt="" className="w-full h-full object-contain opacity-70 transform translate-y-2" />
-                )}
-                {belief.iconPattern === 'radiating' && (
-                  <div className="relative w-full h-full">
-                    <img src={starImg} alt="" className="absolute inset-0 w-full h-full object-contain opacity-40 scale-150" />
-                    <img src={starImg} alt="" className="absolute inset-0 w-full h-full object-contain opacity-70" />
-                  </div>
-                )}
-                {belief.iconPattern === 'paired' && (
-                  <>
-                    <img src={circleImg} alt="" className="absolute top-0 left-0 w-10 h-10 object-contain opacity-70" />
-                    <img src={diamondImg} alt="" className="absolute bottom-0 right-0 w-10 h-10 object-contain opacity-70" />
-                  </>
-                )}
-              </div>
+              {/* Background icon - 50% opacity, positioned left with 50% visible */}
+              <div 
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-32 h-32 pointer-events-none opacity-50"
+                style={{
+                  backgroundImage: `url(${belief.icon})`,
+                  backgroundSize: 'contain',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
+                }}
+              />
               
-              <h4 className="text-2xl font-bold text-foreground">
+              <h4 className="text-2xl font-bold text-foreground relative z-10">
                 {belief.number}: {belief.title}
               </h4>
               
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed relative z-10">
                 {belief.description}
               </p>
             </div>
