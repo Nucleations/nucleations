@@ -6,17 +6,17 @@ const services = [
   {
     title: 'AI Strategy & Planning',
     description: 'We analyze your business operations and organizational context to design AI components that deliver measurable results. You get a comprehensive action plan grounded in your reality and mapped to your actual workflows, not generic best practices.',
-    iconElements: [circleImg, starImg], // Composite icon
+    icon: diamondImg,
   },
   {
     title: 'AI Design & Implementation',
     description: 'We dive deep into your workflows to build AI interventions that demonstrate real value in your current stack, or help you build an AI-ready foundation if you need one. Starting with focused pilots, we scale to entire products or business lines, regardless of your AI maturity or technical starting point.',
-    iconElements: [diamondImg, circleImg],
+    icon: circleImg,
   },
   {
     title: 'AI Training & Enablement',
     description: 'We develop tailored training for every level of your organization, from leadership workshops to frontline upskilling, delivered as in-person sessions, digital modules, or custom content that fits how your people learn.',
-    iconElements: [starImg, diamondImg],
+    icon: starImg,
   },
 ];
 
@@ -35,21 +35,19 @@ export const HowWeHelpSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-3xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in space-y-6"
+              className="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-3xl p-8 shadow-soft hover:shadow-elegant transition-all duration-500 animate-fade-in space-y-6 group"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              {/* Unique composite icon */}
-              <div className="relative w-24 h-24 mx-auto">
-                <img
-                  src={service.iconElements[0]}
-                  alt=""
-                  className="absolute top-0 left-0 w-16 h-16 object-contain opacity-70"
-                />
-                <img
-                  src={service.iconElements[1]}
-                  alt=""
-                  className="absolute bottom-0 right-0 w-16 h-16 object-contain opacity-70"
-                />
+              {/* Single brand micro-shape icon */}
+              <div className="flex justify-center mb-2">
+                <div className="w-8 h-8 flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+                  <img
+                    src={service.icon}
+                    alt=""
+                    className="w-full h-full object-contain"
+                    style={{ filter: 'brightness(0) saturate(100%) invert(82%) sepia(45%) saturate(1234%) hue-rotate(85deg) brightness(98%) contrast(96%)' }}
+                  />
+                </div>
               </div>
               
               <h3 className="text-2xl font-bold text-foreground text-center">
