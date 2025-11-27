@@ -38,7 +38,7 @@ const faqs = [
 
 export const FAQSection = () => {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-24 px-6 bg-gradient-to-b from-background via-background to-primary/30">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-foreground text-center mb-16 animate-fade-in">
           FAQs
