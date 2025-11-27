@@ -38,7 +38,7 @@ export const HowWeHelpSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+              className="bg-card rounded-2xl p-8 border-2 border-secondary/20 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="inline-flex p-3 rounded-xl bg-background mb-6">
