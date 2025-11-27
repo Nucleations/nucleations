@@ -45,7 +45,7 @@ export const HowWeHelpSection = () => {
                 <img 
                   src={service.iconSrc} 
                   alt="" 
-                  style={{ width: '32px', height: '32px' }}
+                  style={{ width: '37px', height: '37px' }}
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">{service.title}</h3>
