@@ -7,16 +7,19 @@ const services = [
     title: 'AI Strategy & Planning',
     description: 'We analyze your business operations and organizational context to design AI components that deliver measurable results. You get a comprehensive action plan grounded in your reality and mapped to your actual workflows, not generic best practices.',
     icon: diamondImg,
+    iconColor: '#1AF037', // Lime
   },
   {
     title: 'AI Design & Implementation',
     description: 'We dive deep into your workflows to build AI interventions that demonstrate real value in your current stack, or help you build an AI-ready foundation if you need one. Starting with focused pilots, we scale to entire products or business lines, regardless of your AI maturity or technical starting point.',
     icon: circleImg,
+    iconColor: '#59F3C3', // Mint
   },
   {
     title: 'AI Training & Enablement',
     description: 'We develop tailored training for every level of your organization, from leadership workshops to frontline upskilling, delivered as in-person sessions, digital modules, or custom content that fits how your people learn.',
     icon: starImg,
+    iconColor: '#1A9988', // Green
   },
 ];
 
@@ -45,7 +48,21 @@ export const HowWeHelpSection = () => {
                     src={service.icon}
                     alt=""
                     className="w-full h-full object-contain"
-                    style={{ filter: 'brightness(0) saturate(100%) invert(82%) sepia(45%) saturate(1234%) hue-rotate(85deg) brightness(98%) contrast(96%)' }}
+                    style={{ filter: `drop-shadow(0 0 8px ${service.iconColor}40)` }}
+                  />
+                  <div 
+                    className="absolute inset-0"
+                    style={{ 
+                      backgroundColor: service.iconColor,
+                      WebkitMaskImage: `url(${service.icon})`,
+                      WebkitMaskSize: 'contain',
+                      WebkitMaskRepeat: 'no-repeat',
+                      WebkitMaskPosition: 'center',
+                      maskImage: `url(${service.icon})`,
+                      maskSize: 'contain',
+                      maskRepeat: 'no-repeat',
+                      maskPosition: 'center'
+                    }}
                   />
                 </div>
               </div>
