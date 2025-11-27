@@ -20,16 +20,16 @@ export const ParticleAnimation = () => {
     const particles: Particle[] = [];
     const types: ('circle' | 'diamond' | 'star')[] = ['circle', 'diamond', 'star'];
     
-    // Generate 12 particles
+    // Generate 12 particles with enhanced slow burst
     for (let i = 0; i < 12; i++) {
       particles.push({
         id: i,
         type: types[Math.floor(Math.random() * types.length)],
         x: 50, // Start at center
         y: 50,
-        duration: 2 + Math.random() * 2, // 2-4 seconds
-        delay: Math.random() * 2, // Stagger start
-        amplitude: 15 + Math.random() * 25, // 15-40% drift range
+        duration: 4 + Math.random() * 3, // 4-7 seconds for calm breathing
+        delay: Math.random() * 1.2 - 0.6, // ±0.6s timing offset
+        amplitude: 200 + Math.random() * 150, // 200-350px for 50-70% hero coverage
       });
     }
 
@@ -45,17 +45,23 @@ export const ParticleAnimation = () => {
         img.alt = '';
         img.className = 'w-full h-full object-contain';
         
-        // Calculate random direction
+        // Calculate random direction for burst
         const angle = Math.random() * Math.PI * 2;
-        const txStart = `0px`;
-        const tyStart = `0px`;
-        const txEnd = `${Math.cos(angle) * particle.amplitude}px`;
-        const tyEnd = `${Math.sin(angle) * particle.amplitude}px`;
         
-        el.style.setProperty('--tx-start', txStart);
-        el.style.setProperty('--ty-start', tyStart);
-        el.style.setProperty('--tx-end', txEnd);
-        el.style.setProperty('--ty-end', tyEnd);
+        // Expansion: 150-200% of initial amplitude (full burst)
+        const expansionMultiplier = 1.5 + Math.random() * 0.5; // 150-200%
+        const txExpand = `${Math.cos(angle) * particle.amplitude * expansionMultiplier}px`;
+        const tyExpand = `${Math.sin(angle) * particle.amplitude * expansionMultiplier}px`;
+        
+        // Contraction: 50-60% of expanded radius (visible cluster)
+        const contractionMultiplier = 0.5 + Math.random() * 0.1; // 50-60%
+        const txContract = `${Math.cos(angle) * particle.amplitude * expansionMultiplier * contractionMultiplier}px`;
+        const tyContract = `${Math.sin(angle) * particle.amplitude * expansionMultiplier * contractionMultiplier}px`;
+        
+        el.style.setProperty('--tx-expand', txExpand);
+        el.style.setProperty('--ty-expand', tyExpand);
+        el.style.setProperty('--tx-contract', txContract);
+        el.style.setProperty('--ty-contract', tyContract);
         el.style.setProperty('--duration', `${particle.duration}s`);
         el.style.animationDelay = `${particle.delay}s`;
         
