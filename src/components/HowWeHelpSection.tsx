@@ -2,24 +2,24 @@ import circleImg from '@/assets/element-circle.png';
 import diamondImg from '@/assets/element-diamond.png';
 import starImg from '@/assets/element-star.png';
 
-const services = [
+const services: { title: string; description: string; iconSrc: string; iconColor: string }[] = [
   {
-    title: 'AI Strategy & Planning',
-    description: 'We analyze your business operations and organizational context to design AI components that deliver measurable results. You get a comprehensive action plan grounded in your reality and mapped to your actual workflows, not generic best practices.',
-    icon: diamondImg,
-    iconColor: '#1AF037', // Lime
+    title: 'AI Strategy',
+    description: 'We work with you to understand your business challenges and identify high-impact opportunities where AI can drive real value.',
+    iconSrc: diamondImg,
+    iconColor: '#1AF037',
   },
   {
-    title: 'AI Design & Implementation',
-    description: 'We dive deep into your workflows to build AI interventions that demonstrate real value in your current stack, or help you build an AI-ready foundation if you need one. Starting with focused pilots, we scale to entire products or business lines, regardless of your AI maturity or technical starting point.',
-    icon: circleImg,
-    iconColor: '#59F3C3', // Mint
+    title: 'Workflow Design',
+    description: 'We map your existing processes, design optimized workflows, and ensure AI solutions integrate seamlessly into how your team actually works.',
+    iconSrc: circleImg,
+    iconColor: '#59F3C3',
   },
   {
-    title: 'AI Training & Enablement',
-    description: 'We develop tailored training for every level of your organization, from leadership workshops to frontline upskilling, delivered as in-person sessions, digital modules, or custom content that fits how your people learn.',
-    icon: starImg,
-    iconColor: '#1A9988', // Green
+    title: 'System Implementation',
+    description: 'We build and deploy custom AI systems tailored to your needs, with ongoing support to ensure sustained impact and continuous improvement.',
+    iconSrc: starImg,
+    iconColor: '#1A9988',
   },
 ];
 
@@ -29,7 +29,7 @@ export const HowWeHelpSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 space-y-4 animate-fade-in">
           <h2 className="text-foreground">How We Help</h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We meet you where you are and design AI that fits your business reality.
           </p>
         </div>
@@ -38,42 +38,18 @@ export const HowWeHelpSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-3xl p-8 shadow-soft hover:shadow-elegant transition-all duration-500 animate-fade-in space-y-6 group"
-              style={{ animationDelay: `${index * 0.15}s` }}
+              className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Single brand micro-shape icon */}
-              <div className="flex justify-center mb-2">
-                <div className="w-8 h-8 flex items-center justify-center transition-all duration-500 group-hover:scale-110">
-                  <img
-                    src={service.icon}
-                    alt=""
-                    className="w-full h-full object-contain"
-                    style={{ filter: `drop-shadow(0 0 8px ${service.iconColor}40)` }}
-                  />
-                  <div 
-                    className="absolute inset-0"
-                    style={{ 
-                      backgroundColor: service.iconColor,
-                      WebkitMaskImage: `url(${service.icon})`,
-                      WebkitMaskSize: 'contain',
-                      WebkitMaskRepeat: 'no-repeat',
-                      WebkitMaskPosition: 'center',
-                      maskImage: `url(${service.icon})`,
-                      maskSize: 'contain',
-                      maskRepeat: 'no-repeat',
-                      maskPosition: 'center'
-                    }}
-                  />
-                </div>
+              <div className="inline-flex p-3 rounded-xl bg-background mb-6">
+                <img 
+                  src={service.iconSrc} 
+                  alt="" 
+                  style={{ width: '32px', height: '32px' }}
+                />
               </div>
-              
-              <h3 className="text-2xl font-bold text-foreground text-center">
-                {service.title}
-              </h3>
-              
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">{service.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>
