@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     question: 'Will AI replace my people or change how I hire?',
-    answer: 'No. AI helps reduce burnout, clear bottlenecks, avoid unnecessary hiring, and improve quality and consistency. Ultimately, it augments your people, helping boost their capacity to spend more time on the activities requiring their valuable judgment and experience. AI becomes a force multiplier, not a replacement.',
+    answer: 'AI helps reduce burnout, clear bottlenecks, avoid unnecessary hiring, and improve quality and consistency. Ultimately, it augments your people, helping boost their capacity to spend more time on the activities requiring their valuable judgment and experience. AI becomes a force multiplier.',
     icon: diamondImg,
   },
 ];
