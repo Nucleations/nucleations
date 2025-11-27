@@ -28,7 +28,7 @@ export const ParticleAnimation = () => {
         type: types[Math.floor(Math.random() * types.length)],
         x: 50, // Start at center (50%)
         y: 50,
-        duration: 4 + Math.random() * 3, // 4-7 seconds per full cycle
+        duration: 6 + Math.random() * 4.5, // 6-10.5 seconds per full cycle (50% slower)
         delay: Math.random() * 1.2 - 0.6, // ±0.6s randomized timing offset
         amplitude: 200 + Math.random() * 150, // 200-350px base radius for 50-70% hero coverage
       });

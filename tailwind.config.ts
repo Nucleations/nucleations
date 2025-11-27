@@ -100,15 +100,15 @@ export default {
         "breathe": {
           "0%": {
             transform: "translate(0, 0) scale(1)",
-            opacity: "0.7",
+            opacity: "0.35",
           },
           "50%": {
             transform: "translate(var(--tx-expand), var(--ty-expand)) scale(1)",
-            opacity: "1",
+            opacity: "0.5",
           },
           "100%": {
             transform: "translate(var(--tx-contract), var(--ty-contract)) scale(0.95)",
-            opacity: "0.7",
+            opacity: "0.35",
           },
         },
       },
