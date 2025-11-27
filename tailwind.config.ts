@@ -98,13 +98,17 @@ export default {
           },
         },
         "breathe": {
-          "0%, 100%": {
-            transform: "translate(var(--tx-start), var(--ty-start)) scale(1)",
-            opacity: "0.8",
+          "0%": {
+            transform: "translate(0, 0) scale(1)",
+            opacity: "0.7",
           },
           "50%": {
-            transform: "translate(var(--tx-end), var(--ty-end)) scale(0.85)",
+            transform: "translate(var(--tx-expand), var(--ty-expand)) scale(1)",
             opacity: "1",
+          },
+          "100%": {
+            transform: "translate(var(--tx-contract), var(--ty-contract)) scale(0.95)",
+            opacity: "0.7",
           },
         },
       },
