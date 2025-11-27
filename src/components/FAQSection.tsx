@@ -58,7 +58,7 @@ export const FAQSection = () => {
                     src={faq.icon}
                     alt=""
                     className="object-contain opacity-40 group-hover:opacity-70 transition-opacity flex-shrink-0"
-                    style={{ width: '8px', height: '8px' }}
+                    style={{ width: '15px', height: '15px' }}
                   />
                   <span className="text-lg font-semibold text-foreground">
                     {faq.question}
