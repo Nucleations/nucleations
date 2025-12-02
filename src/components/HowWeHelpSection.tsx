@@ -18,7 +18,7 @@ const services: { title: string; description: string; iconSrc: string; iconColor
   },
   {
     title: 'AI Training & Enablement',
-    description: 'We build and deploy custom AI systems tailored to your needs, with ongoing support to ensure sustained impact and continuous improvement.',
+    description: 'We develop tailored training for every level of your organization, from leadership workshops to frontline upskilling, delivered as in-person sessions, digital modules, or custom content that fits how your people learn.',
     iconSrc: starImg,
     iconColor: '#1A9988',
   },
