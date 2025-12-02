@@ -11,7 +11,7 @@ const services: { title: string; description: string; iconSrc: string; iconColor
     iconColor: '#1AF037',
   },
   {
-    title: 'Workflow Design',
+    title: 'AI Design & Implementation',
     description: 'We map your existing processes, design optimized workflows, and ensure AI solutions integrate seamlessly into how your team actually works.',
     iconSrc: circleImg,
     iconColor: '#59F3C3',
