@@ -12,7 +12,7 @@ const services: { title: string; description: string; iconSrc: string; iconColor
   },
   {
     title: 'AI Design & Implementation',
-    description: 'We map your existing processes, design optimized workflows, and ensure AI solutions integrate seamlessly into how your team actually works.',
+    description: 'We dive deep into your workflows to build AI interventions that demonstrate real value in your current stack, or help you build an AI-ready foundation if you need one. Starting with focused pilots, we scale to entire products or business lines, regardless of your AI maturity or technical starting point.',
     iconSrc: circleImg,
     iconColor: '#59F3C3',
   },
