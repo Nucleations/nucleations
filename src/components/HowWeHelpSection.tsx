@@ -17,7 +17,7 @@ const services: { title: string; description: string; iconSrc: string; iconColor
     iconColor: '#59F3C3',
   },
   {
-    title: 'System Implementation',
+    title: 'AI Training & Enablement',
     description: 'We build and deploy custom AI systems tailored to your needs, with ongoing support to ensure sustained impact and continuous improvement.',
     iconSrc: starImg,
     iconColor: '#1A9988',
