@@ -6,7 +6,7 @@ import starImg from '@/assets/element-star.png';
 const services: { title: string; description: string; iconSrc: string; iconColor: string }[] = [
   {
     title: 'AI Strategy',
-    description: 'We work with you to understand your business challenges and identify high-impact opportunities where AI can drive real value.',
+    description: 'We analyze your business operations and organizational context to design AI components that deliver measurable results. You get a comprehensive action plan grounded in your reality and mapped to your actual workflows, not generic best practices.',
     iconSrc: diamondImg,
     iconColor: '#1AF037',
   },
