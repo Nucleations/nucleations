@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { ArrowLeft, Clock, Users, CheckCircle, Search, Compass, Rocket, TrendingUp, AlertTriangle, Scale, GraduationCap, Trophy } from "lucide-react";
+import { ArrowLeft, Clock, Users, CheckCircle, Search, Compass, Rocket, TrendingUp, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -71,23 +71,13 @@ const adoptionSteps = [
 const firmBenefits = [
   {
     icon: TrendingUp,
-    title: "Save time and make smarter decisions",
-    description: "AI reduces manual workload and lowers error rates, giving your team clearer visibility into what's happening across engagements, deadlines, and client needs. This leads to faster closes, more confident decisions, and better overall control of your practice."
+    title: "Make better decisions, faster",
+    description: "By reducing manual work and improving accuracy, AI gives your team a clearer picture of what's happening across clients and engagements. This helps you move faster, make smarter decisions, and identify issues sooner—so you can address bottlenecks before they become expensive problems."
   },
   {
-    icon: AlertTriangle,
-    title: "Spot issues earlier",
-    description: "AI helps you detect shifts in client behavior, demand, or performance sooner. With early insight into anomalies or bottlenecks, you can address issues before they become costly, time-consuming, or irreversible."
-  },
-  {
-    icon: Scale,
-    title: "Scale without extra headcount",
-    description: "By handling repetitive tasks such as categorization, reconciliation, and document processing, AI frees your team to focus on higher-value advisory and review work. Your firm gains capacity without needing immediate hires—especially valuable during peak periods."
-  },
-  {
-    icon: GraduationCap,
-    title: "Build a smarter, more capable workforce",
-    description: "As AI supports day-to-day tasks, your team continually learns and moves up the value chain. Staff gain experience faster, client conversations improve, and the consistency of deliverables strengthens across the firm."
+    icon: Users,
+    title: "Do More With the Team You Already Have",
+    description: "AI automates repetitive work and frees your people to focus on analysis, review, and client guidance. This not only increases your firm's capacity during busy periods, it also accelerates staff development and strengthens the quality and consistency of your deliverables."
   },
   {
     icon: Trophy,
