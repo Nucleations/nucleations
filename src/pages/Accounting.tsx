@@ -198,9 +198,6 @@ const Accounting = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-                {index < adoptionSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-6 left-[calc(100%+1rem)] w-8 h-0.5 bg-primary/30" />
-                )}
               </div>
             ))}
           </div>
