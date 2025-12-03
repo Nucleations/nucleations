@@ -43,7 +43,7 @@ const benefitCards = [
   {
     icon: CheckCircle,
     title: "Quality and Consistency Improve",
-    description: "AI can cut processing time by up to 60% while reducing accounting errors by about 30%². The result is more consistent books, fewer corrections, and a stronger audit trail for every reporting cycle."
+    description: <><strong>AI can cut processing time by up to 60% while reducing accounting errors by about 30%</strong>². The result is more consistent books, fewer corrections, and a stronger audit trail for every reporting cycle.</>
   }
 ];
 
