@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { ArrowLeft, Clock, Users, CheckCircle, Search, Compass, Rocket, TrendingUp, Trophy } from "lucide-react";
+import { ArrowLeft, Clock, Users, CheckCircle, TrendingUp, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -19,6 +19,9 @@ import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
 import nucleationsLogo from "@/assets/nucleations-logo-main.png";
 import logoOutline from '@/assets/nucleations-logo-outline.png';
+import elementDiamond from '@/assets/element-diamond.png';
+import elementCircle from '@/assets/element-circle.png';
+import elementStar from '@/assets/element-star.png';
 
 const formSchema = z.object({
   fullName: z.string().trim().min(1, 'Full name is required').max(100, 'Name must be less than 100 characters'),
@@ -49,21 +52,18 @@ const benefitCards = [
 
 const adoptionSteps = [
   {
-    step: 1,
     title: "Diagnose",
-    icon: Search,
+    element: elementDiamond,
     description: "We map your accounting workflows to uncover bottlenecks, busy-season pressure points, and high-effort tasks. From this, we identify the highest-value AI opportunities that improve capacity, profitability, and turnaround times."
   },
   {
-    step: 2,
     title: "Design",
-    icon: Compass,
+    element: elementCircle,
     description: "We design adaptive, accounting-specific workflows where AI automates routing, categorization, reconciliation, and document handling, while your team stays in control through human-review steps. We also define reusable AI components that integrate with your GL, document tools, and practice-management systems."
   },
   {
-    step: 3,
     title: "Deliver",
-    icon: Rocket,
+    element: elementStar,
     description: "We launch an initial quick-win release, often producing 30–50% time savings, so your firm sees value immediately. Each rollout includes risk-aware AI with audit-ready logs and controls, creating a scalable blueprint you can expand across teams and service lines."
   }
 ];
@@ -211,14 +211,9 @@ const Accounting = () => {
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg">
-                    {step.step}
-                  </div>
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <step.icon className="w-5 h-5 text-primary" />
-                  </div>
+                  <img src={step.element} alt="" className="w-12 h-12 object-contain" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Step {step.step}: {step.title}</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                 {index < adoptionSteps.length - 1 && (
                   <div className="hidden md:block absolute top-6 left-[calc(100%+1rem)] w-8 h-0.5 bg-primary/30" />
