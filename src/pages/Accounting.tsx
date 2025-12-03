@@ -189,6 +189,14 @@ const Accounting = () => {
           <p className="text-sm text-muted-foreground/70 mt-8 text-center">
             ¹Human + AI in Accounting: Early Evidence from the Field, Stanford/MIT study; ²AI In The Accounting Industry Statistics, Gitnux. Results may vary based on firm statistics.
           </p>
+          <div className="text-center mt-8">
+            <Button 
+              size="lg"
+              onClick={() => document.getElementById('accounting-contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Book an Intro Call
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -258,7 +266,7 @@ const Accounting = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-secondary/20 via-accent/10 to-primary/10 relative overflow-hidden">
+      <section id="accounting-contact" className="py-24 px-6 bg-gradient-to-br from-secondary/20 via-accent/10 to-primary/10 relative overflow-hidden">
         <div className="absolute top-20 left-10 w-8 h-8 bg-secondary/20 rounded-full blur-xl" aria-hidden="true" />
         <div className="absolute bottom-20 right-10 w-12 h-12 bg-accent/20 rounded-full blur-xl" aria-hidden="true" />
         
