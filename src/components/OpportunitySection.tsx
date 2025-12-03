@@ -34,7 +34,7 @@ const stats: Array<{
 
 export const OpportunitySection = () => {
   return (
-    <section className="py-24 px-6 bg-muted/30">
+    <section className="py-24 px-6 opportunity-gradient animate-gradient-shift">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 space-y-6 animate-fade-in">
           <h2 className="text-foreground">Unleash Your Team. Unlock Your Growth.</h2>
