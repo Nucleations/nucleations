@@ -37,7 +37,7 @@ export const OpportunitySection = () => {
     <section className="py-24 px-6 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 space-y-6 animate-fade-in">
-          <h2 className="text-foreground">The AI Opportunity: What the Research Shows</h2>
+          <h2 className="text-foreground">Unleash Your Team. Unlock Your Growth.</h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             AI strengthens the way your teams work by reducing friction and streamlining routine tasks. When integrated thoughtfully into everyday workflows, it helps your business move faster, operate more consistently, and perform at a higher level, without adding strain or complexity.
           </p>
