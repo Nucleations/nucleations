@@ -192,6 +192,7 @@ const Accounting = () => {
           <div className="text-center mt-8">
             <Button 
               size="lg"
+              className="text-lg px-8 py-6 rounded-full shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
               onClick={() => document.getElementById('accounting-contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Book an Intro Call
