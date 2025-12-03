@@ -33,7 +33,7 @@ const benefitCards = [
   {
     icon: Clock,
     title: "Work Gets Done Faster",
-    description: "AI accelerates key workflows such as reconciliations, variance checks, and document handling. Firms that adopt AI close their books 7.5 days faster on average¹, reducing delays and eliminating manual backlogs."
+    description: <>AI accelerates key workflows such as reconciliations, variance checks, and document handling. <strong>Firms that adopt AI close their books 7.5 days faster on average</strong>¹, reducing delays and eliminating manual backlogs.</>
   },
   {
     icon: Users,
