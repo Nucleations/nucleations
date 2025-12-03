@@ -207,36 +207,6 @@ const Accounting = () => {
         </div>
       </section>
 
-      {/* Questions Section */}
-      <section className="py-20 px-6 opportunity-gradient animate-gradient-shift">
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-8">
-            {[
-              "Do you want your team operating with the clarity needed to move quickly and confidently?",
-              "Do you want to increase capacity without taking on new hires or stretching your staff?",
-              "Are you looking for a scalable way to grow your firm's revenue and performance?"
-            ].map((question, index) => (
-              <p 
-                key={index}
-                className="text-xl md:text-2xl text-foreground font-medium text-center animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {question}
-              </p>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Button 
-              size="lg"
-              className="text-lg px-8 py-6 rounded-full shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
-              onClick={() => document.getElementById('accounting-contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Let's Talk
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="accounting-contact" className="py-24 px-6 bg-gradient-to-br from-secondary/20 via-accent/10 to-primary/10 relative overflow-hidden">
         <div className="absolute top-20 left-10 w-8 h-8 bg-secondary/20 rounded-full blur-xl" aria-hidden="true" />
@@ -250,11 +220,20 @@ const Accounting = () => {
               className="w-24 h-24 mx-auto mb-8 opacity-80"
             />
             
-            <h2 className="text-foreground mb-6">
-              Ready to Unlock Your AI Advantage?
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Book a 30-minute intro call to discuss how we can help you accelerate your AI journey.
+            <p className="text-xl md:text-2xl text-foreground font-medium mb-2">
+              Want your team to move faster and make clearer decisions?
+            </p>
+            <p className="text-xl md:text-2xl text-foreground font-medium mb-2">
+              Need more capacity without more hiring?
+            </p>
+            <p className="text-xl md:text-2xl text-foreground font-medium mb-8">
+              Ready to grow revenue in a scalable, sustainable way?
+            </p>
+            <p className="text-2xl md:text-3xl font-bold text-primary mb-4">
+              Let's make it happen.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              Book a 30-minute intro call and start your AI journey.
             </p>
           </div>
 
