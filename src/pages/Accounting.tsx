@@ -38,7 +38,7 @@ const benefitCards = [
   {
     icon: Users,
     title: "Capacity Expands Without Hiring",
-    description: "By automating data entry, categorization, and review tasks, accounting teams can support 55% more clients per week¹. This creates additional capacity without increasing headcount and allows staff to focus on higher-value work."
+    description: <>By automating data entry, categorization, and review tasks, <strong>accounting teams can support 55% more clients per week</strong>¹. This creates additional capacity without increasing headcount and allows staff to focus on higher-value work.</>
   },
   {
     icon: CheckCircle,
