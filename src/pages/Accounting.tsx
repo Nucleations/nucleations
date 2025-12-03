@@ -196,7 +196,7 @@ const Accounting = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-foreground mb-4">
-              An AI Adoption Path That Fits Your Firm and Your Ambitions
+              A Practical, Scalable Way to Bring AI Into Your Firm
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               We help you modernize key workflows and introduce AI thoughtfully, so your team can evolve at the right pace and in the right direction.
