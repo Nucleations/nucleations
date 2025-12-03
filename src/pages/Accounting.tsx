@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { ArrowLeft, Clock, Users, CheckCircle, TrendingUp, Trophy } from "lucide-react";
+import { ArrowLeft, Clock, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -68,23 +68,6 @@ const adoptionSteps = [
   }
 ];
 
-const firmBenefits = [
-  {
-    icon: TrendingUp,
-    title: "Make better decisions, faster",
-    description: "By reducing manual work and improving accuracy, AI gives your team a clearer picture of what's happening across clients and engagements. This helps you move faster, make smarter decisions, and identify issues sooner—so you can address bottlenecks before they become expensive problems."
-  },
-  {
-    icon: Users,
-    title: "Do More With the Team You Already Have",
-    description: "AI automates repetitive work and frees your people to focus on analysis, review, and client guidance. This not only increases your firm's capacity during busy periods, it also accelerates staff development and strengthens the quality and consistency of your deliverables."
-  },
-  {
-    icon: Trophy,
-    title: "Gain a long-term competitive edge",
-    description: "AI-enabled firms grow faster by expanding capacity, improving turnaround times, and delivering higher-value services—driving measurable gains in firm performance and revenue."
-  }
-];
 
 const Accounting = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -224,29 +207,32 @@ const Accounting = () => {
         </div>
       </section>
 
-      {/* What This Means Section */}
+      {/* Questions Section */}
       <section className="py-20 px-6 opportunity-gradient animate-gradient-shift">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-foreground text-center mb-16">
-            What This Means for Your Firm
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {firmBenefits.map((benefit, index) => (
-              <Card 
-                key={benefit.title}
-                className="bg-card/80 backdrop-blur-sm border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-elegant animate-fade-in"
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
+            {[
+              "Do you want your team operating with the clarity needed to move quickly and confidently?",
+              "Do you want to increase capacity without taking on new hires or stretching your staff?",
+              "Are you looking for a scalable way to grow your firm's revenue and performance?"
+            ].map((question, index) => (
+              <p 
+                key={index}
+                className="text-xl md:text-2xl text-foreground font-medium text-center animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <benefit.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">{benefit.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{benefit.description}</p>
-                </CardContent>
-              </Card>
+                {question}
+              </p>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button 
+              size="lg"
+              className="text-lg px-8 py-6 rounded-full shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
+              onClick={() => document.getElementById('accounting-contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Let's Talk
+            </Button>
           </div>
         </div>
       </section>
