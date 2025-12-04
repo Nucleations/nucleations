@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { ArrowLeft, Clock, Users, CheckCircle } from "lucide-react";
+import { Clock, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -111,16 +111,14 @@ const Accounting = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="py-6 px-6 border-b border-border/50">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back to Home</span>
+        <div className="max-w-7xl mx-auto flex items-center justify-center">
+          <Link to="/">
+            <img 
+              src={nucleationsLogo} 
+              alt="Nucleations Logo" 
+              className="h-14 w-auto"
+            />
           </Link>
-          <img 
-            src={nucleationsLogo} 
-            alt="Nucleations Logo" 
-            className="h-10 w-auto"
-          />
         </div>
       </header>
 
