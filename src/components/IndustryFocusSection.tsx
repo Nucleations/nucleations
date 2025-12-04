@@ -24,7 +24,7 @@ const industries = [
     link: '/logistics',
   },
   {
-    title: 'Small and Medium Business: Accelerating Performance and Profitability',
+    title: 'SMB: Accelerate Performance and Profitability',
     icon: Building2,
     paragraphs: [
       'From completing complex tasks 25% faster to improving quality by 40%, modern tools are helping teams deliver better results.',
