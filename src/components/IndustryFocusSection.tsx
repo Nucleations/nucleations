@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const industries = [
   {
-    title: 'Accounting',
+    title: 'AI Turns Accounting Efficiency into Growth',
     icon: Calculator,
     paragraphs: [
       'Industry-leading studies show AI-enabled accountants outperform traditional teams, supporting 55% more clients with greater accuracy.',
@@ -52,7 +52,7 @@ export const IndustryFocusSection = () => {
                 
                 <div className="space-y-4 flex-grow">
                   {industry.paragraphs.map((paragraph, pIndex) => (
-                    <p key={pIndex} className="text-muted-foreground leading-relaxed">
+                    <p key={pIndex} className="text-foreground/70 leading-relaxed">
                       {paragraph}
                     </p>
                   ))}
