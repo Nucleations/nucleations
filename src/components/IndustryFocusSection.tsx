@@ -10,7 +10,7 @@ const industries = [{
 }, {
   title: 'Accounting: Turn Efficiency into Growth',
   icon: Calculator,
-  paragraphs: ['Industry-leading studies show AI-enabled accountants outperform traditional teams — supporting 55% more clients with greater accuracy.', 'Top research from Stanford and MIT confirms that AI elevates capacity, speeds monthly closes, and strengthens financial reporting — giving modern firms a measurable competitive edge.'],
+  paragraphs: [<>Industry-leading studies show AI-enabled accountants outperform traditional teams — <strong>supporting 55% more clients with greater accuracy.</strong></>, 'Top research from Stanford and MIT confirms that AI elevates capacity, speeds monthly closes, and strengthens financial reporting — giving modern firms a measurable competitive edge.'],
   buttonText: 'Explore Accounting AI',
   link: '/accounting'
 }, {
