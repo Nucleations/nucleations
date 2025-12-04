@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const industries = [{
   title: 'SMB: Accelerate Performance and Profitability',
   icon: Building2,
-  paragraphs: ['From completing complex tasks 25% faster to improving quality by 40%, modern tools are helping teams deliver better results.', 'In the past year, 45% of business leaders have seen higher customer satisfaction and 36% report improved profitability directly from smarter automation.'],
+  paragraphs: [<>From completing complex tasks <strong>25% faster to improving quality by 40%</strong>, modern tools are helping teams deliver better results.</>, 'In the past year, 45% of business leaders have seen higher customer satisfaction and 36% report improved profitability directly from smarter automation.'],
   buttonText: 'Book Your Intro Call',
   link: '#contact-section'
 }, {
