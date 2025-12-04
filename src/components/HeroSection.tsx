@@ -36,7 +36,7 @@ export const HeroSection = () => {
         />
         
         <h1 className={`font-bold tracking-tight text-balance ${backgroundVariant === 'purple' ? 'text-primary-foreground' : 'text-foreground'}`}>
-          Nucleations
+          We're Nucleations. We design AI that fits your business, making teams more productive and growth inevitable.
         </h1>
         
         <p className={`text-2xl md:text-3xl font-semibold ${backgroundVariant === 'purple' ? 'text-secondary' : 'text-foreground'}`}>
