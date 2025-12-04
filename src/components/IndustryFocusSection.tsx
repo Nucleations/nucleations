@@ -41,7 +41,7 @@ export const IndustryFocusSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 animate-fade-in">
-            AI Turns Operations-Heavy Industries into Growth Engines
+            Turn your operations-heavy business into a growth engine with AI.
           </h2>
           <p className="text-lg md:text-xl text-foreground/70 leading-relaxed animate-fade-in" style={{ animationDelay: '0.1s' }}>
             Across Accounting, Logistics and Moving, and other operations-heavy sectors, AI streamlines work, cuts inefficiencies, and drives measurable business growth.
