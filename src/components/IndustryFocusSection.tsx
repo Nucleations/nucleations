@@ -10,7 +10,7 @@ const industries = [
       'Industry-leading studies show AI-enabled accountants outperform traditional teams — supporting 55% more clients with greater accuracy.',
       'Top research from Stanford and MIT confirms that AI elevates capacity, speeds monthly closes, and strengthens financial reporting — giving modern firms a measurable competitive edge.',
     ],
-    buttonText: 'Get your Accounting AI Strategy',
+    buttonText: 'Explore Accounting AI',
     link: '/accounting',
   },
   {
