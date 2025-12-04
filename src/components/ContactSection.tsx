@@ -214,14 +214,12 @@ export const ContactSection = () => {
           </div>
         )}
 
-        <div className="flex items-center justify-center gap-2 md:gap-4 mt-12 text-xs md:text-sm text-muted-foreground whitespace-nowrap overflow-x-auto">
+        <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mt-12 text-xs md:text-sm text-muted-foreground">
           <span>© 2025 Nucleations. All rights reserved.</span>
           <span className="text-border">|</span>
-          <span className="flex items-center gap-1 md:gap-2">
-            Industries: Small & Medium Business
-            <Link to="/accounting" className="hover:text-primary transition-colors">Accounting</Link>
-            <Link to="/logistics" className="hover:text-primary transition-colors">Logistics & Moving</Link>
-          </span>
+          <span>Industries: Small & Medium Business</span>
+          <Link to="/accounting" className="hover:text-primary transition-colors">Accounting</Link>
+          <Link to="/logistics" className="hover:text-primary transition-colors">Logistics & Moving</Link>
           <span className="text-border">|</span>
           <a
             href="https://www.linkedin.com/company/nucleations/"
