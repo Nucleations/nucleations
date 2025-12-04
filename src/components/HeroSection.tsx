@@ -44,9 +44,6 @@ export const HeroSection = () => {
         </p>
         
         <div className="pt-6">
-          <p className={`text-xl md:text-2xl font-medium mb-6 ${backgroundVariant === 'purple' ? 'text-primary-foreground' : 'text-foreground'}`}>
-            Ready to reach your full potential with AI?
-          </p>
           <Button
             asChild
             size="lg"
