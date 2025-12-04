@@ -44,7 +44,7 @@ export const IndustryFocusSection = () => {
             AI Turns Operations-Heavy Industries into Growth Engines
           </h2>
           <p className="text-lg md:text-xl text-foreground/70 leading-relaxed animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            Across Accounting, Logistics and Moving, and other operations-driven sectors, intelligent automation is transforming how work gets done. By streamlining routine tasks and reducing operational drag, teams are working faster, with greater accuracy and consistency—unlocking efficiency that directly fuels business growth.
+            Across Accounting, Logistics and Moving, and other operations-heavy sectors, AI streamlines work, cuts inefficiencies, and drives measurable business growth.
           </p>
         </div>
         
