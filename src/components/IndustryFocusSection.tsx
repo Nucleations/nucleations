@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const industries = [
   {
-    title: 'Accounting: Turning Efficiency into Growth',
+    title: 'Accounting: Turn Efficiency into Growth',
     icon: Calculator,
     paragraphs: [
       'Industry-leading studies show AI-enabled accountants outperform traditional teams — supporting 55% more clients with greater accuracy.',
