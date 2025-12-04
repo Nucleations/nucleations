@@ -89,7 +89,7 @@ export const IndustryFocusSection = () => {
           })}
         </div>
         
-        <p className="text-center text-lg md:text-xl text-foreground/80 mt-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+        <p className="text-center text-lg md:text-xl text-foreground/80 font-bold mt-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           Unlocking this value takes more than technology. It takes the right approach.
         </p>
       </div>
