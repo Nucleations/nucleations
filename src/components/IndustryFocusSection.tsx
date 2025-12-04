@@ -18,7 +18,7 @@ const industries = [{
   icon: Building2,
   paragraphs: ['From completing complex tasks 25% faster to improving quality by 40%, modern tools are helping teams deliver better results.', 'In the past year, 45% of business leaders have seen higher customer satisfaction and 36% report improved profitability directly from smarter automation.'],
   buttonText: 'Book Your Intro Call',
-  link: '/smb'
+  link: '#contact-section'
 }];
 export const IndustryFocusSection = () => {
   return <section className="py-24 px-6 bg-background">
@@ -56,11 +56,24 @@ export const IndustryFocusSection = () => {
                 </div>
                 
                 <div className="mt-8">
-                  <Button asChild size="lg" className="w-full md:w-auto">
-                    <Link to={industry.link}>
+                  {industry.link.startsWith('#') ? (
+                    <Button 
+                      size="lg" 
+                      className="w-full md:w-auto"
+                      onClick={() => {
+                        const element = document.querySelector(industry.link);
+                        element?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                    >
                       {industry.buttonText}
-                    </Link>
-                  </Button>
+                    </Button>
+                  ) : (
+                    <Button asChild size="lg" className="w-full md:w-auto">
+                      <Link to={industry.link}>
+                        {industry.buttonText}
+                      </Link>
+                    </Button>
+                  )}
                 </div>
               </div>;
         })}
