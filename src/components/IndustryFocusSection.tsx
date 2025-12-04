@@ -57,7 +57,7 @@ export const IndustryFocusSection = () => {
                 className="bg-card rounded-3xl p-8 md:p-10 shadow-soft hover:shadow-elegant transition-all duration-500 animate-fade-in group hover:scale-[1.01] flex flex-col"
                 style={{ animationDelay: `${(index + 2) * 0.15}s` }}
               >
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-start gap-4 mb-6">
                   <div className="p-3 rounded-2xl bg-accent/10">
                     <Icon 
                       className="w-8 h-8 text-accent transition-all duration-500 group-hover:scale-105" 
