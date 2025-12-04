@@ -116,7 +116,7 @@ const Accounting = () => {
             <img 
               src={nucleationsLogo} 
               alt="Nucleations Logo" 
-              className="h-14 w-auto"
+              className="h-[4.2rem] w-auto"
             />
           </Link>
         </div>
