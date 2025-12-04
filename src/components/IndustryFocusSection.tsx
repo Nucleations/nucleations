@@ -2,6 +2,12 @@ import { Calculator, Truck, Building2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 const industries = [{
+  title: 'SMB: Accelerate Performance and Profitability',
+  icon: Building2,
+  paragraphs: ['From completing complex tasks 25% faster to improving quality by 40%, modern tools are helping teams deliver better results.', 'In the past year, 45% of business leaders have seen higher customer satisfaction and 36% report improved profitability directly from smarter automation.'],
+  buttonText: 'Book Your Intro Call',
+  link: '#contact-section'
+}, {
   title: 'Accounting: Turn Efficiency into Growth',
   icon: Calculator,
   paragraphs: ['Industry-leading studies show AI-enabled accountants outperform traditional teams — supporting 55% more clients with greater accuracy.', 'Top research from Stanford and MIT confirms that AI elevates capacity, speeds monthly closes, and strengthens financial reporting — giving modern firms a measurable competitive edge.'],
@@ -13,12 +19,6 @@ const industries = [{
   paragraphs: ['Leading logistics and distribution companies are embedding AI into operations to achieve reductions of up to 30% in inventory costs, 20% in logistics costs, and 15% in procurement spend.', 'According to McKinsey, AI creates measurable competitive advantage in logistics — but only when designed with your specific workflows, constraints, and business context in mind.'],
   buttonText: 'Explore Logistics AI',
   link: '/logistics'
-}, {
-  title: 'SMB: Accelerate Performance and Profitability',
-  icon: Building2,
-  paragraphs: ['From completing complex tasks 25% faster to improving quality by 40%, modern tools are helping teams deliver better results.', 'In the past year, 45% of business leaders have seen higher customer satisfaction and 36% report improved profitability directly from smarter automation.'],
-  buttonText: 'Book Your Intro Call',
-  link: '#contact-section'
 }];
 export const IndustryFocusSection = () => {
   return <section className="py-24 px-6 bg-background">
