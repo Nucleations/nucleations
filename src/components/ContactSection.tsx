@@ -230,7 +230,7 @@ export const ContactSection = () => {
           </a>
           <span className="hidden md:inline text-border">|</span>
           <span className="flex items-center gap-2">
-            Industries:
+            Industries: Small & Medium Business
             <Link to="/accounting" className="hover:text-primary transition-colors">Accounting</Link>
             <Link to="/logistics" className="hover:text-primary transition-colors">Logistics & Moving</Link>
           </span>
