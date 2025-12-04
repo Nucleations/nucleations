@@ -11,7 +11,7 @@ const industries = [{
   title: 'Logistics & Moving: Gain a Competitive Edge',
   icon: Truck,
   paragraphs: ['Leading logistics and distribution companies are embedding AI into operations to achieve reductions of up to 30% in inventory costs, 20% in logistics costs, and 15% in procurement spend.', 'According to McKinsey, AI creates measurable competitive advantage in logistics — but only when designed with your specific workflows, constraints, and business context in mind.'],
-  buttonText: 'Get your Logistics AI Strategy',
+  buttonText: 'Explore Logistics AI',
   link: '/logistics'
 }, {
   title: 'SMB: Accelerate Performance and Profitability',
