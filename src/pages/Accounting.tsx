@@ -128,7 +128,7 @@ const Accounting = () => {
       <section className="py-20 px-6 opportunity-gradient animate-gradient-shift">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-foreground mb-4 animate-fade-in">
-            The AI Advantage for Accounting Firms
+            AI Drives Smarter, Faster, More Profitable Accounting
           </h1>
           <p className="text-xl md:text-2xl text-primary font-medium mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Stronger Teams. Faster Closes. More Clients Served.
