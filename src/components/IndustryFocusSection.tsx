@@ -14,7 +14,7 @@ const industries = [
     link: '/accounting',
   },
   {
-    title: 'Logistics & Moving',
+    title: 'AI Gives Logistics and Moving Firms a Competitive Edge',
     icon: Truck,
     paragraphs: [
       'Leading logistics and distribution companies are embedding AI into operations to achieve reductions of up to 30% in inventory costs, 20% in logistics costs, and 15% in procurement spend.',
