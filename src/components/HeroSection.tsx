@@ -43,10 +43,6 @@ export const HeroSection = () => {
           Human-centered. Intelligence Augmented.
         </p>
         
-        <p className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed ${backgroundVariant === 'purple' ? 'text-primary-foreground/90' : 'text-muted-foreground'}`}>
-          We help growing businesses design AI that fits their reality. By understanding your workflows and business context, we build solutions that make your teams more productive and drive real business growth.
-        </p>
-        
         <div className="pt-6">
           <p className={`text-xl md:text-2xl font-medium mb-6 ${backgroundVariant === 'purple' ? 'text-primary-foreground' : 'text-foreground'}`}>
             Ready to reach your full potential with AI?
