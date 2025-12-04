@@ -217,6 +217,12 @@ export const ContactSection = () => {
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 mt-12 text-sm text-muted-foreground">
           <span>© 2025 Nucleations. All rights reserved.</span>
           <span className="hidden md:inline text-border">|</span>
+          <span className="flex items-center gap-2">
+            Industries: Small & Medium Business
+            <Link to="/accounting" className="hover:text-primary transition-colors">Accounting</Link>
+            <Link to="/logistics" className="hover:text-primary transition-colors">Logistics & Moving</Link>
+          </span>
+          <span className="hidden md:inline text-border">|</span>
           <a
             href="https://www.linkedin.com/company/nucleations/"
             target="_blank"
@@ -228,12 +234,6 @@ export const ContactSection = () => {
             </svg>
             Follow us on LinkedIn
           </a>
-          <span className="hidden md:inline text-border">|</span>
-          <span className="flex items-center gap-2">
-            Industries: Small & Medium Business
-            <Link to="/accounting" className="hover:text-primary transition-colors">Accounting</Link>
-            <Link to="/logistics" className="hover:text-primary transition-colors">Logistics & Moving</Link>
-          </span>
         </div>
       </div>
     </section>
