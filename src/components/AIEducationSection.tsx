@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import gtaafnLogo from '@/assets/gtaafn-logo.png';
-import cpaOntarioLogo from '@/assets/cpa-ontario-logo.png';
+import cpaOntarioLogo from '@/assets/cpa-ontario-logo.jpg';
 
 export const AIEducationSection = () => {
   const scrollToContact = () => {
