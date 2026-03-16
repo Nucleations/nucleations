@@ -21,7 +21,7 @@ export const HeroSection = () => {
         </h1>
 
         <p className="text-lg md:text-xl font-semibold text-foreground/80 max-w-3xl mx-auto">
-          We help small and medium-sized organizations with manual, operations-heavy workflows redesign how work gets done through strategy, workflow redesign, and practical AI implementation that augments human expertise and delivers real business results.
+          We help small and medium-sized organizations with manual, operations-heavy workflows by redesigning how work gets done through strategy and practical AI implementation that augments human expertise and delivers real business results.
         </p>
 
         <p className="text-sm text-foreground/70">
