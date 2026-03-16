@@ -24,7 +24,7 @@ export const HeroSection = () => {
           We help small and medium-sized organizations with manual, operations-heavy workflows by redesigning how work gets done through strategy and practical AI implementation that augments human expertise and delivers real business results.
         </p>
 
-        <p className="text-sm text-foreground/70">
+        <p className="text-sm font-bold text-foreground/70">
           Book a 30-minute AI Strategy Session to identify opportunities in your business.
         </p>
         
