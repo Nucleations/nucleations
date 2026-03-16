@@ -14,6 +14,7 @@ const Index = () => {
       <WhyNucleationsSection />
       <IndustryFocusSection />
       <HowWeHelpSection />
+      <AIEducationSection />
       <FAQSection />
       <TeamSection />
       <ContactSection />
