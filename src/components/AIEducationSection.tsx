@@ -78,7 +78,7 @@ export const AIEducationSection = () => {
                 </svg>
               </div>
               <h4 className="text-xl font-bold text-foreground">
-                Certification Program: AI Transformation Leaders
+                AI Adoption Certification Program for AI Leaders
               </h4>
             </div>
           </div>
