@@ -20,7 +20,7 @@ export const HeroSection = () => {
           We're Nucleations. We turn AI from experimentation into real business impact.
         </h1>
 
-        <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl font-semibold text-foreground/80 max-w-3xl mx-auto">
           We help small and medium-sized organizations with manual, operations-heavy workflows redesign how work gets done through strategy, workflow redesign, and practical AI implementation that augments human expertise and delivers real business results.
         </p>
 
