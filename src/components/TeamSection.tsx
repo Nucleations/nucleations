@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import amitImg from '@/assets/amit.jpeg';
 import vanessaImg from '@/assets/vanessa.png';
 import saadImg from '@/assets/saad.jpg';
