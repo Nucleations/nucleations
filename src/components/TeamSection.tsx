@@ -64,6 +64,24 @@ export const TeamSection = () => {
             </div>
           ))}
         </div>
+
+        <div className="text-center mt-16 animate-fade-in">
+          <Button
+            asChild
+            size="lg"
+            className="text-lg px-8 py-6 rounded-full shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
+          >
+            <a
+              href="#contact-section"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Book a Strategy Session
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   );
