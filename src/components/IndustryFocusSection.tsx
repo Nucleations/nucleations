@@ -78,7 +78,7 @@ export const IndustryFocusSection = () => {
                 </div>
 
                 <div className="space-y-4 flex-grow">
-                  <p className="text-muted-foreground leading-relaxed">{industry.intro}</p>
+                  <p className="text-foreground/80 leading-relaxed">{industry.intro}</p>
                   <p className="text-muted-foreground leading-relaxed">{industry.listIntro}</p>
                   <ul className="space-y-2 text-muted-foreground">
                     {industry.items.map((item, i) => (
