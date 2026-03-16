@@ -76,10 +76,10 @@ export const WhyNucleationsSection = () => {
               <h3 className="text-xl font-bold text-foreground mb-4 relative z-10">
                 {card.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-3 relative z-10">
+              <p className="text-foreground/70 leading-relaxed mb-3 relative z-10">
                 {card.description}
               </p>
-              <p className="text-muted-foreground leading-relaxed relative z-10">
+              <p className="text-foreground/70 leading-relaxed relative z-10">
                 {card.detail}
               </p>
             </div>
