@@ -32,7 +32,7 @@ export const AIEducationSection = () => {
             <div className="space-y-4">
               <p className="text-lg text-foreground leading-relaxed">
                 Recently delivered to the <strong>GTA Accountants & Finance Network</strong>, our session{' '}
-                <em>Getting Started with AI</em> is now available as an on-demand course for accounting and finance professionals.
+                <em>Getting Started with AI: Practical Uses, Real Risks, and What's Changing Fast</em> is now available as an on-demand course for accounting and finance professionals.
               </p>
               <a
                 href="https://www.gtaaccountantsnetwork.com/courses/getting-started-with-ai"
