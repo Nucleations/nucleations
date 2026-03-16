@@ -63,7 +63,7 @@ export const AIEducationSection = () => {
               <img
                 src={cpaOntarioLogo}
                 alt="CPA Ontario"
-                className="w-20 h-20 object-contain"
+                className="w-30 h-30 object-contain"
               />
               <h4 className="text-xl font-bold text-foreground">
                 CPA Ontario Webinar: State of AI
