@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import circleImg from '@/assets/element-circle.png';
 import diamondImg from '@/assets/element-diamond.png';
 import starImg from '@/assets/element-star.png';
+import strategyImg from '@/assets/nucleations-strategy.png';
 
 const cards = [
   {
@@ -89,6 +90,18 @@ export const WhyNucleationsSection = () => {
               </p>
             </div>
           ))}
+
+          {/* 6th card – photo */}
+          <div
+            className="rounded-3xl shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-fade-in overflow-hidden"
+            style={{ animationDelay: `${cards.length * 0.1}s` }}
+          >
+            <img
+              src={strategyImg}
+              alt="Nucleations strategy session"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         <div className="text-center animate-fade-in">
