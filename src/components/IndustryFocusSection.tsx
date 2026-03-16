@@ -54,7 +54,7 @@ export const IndustryFocusSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 animate-fade-in">
             Where AI Creates Value
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-lg md:text-xl text-foreground/70 leading-relaxed animate-fade-in" style={{ animationDelay: '0.1s' }}>
             Across industries such as accounting, logistics, manufacturing, and service businesses, AI is helping teams reduce manual work, improve efficiency, and make better decisions.
           </p>
         </div>
