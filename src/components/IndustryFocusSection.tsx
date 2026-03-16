@@ -120,12 +120,3 @@ export const IndustryFocusSection = () => {
     </section>
   );
 };
-
-        <p className="text-center text-lg md:text-xl text-foreground/80 font-bold mt-16 animate-fade-in" style={{
-        animationDelay: '0.6s'
-      }}>
-          Unlocking this value takes more than technology. It takes the right approach.
-        </p>
-      </div>
-    </section>;
-};
