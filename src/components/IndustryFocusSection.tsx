@@ -52,12 +52,9 @@ export const IndustryFocusSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 animate-fade-in">
-            Where AI creates value in operations-heavy organizations
+            Where AI Creates Value
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed animate-fade-in mb-4" style={{ animationDelay: '0.1s' }}>
-            AI delivers the greatest impact in organizations where manual processes, documentation, and coordination drive daily operations.
-          </p>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed animate-fade-in" style={{ animationDelay: '0.15s' }}>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed animate-fade-in" style={{ animationDelay: '0.1s' }}>
             Across industries such as accounting, logistics, manufacturing, and service businesses, AI is helping teams reduce manual work, improve efficiency, and make better decisions.
           </p>
         </div>
