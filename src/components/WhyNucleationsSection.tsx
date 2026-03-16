@@ -50,14 +50,14 @@ export const WhyNucleationsSection = () => {
           <h2 className="text-foreground">
             Why organizations work with Nucleations
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Most organizations begin their AI journey by experimenting with tools.
+          <p className="text-lg md:text-xl text-primary max-w-3xl mx-auto leading-relaxed">
+            Most organizations start their AI journey with tools.
           </p>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            The organizations that create real value start differently. They start by understanding how work actually gets done in their business.
+          <p className="text-lg md:text-xl text-primary max-w-3xl mx-auto leading-relaxed">
+            The organizations that create real value start with how work actually gets done.
           </p>
-          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed font-medium">
-            At Nucleations, we design AI around your real operational context: your workflows, your people, and the decisions that drive your organization.
+          <p className="text-lg md:text-xl text-primary max-w-3xl mx-auto leading-relaxed font-medium">
+            At Nucleations, we design AI around your real operational context: your workflows, people, and decisions.
           </p>
         </div>
 
