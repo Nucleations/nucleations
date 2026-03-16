@@ -51,13 +51,7 @@ export const WhyNucleationsSection = () => {
             Why organizations work with Nucleations
           </h2>
           <p className="text-lg md:text-xl text-primary max-w-3xl mx-auto leading-relaxed">
-            Most organizations start their AI journey with tools.
-          </p>
-          <p className="text-lg md:text-xl text-primary max-w-3xl mx-auto leading-relaxed">
-            The organizations that create real value start with how work actually gets done.
-          </p>
-          <p className="text-lg md:text-xl text-primary max-w-3xl mx-auto leading-relaxed font-medium">
-            At Nucleations, we design AI around your real operational context: your workflows, people, and decisions.
+            Most organizations start with standalone AI tools. The ones that create real value start with how work actually gets done. At Nucleations, we design AI around your workflows, people, and decisions.
           </p>
         </div>
 
