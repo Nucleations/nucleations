@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import circleImg from '@/assets/element-circle.png';
 import diamondImg from '@/assets/element-diamond.png';
 import starImg from '@/assets/element-star.png';
+import strategyImg from '@/assets/nucleations-strategy.png';
 
 const cards = [
   {
