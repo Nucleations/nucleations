@@ -21,11 +21,7 @@ export const HeroSection = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
-          We help small and medium-sized organizations with manual, operations-heavy workflows redesign how work gets done and implement practical AI that augments human expertise.
-        </p>
-        
-        <p className="text-2xl md:text-3xl font-semibold text-foreground">
-          Strategy, workflow redesign, and AI implementation for organizations that want real results, not just tools.
+          We help small and medium-sized organizations with manual, operations-heavy workflows redesign how work gets done through strategy, workflow redesign, and practical AI implementation that augments human expertise and delivers real business results.
         </p>
 
         <p className="text-sm text-foreground/70">
