@@ -52,10 +52,8 @@ export const AIEducationSection = () => {
         <div className="space-y-6 mb-12 animate-fade-in">
           <h3 className="text-foreground text-center">Upcoming Programs</h3>
           <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
-            We are developing additional courses and webinars designed to help organizations and professionals navigate AI adoption.
+            We offer courses and webinars designed to help organizations and professionals navigate AI adoption.
           </p>
-          <p className="text-lg text-muted-foreground text-center">
-            Upcoming programs include:
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mt-8">
@@ -114,9 +112,6 @@ export const AIEducationSection = () => {
             </div>
           </div>
 
-          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mt-8">
-            These programs focus on helping leaders understand where AI creates value, how to adopt it responsibly, and how to design effective human-AI collaboration.
-          </p>
         </div>
 
         {/* CTA */}
