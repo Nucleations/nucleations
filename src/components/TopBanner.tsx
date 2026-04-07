@@ -18,18 +18,18 @@ export const TopBanner = () => {
           href={WEBINAR_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary-foreground font-semibold text-xs hover:underline"
+          className="text-primary-foreground font-semibold text-[15px] hover:underline"
         >
           Join our webinar: Beyond the Tools: A Strategic Approach to AI in Accounting
         </a>
-        <span className="text-primary-foreground/80 text-xs">
+        <span className="text-primary-foreground/80 text-[15px]">
           May 19, 2026 at 9–11 AM EST
         </span>
         <a href={WEBINAR_URL} target="_blank" rel="noopener noreferrer">
           <Button
             variant="secondary"
             size="sm"
-            className="rounded-full text-[10px] font-semibold"
+            className="rounded-full text-xs font-semibold"
           >
             Learn More
           </Button>
