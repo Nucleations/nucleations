@@ -54,8 +54,6 @@ export const AIEducationSection = () => {
           <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
             We offer courses and webinars designed to help organizations and professionals navigate AI adoption.
           </p>
-          </p>
-
           <div className="grid md:grid-cols-2 gap-6 mt-8">
             {/* CPA Ontario */}
             <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 border-2 border-secondary/20 shadow-soft flex flex-col items-center text-center gap-4">
@@ -112,7 +110,6 @@ export const AIEducationSection = () => {
             </div>
           </div>
 
-        </div>
         </div>
 
         {/* CTA */}
