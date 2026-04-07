@@ -65,9 +65,29 @@ export const AIEducationSection = () => {
                 alt="CPA Ontario"
                 className="w-[109px] h-[109px] object-contain"
               />
-              <h4 className="text-xl font-bold text-foreground">
-                CPA Ontario Webinar: State of AI
-              </h4>
+              <a
+                href="https://pd.cpaontario.ca/seminars/beyond-the-tools-a-strategic-approach-to-ai-in-accounting/E003475.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl font-bold text-foreground hover:text-primary transition-colors"
+              >
+                CPA Ontario Webinar: Beyond the Tools: A Strategic Approach to AI in Accounting
+              </a>
+              <p className="text-muted-foreground">
+                This seminar presents a strategic approach to AI adoption, focusing on clear business problems, key risks and impacts in accounting, and aligning people, processes, and data for success.
+              </p>
+              <p className="text-sm font-semibold text-foreground">
+                May 19, 2026, 9–11 A.M. EST
+              </p>
+              <a
+                href="https://pd.cpaontario.ca/seminars/beyond-the-tools-a-strategic-approach-to-ai-in-accounting/E003475.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" className="rounded-xl">
+                  Learn More →
+                </Button>
+              </a>
             </div>
 
             {/* Certification */}
