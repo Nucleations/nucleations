@@ -11,7 +11,7 @@ export const TopBanner = () => {
           <img
             src={cpaOntarioLogo}
             alt="CPA Ontario"
-            className="h-8 w-auto object-contain"
+            className="h-16 w-auto object-contain"
           />
         </a>
         <a
