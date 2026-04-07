@@ -113,6 +113,7 @@ export const AIEducationSection = () => {
           </div>
 
         </div>
+        </div>
 
         {/* CTA */}
         <div className="text-center space-y-4 animate-fade-in">
