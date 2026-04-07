@@ -52,7 +52,7 @@ export const AIEducationSection = () => {
         <div className="space-y-6 mb-12 animate-fade-in">
           <h3 className="text-foreground text-center">Upcoming Programs</h3>
           <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
-            We offer courses and webinars designed to help organizations and professionals navigate AI adoption.
+            We offer courses designed to help organizations and professionals navigate AI adoption.
           </p>
           <div className="grid md:grid-cols-2 gap-6 mt-8">
             {/* CPA Ontario */}
@@ -99,6 +99,9 @@ export const AIEducationSection = () => {
               </h4>
               <p className="text-muted-foreground">
                 In this 4-week sprint, you will learn our Nucleations framework for human-centered AI adoption, focusing on people, process, and technology, and create a practical roadmap to lead successful AI transformation in your organization.
+              </p>
+              <p className="text-sm font-semibold text-foreground">
+                Coming in May–June
               </p>
               <Button
                 onClick={scrollToContact}
