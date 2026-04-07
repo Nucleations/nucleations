@@ -51,9 +51,6 @@ export const AIEducationSection = () => {
         {/* Upcoming Programs */}
         <div className="space-y-6 mb-12 animate-fade-in">
           <h3 className="text-foreground text-center">Upcoming Programs</h3>
-          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
-            We offer courses designed to help organizations and professionals navigate AI adoption.
-          </p>
           <div className="grid md:grid-cols-2 gap-6 mt-8">
             {/* CPA Ontario */}
             <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 border-2 border-secondary/20 shadow-soft flex flex-col items-center text-center gap-4">
