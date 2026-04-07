@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import cpaOntarioLogo from '@/assets/cpa-ontario-logo.png';
+import cpaOntarioLogo from '@/assets/cpa-ontario-banner-logo.webp';
 
 const WEBINAR_URL = 'https://pd.cpaontario.ca/seminars/beyond-the-tools-a-strategic-approach-to-ai-in-accounting/E003475.html';
 
