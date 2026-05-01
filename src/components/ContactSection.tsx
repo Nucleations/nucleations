@@ -53,7 +53,7 @@ export const ContactSection = () => {
         `Message:\n${data.message}`
       );
       
-      const mailtoLink = `mailto:info@nucleations.com?subject=${subject}&body=${body}`;
+      const mailtoLink = `mailto:vanessa@nucleations.com?subject=${subject}&body=${body}`;
       
       // Open mailto link
       window.location.href = mailtoLink;
