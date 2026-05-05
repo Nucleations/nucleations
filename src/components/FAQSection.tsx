@@ -51,7 +51,7 @@ export const FAQSection = () => {
     <section className="py-24 px-6 opportunity-gradient animate-gradient-shift">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-foreground text-center mb-16 animate-fade-in">
-          Questions leaders ask before starting with AI
+          AI questions leaders ask
         </h2>
 
         <Accordion type="single" collapsible className="space-y-4">
