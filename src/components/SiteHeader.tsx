@@ -47,8 +47,14 @@ export const SiteHeader = () => {
   return (
     <nav className="sticky top-0 z-50 w-full bg-background/90 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
-        <Link to="/" aria-label="Nucleations Home" className="flex items-center">
+        <Link to="/" aria-label="Nucleations Home" className="flex items-center gap-3">
           <img src={logo} alt="Nucleations" className="h-12 w-auto" />
+          <span
+            className="text-xl md:text-2xl font-bold tracking-wide text-foreground leading-none"
+            style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
+          >
+            NUCLEATIONS
+          </span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
