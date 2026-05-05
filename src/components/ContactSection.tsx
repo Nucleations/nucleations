@@ -110,7 +110,8 @@ export const ContactSection = () => {
             <img
               src={logoOutline}
               alt="Nucleations"
-              className="w-20 h-20 mb-8 opacity-80"
+              className="w-26 h-26 mb-8 opacity-80"
+              style={{ width: '104px', height: '104px' }}
             />
             <h2 className="text-foreground mb-6">
               Ready to move from AI experimentation to business impact?
