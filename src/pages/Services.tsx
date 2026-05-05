@@ -146,11 +146,11 @@ const Services = () => {
                 <p>A four-week design sprint that turns AI ambition into an investment-ready transformation plan.</p>
                 <p>Leadership teams move from opportunity identification to workflow redesign, business case development, pilot planning, and roadmap creation. The result is a fully scoped AI transformation plan with a clear path into execution.</p>
               </div>
-              <div className="bg-gradient-to-br from-primary/10 to-secondary/20 rounded-2xl p-3 flex items-center justify-center w-4/5 mx-auto">
+              <div className="bg-gradient-to-br from-primary/10 to-secondary/20 rounded-2xl p-3 flex items-center justify-center w-[72%] mx-auto">
                 <img
                   src={transformationSprintImage}
                   alt="Nucleations facilitator leading an AI Transformation Sprint with clients around a whiteboard"
-                  className="w-full h-full object-cover rounded-xl shadow-soft max-h-[256px]"
+                  className="w-full h-full object-cover rounded-xl shadow-soft max-h-[230px]"
                   loading="lazy"
                 />
               </div>
