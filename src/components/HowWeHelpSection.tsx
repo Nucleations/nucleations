@@ -125,7 +125,7 @@ export const HowWeHelpSection = () => {
           {services.slice(0, 3).map((s, index) => {
             const eyebrow =
               s.title === 'AI Strategy Advisory'
-                ? 'Advisory'
+                ? 'Strategy'
                 : 'Strategy and Capability Transfer';
             return (
               <div
