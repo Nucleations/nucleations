@@ -7,6 +7,7 @@ import { HowWeHelpSection } from '@/components/HowWeHelpSection';
 import { AIEducationSection } from '@/components/AIEducationSection';
 import { FAQSection } from '@/components/FAQSection';
 import { TeamSection } from '@/components/TeamSection';
+import { PartnerSection } from '@/components/PartnerSection';
 import { ContactSection } from '@/components/ContactSection';
 
 const Index = () => {
@@ -23,6 +24,7 @@ const Index = () => {
         <AIEducationSection />
       </div>
       <TeamSection />
+      <PartnerSection />
       <FAQSection />
       <ContactSection />
     </main>

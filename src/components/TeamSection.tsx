@@ -24,15 +24,61 @@ const team = [
   },
 ];
 
+const stats = [
+  {
+    value: '100+',
+    label: 'Business transformations',
+    description: 'Collective experience across complex organizations and sectors.',
+  },
+  {
+    value: '$100MM+',
+    label: 'Impact generated',
+    description: 'Through AI-enabled insights, efficiencies, and growth opportunities.',
+  },
+  {
+    value: '10+ hrs',
+    label: 'Average human dividend per workflow',
+    description: 'Time returned by reducing manual effort, rework, duplication, and avoidable handoffs.*',
+    footnote: '*Time returned varies by workflow length, complexity, and task type.',
+  },
+];
+
 export const TeamSection = () => {
   return (
     <section className="py-24 px-6 bg-gradient-to-b from-muted/20 to-background">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 space-y-4 animate-fade-in">
-          <h2 className="text-foreground">The Team: Experience with a Fresh Perspective</h2>
+        <div className="text-center mb-12 space-y-4 animate-fade-in max-w-4xl mx-auto">
+          <h2 className="text-foreground">
+            Led by strategists who have built, scaled, and taught transformation in complex organizations.
+          </h2>
           <p className="text-xl text-muted-foreground">
-            Our team brings decades of real-world AI transformation expertise.
+            Nucleations combines AI strategy, human-centred design, value creation, operations, and enterprise technology experience.
           </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 mb-20">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="rounded-3xl p-8 bg-card border border-border shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-[1.02] animate-fade-in flex flex-col"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
+                {stat.value}
+              </div>
+              <div className="text-lg font-semibold text-foreground mb-2">
+                {stat.label}
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                {stat.description}
+              </p>
+              {stat.footnote && (
+                <p className="text-xs text-muted-foreground/80 mt-4 italic">
+                  {stat.footnote}
+                </p>
+              )}
+            </div>
+          ))}
         </div>
 
         <div className="grid md:grid-cols-3 gap-12">
@@ -49,7 +95,7 @@ export const TeamSection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-2">
                   {member.name}
@@ -78,7 +124,7 @@ export const TeamSection = () => {
                 document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Book a Strategy Session
+              Book an AI Opportunity Call
             </a>
           </Button>
         </div>
