@@ -82,7 +82,7 @@ export const HowWeHelpSection = () => {
           <div className="grid lg:grid-cols-2 gap-0">
             <div className="p-8 md:p-12 flex flex-col justify-center space-y-5">
               <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full">
-                Featured
+                Nucleations Method
               </span>
               <h3 className="text-foreground">ARIA Workflow-to-Value Workshop</h3>
               <p className="text-lg font-semibold text-primary">
