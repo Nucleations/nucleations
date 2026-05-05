@@ -27,7 +27,7 @@ const ServiceBlock = ({ eyebrow, title, subtitle, body, bestFor, ctaLabel, ctaTo
     <div className="h-2 bg-gradient-to-r from-primary via-secondary to-accent" />
     <div className="p-8 md:p-12 space-y-6">
       {eyebrow && (
-        <span className="inline-block text-xs font-bold uppercase tracking-wider text-primary">
+        <span className="inline-block text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full">
           {eyebrow}
         </span>
       )}
