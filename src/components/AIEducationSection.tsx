@@ -62,19 +62,18 @@ export const AIEducationSection = () => {
           </div>
 
           {/* Speaking engagements */}
-          <div className="relative rounded-2xl shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 flex flex-col overflow-hidden bg-gradient-to-br from-primary to-primary-dark text-primary-foreground p-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <span className="inline-block self-start text-xs font-bold uppercase tracking-wider bg-secondary text-secondary-foreground px-3 py-1 rounded-full mb-6">
+          <div className="relative rounded-2xl shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 flex flex-col overflow-hidden border-2 border-primary/20 bg-gradient-to-br from-primary/15 via-secondary/20 to-accent/15 text-foreground p-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full mb-6">
               Speaking Engagements
             </span>
-            <h3 className="text-xl font-bold text-primary-foreground mb-3 leading-snug">
+            <h3 className="text-xl font-bold text-foreground mb-3 leading-snug">
               Bring Nucleations to Your Audience
             </h3>
-            <p className="text-primary-foreground/90 leading-relaxed mb-6 flex-grow">
+            <p className="text-gray-800 leading-relaxed mb-6 flex-grow">
               Book us for practical, human-centred AI talks, webinars, panels, and leadership sessions for business, accounting, finance, and professional services audiences.
             </p>
             <Button
               onClick={scrollToContact}
-              variant="secondary"
               className="rounded-full self-start shadow-soft hover:shadow-elegant"
             >
               Inquire about speaking →
