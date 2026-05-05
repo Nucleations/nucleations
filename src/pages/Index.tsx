@@ -2,7 +2,7 @@ import { TopBanner } from '@/components/TopBanner';
 import { SiteHeader } from '@/components/SiteHeader';
 import { HeroSection } from '@/components/HeroSection';
 import { WhyNucleationsSection } from '@/components/WhyNucleationsSection';
-import { IndustryFocusSection } from '@/components/IndustryFocusSection';
+
 import { HowWeHelpSection } from '@/components/HowWeHelpSection';
 import { AIEducationSection } from '@/components/AIEducationSection';
 import { FAQSection } from '@/components/FAQSection';
@@ -23,7 +23,6 @@ const Index = () => {
         <AIEducationSection />
       </div>
       <TeamSection />
-      <IndustryFocusSection />
       <FAQSection />
       <ContactSection />
     </main>
