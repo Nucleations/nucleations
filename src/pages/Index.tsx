@@ -24,6 +24,7 @@ const Index = () => {
         <AIEducationSection />
       </div>
       <TeamSection />
+      <PartnerSection />
       <FAQSection />
       <ContactSection />
     </main>
