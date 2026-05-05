@@ -126,9 +126,7 @@ export const HowWeHelpSection = () => {
             const eyebrow =
               s.title === 'AI Strategy Advisory'
                 ? 'Advisory'
-                : s.title === 'Leading Through AI'
-                ? 'Change'
-                : 'Strategy';
+                : 'Strategy and Capability Transfer';
             return (
               <div
                 key={index}
