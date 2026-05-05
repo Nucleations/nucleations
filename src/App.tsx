@@ -5,8 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import Index from "./pages/Index";
-import Accounting from "./pages/Accounting";
-import Logistics from "./pages/Logistics";
 import Aria from "./pages/Aria";
 import Services from "./pages/Services";
 import Courses from "./pages/Courses";
@@ -23,8 +21,6 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/accounting" element={<Accounting />} />
-          <Route path="/logistics" element={<Logistics />} />
           <Route path="/aria" element={<Aria />} />
           <Route path="/services" element={<Services />} />
           <Route path="/courses" element={<Courses />} />
