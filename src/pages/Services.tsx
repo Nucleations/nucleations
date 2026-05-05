@@ -150,7 +150,7 @@ const Services = () => {
                 <img
                   src={transformationSprintImage}
                   alt="Nucleations facilitator leading an AI Transformation Sprint with clients around a whiteboard"
-                  className="w-full h-full object-cover rounded-xl shadow-soft max-h-[320px]"
+                  className="w-4/5 h-full object-cover rounded-xl shadow-soft max-h-[256px]"
                   loading="lazy"
                 />
               </div>
