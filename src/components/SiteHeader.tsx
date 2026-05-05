@@ -50,8 +50,8 @@ export const SiteHeader = () => {
         <Link to="/" aria-label="Nucleations Home" className="flex items-center gap-3">
           <img src={logo} alt="Nucleations" className="h-12 w-auto" />
           <span
-            className="text-xl md:text-2xl font-bold tracking-wide text-foreground leading-none"
-            style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
+            className="font-bold tracking-wide text-foreground leading-none text-[1.125rem] md:text-[1.35rem]"
+            style={{ fontFamily: "'Lato', sans-serif", fontWeight: 900 }}
           >
             NUCLEATIONS
           </span>
