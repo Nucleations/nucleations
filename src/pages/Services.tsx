@@ -209,17 +209,49 @@ const Services = () => {
           </div>
 
           {/* SECTION 5: LEADING THROUGH AI */}
-          <ServiceBlock
-            eyebrow="Change & Adoption"
-            title="Leading Through AI: Managing Change"
-            subtitle="The people side of AI transformation, addressed head-on."
-            body={[
-              'AI transformation succeeds or fails on adoption. But this is not traditional change management. AI changes workflows, roles, judgment, accountability, and how people understand the value of their work.',
-              'This offering gives leaders a structured way to understand role evolution, address resistance, build trust, communicate clearly, and sustain adoption beyond the pilot phase.',
-            ]}
-            bestFor="Organizations deploying AI and facing resistance, uncertainty, low adoption, or role-change concerns. Also valuable for broader transformation efforts where the human side requires the same rigour as the technology."
-            ctaLabel="Explore Change Support"
-          />
+          <div className="bg-card rounded-3xl shadow-soft hover:shadow-elegant transition-all duration-300 overflow-hidden animate-fade-in">
+            <div className="h-2 bg-gradient-to-r from-primary via-secondary to-accent" />
+            <div className="grid lg:grid-cols-2 gap-0">
+              <div className="bg-gradient-to-br from-primary/10 to-secondary/20 flex items-center justify-center p-8 min-h-[320px]">
+                <img
+                  src={leadingChangeImage}
+                  alt="Diverse team collaborating around a laptop with an AI adoption mind map in the background"
+                  className="w-full h-full max-h-[560px] object-cover rounded-2xl shadow-soft"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-8 md:p-12 space-y-6">
+                <span className="inline-block text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full">
+                  Change & Adoption
+                </span>
+                <h3 className="text-foreground text-2xl md:text-3xl font-bold">
+                  Leading Through AI: Managing Change
+                </h3>
+                <p className="text-lg font-semibold text-primary">
+                  The people side of AI transformation, addressed head-on.
+                </p>
+                <div className="space-y-4 text-gray-800 leading-relaxed">
+                  <p>
+                    AI transformation succeeds or fails on adoption. But this is not traditional change management. AI changes workflows, roles, judgment, accountability, and how people understand the value of their work.
+                  </p>
+                  <p>
+                    This offering gives leaders a structured way to understand role evolution, address resistance, build trust, communicate clearly, and sustain adoption beyond the pilot phase.
+                  </p>
+                </div>
+                <div className="bg-secondary/10 rounded-2xl p-5 border-l-4 border-secondary">
+                  <p className="text-sm font-bold uppercase tracking-wider text-primary mb-2">Best for</p>
+                  <p className="text-gray-800 leading-relaxed">
+                    Organizations deploying AI and facing resistance, uncertainty, low adoption, or role-change concerns. Also valuable for broader transformation efforts where the human side requires the same rigour as the technology.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <Button onClick={() => scrollToContact()} size="lg" className="rounded-full shadow-soft hover:shadow-elegant transition-all">
+                    Explore Change Support →
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* SECTION 6: AI STRATEGY ADVISORY */}
           <ServiceBlock
