@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Link } from 'react-router-dom';
+
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -298,13 +298,8 @@ export const ContactSection = () => {
         </div>
 
         <div className="flex flex-col items-center gap-3 mt-16 text-xs md:text-sm text-muted-foreground">
-          <div className="flex flex-wrap items-center justify-center gap-x-2">
-            <span>Industries: Small & Medium Business</span>
-            <Link to="/accounting" className="hover:text-primary transition-colors">Accounting</Link>
-            <Link to="/logistics" className="hover:text-primary transition-colors">Logistics & Moving</Link>
-          </div>
           <div className="flex items-center gap-2">
-            <span>© 2025 Nucleations. All rights reserved.</span>
+            <span>© 2026 Nucleations. All rights reserved.</span>
             <span className="text-border">|</span>
             <a
               href="https://www.linkedin.com/company/nucleations/"
