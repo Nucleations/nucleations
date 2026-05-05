@@ -14,7 +14,7 @@ export const AIEducationSection = () => {
         {/* Headline */}
         <div className="text-center mb-16 space-y-4 animate-fade-in">
           <h2 className="text-foreground">
-            Build the AI capability your team needs to lead what comes next
+            AI courses and talks for what's next
           </h2>
         </div>
 
