@@ -173,14 +173,14 @@ const Services = () => {
                   ARIA Workflow-to-Value Workshop
                 </h3>
                 <p className="text-lg font-semibold text-primary">
-                  See where AI genuinely fits — and whether it is worth investing in.
+                  See where AI genuinely fits, and whether it is worth investing in.
                 </p>
                 <div className="space-y-4 text-gray-800 leading-relaxed">
                   <p>
                     ARIA is Nucleations' signature workflow-to-value method. It helps teams map how work happens today, identify where AI can create real value, and translate that opportunity into a credible business case.
                   </p>
                   <p>
-                    Using the ARIA Protocol and IMPACT Model, clients leave with a clear future-state workflow, impact projection, and sponsor-ready case for investment — plus the capability to repeat the approach on other workflows.
+                    Using the ARIA Protocol and IMPACT Model, clients leave with a clear future-state workflow, impact projection, and sponsor-ready case for investment, plus the capability to repeat the approach on other workflows.
                   </p>
                 </div>
                 <div className="bg-secondary/10 rounded-2xl p-5 border-l-4 border-secondary">
