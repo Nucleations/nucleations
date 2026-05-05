@@ -234,14 +234,10 @@ const Services = () => {
           >
             <div className="pt-2">
               <h4 className="text-lg font-bold text-foreground mb-4">Examples include</h4>
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {advisoryExamples.map((ex) => (
-                  <li
-                    key={ex}
-                    className="flex items-start gap-3 bg-background rounded-xl p-4 border border-secondary/20"
-                  >
-                    <span className="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0" />
-                    <span className="text-gray-800 leading-relaxed">{ex}</span>
+                  <li key={ex} className="text-gray-800 leading-relaxed">
+                    {ex}
                   </li>
                 ))}
               </ul>
