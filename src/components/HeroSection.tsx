@@ -10,7 +10,7 @@ export const HeroSection = () => {
   const stats = [
     { value: '10%+', label: 'Revenue increase' },
     { value: '1.5x', label: 'Average products per client' },
-    { value: 'Human-led', label: 'Every client recommendation reviewed by a professional' },
+    { value: 'Human-led', label: 'Every client recommendation reviewed by a professional', valueClassName: 'text-2xl md:text-[1.75rem]' },
   ];
 
   return (
@@ -66,7 +66,7 @@ export const HeroSection = () => {
                 key={i}
                 className="bg-background rounded-2xl p-5 border-2 border-secondary/20 shadow-soft text-center"
               >
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2 leading-tight">
+                <div className={`font-bold text-primary mb-2 leading-tight ${stat.valueClassName ?? 'text-3xl md:text-4xl'}`}>
                   {stat.value}
                 </div>
                 <div className="text-sm text-foreground/70 leading-snug">
