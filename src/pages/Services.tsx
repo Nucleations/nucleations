@@ -7,6 +7,7 @@ import { ContactSection } from '@/components/ContactSection';
 import { Button } from '@/components/ui/button';
 import ariaWorkshopImage from '@/assets/aria-onboarding-workflow.png';
 import leadingChangeImage from '@/assets/leading-through-ai-change.png';
+import transformationSprintImage from '@/assets/ai-transformation-sprint.png';
 
 const scrollToContact = (e?: React.MouseEvent) => {
   e?.preventDefault();
@@ -136,13 +137,24 @@ const Services = () => {
             eyebrow="Flagship Program"
             title="Human-Centred AI Transformation Program"
             subtitle="End-to-end transformation design with a 30-60-90 day roadmap."
-            body={[
-              'A four-week design sprint that turns AI ambition into an investment-ready transformation plan.',
-              'Leadership teams move from opportunity identification to workflow redesign, business case development, pilot planning, and roadmap creation. The result is a fully scoped AI transformation plan with a clear path into execution.',
-            ]}
+            body={[]}
             bestFor="Organizations that may start with a single use case but are ready to define their broader AI direction. Ideal for leaders starting their AI journey, or those who have stalled and need a structured path from initial use case to prioritized roadmap."
             ctaLabel="Explore the Transformation Program"
           >
+            <div className="grid md:grid-cols-2 gap-6 items-center">
+              <div className="space-y-4 text-gray-800 leading-relaxed">
+                <p>A four-week design sprint that turns AI ambition into an investment-ready transformation plan.</p>
+                <p>Leadership teams move from opportunity identification to workflow redesign, business case development, pilot planning, and roadmap creation. The result is a fully scoped AI transformation plan with a clear path into execution.</p>
+              </div>
+              <div className="bg-gradient-to-br from-primary/10 to-secondary/20 rounded-2xl p-3 flex items-center justify-center">
+                <img
+                  src={transformationSprintImage}
+                  alt="Nucleations facilitator leading an AI Transformation Sprint with clients around a whiteboard"
+                  className="w-full h-full object-cover rounded-xl shadow-soft max-h-[320px]"
+                  loading="lazy"
+                />
+              </div>
+            </div>
             <div className="pt-2">
               <h4 className="text-lg font-bold text-foreground mb-6">
                 Built around three proprietary Nucleations frameworks
