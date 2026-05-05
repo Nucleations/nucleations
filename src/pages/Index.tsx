@@ -1,4 +1,5 @@
 import { TopBanner } from '@/components/TopBanner';
+import { SiteHeader } from '@/components/SiteHeader';
 import { HeroSection } from '@/components/HeroSection';
 import { WhyNucleationsSection } from '@/components/WhyNucleationsSection';
 import { IndustryFocusSection } from '@/components/IndustryFocusSection';
@@ -12,13 +13,18 @@ const Index = () => {
   return (
     <main className="min-h-screen">
       <TopBanner />
+      <SiteHeader />
       <HeroSection />
       <WhyNucleationsSection />
-      <IndustryFocusSection />
-      <HowWeHelpSection />
-      <AIEducationSection />
-      <FAQSection />
+      <div id="services">
+        <HowWeHelpSection />
+      </div>
+      <div id="courses">
+        <AIEducationSection />
+      </div>
       <TeamSection />
+      <IndustryFocusSection />
+      <FAQSection />
       <ContactSection />
     </main>
   );
