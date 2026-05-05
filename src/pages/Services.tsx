@@ -170,7 +170,7 @@ const Services = () => {
                   Signature Method
                 </span>
                 <h3 className="text-foreground text-2xl md:text-3xl font-bold">
-                  ARIA Workflow Mapping &amp; Business Case Package
+                  ARIA Workflow-to-Value Workshop
                 </h3>
                 <p className="text-lg font-semibold text-primary">
                   See where AI genuinely fits — and whether it is worth investing in.
