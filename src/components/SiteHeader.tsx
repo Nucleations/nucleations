@@ -6,7 +6,7 @@ import logo from '@/assets/nucleations-main-logo-1.png';
 
 const navLinks = [
   { label: 'ARIA', to: '/aria' },
-  { label: 'Services', to: '/#services' },
+  { label: 'Services', to: '/services' },
   { label: 'Courses', to: '/#courses' },
 ];
 
