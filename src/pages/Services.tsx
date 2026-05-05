@@ -5,6 +5,7 @@ import { SiteHeader } from '@/components/SiteHeader';
 import { PartnerSection } from '@/components/PartnerSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Button } from '@/components/ui/button';
+import ariaWorkshopImage from '@/assets/aria-onboarding-workflow.png';
 
 const scrollToContact = (e?: React.MouseEvent) => {
   e?.preventDefault();
@@ -196,12 +197,12 @@ const Services = () => {
                 </div>
               </div>
               <div className="bg-gradient-to-br from-primary/10 to-secondary/20 flex items-center justify-center p-8 min-h-[320px]">
-                <div className="w-full h-full min-h-[280px] rounded-2xl border-2 border-dashed border-primary/40 bg-background/50 flex items-center justify-center text-center p-6">
-                  <p className="text-sm md:text-base font-semibold text-primary/80 leading-relaxed">
-                    ARIA image placeholder<br />
-                    <span className="font-normal text-foreground/60">image to be supplied</span>
-                  </p>
-                </div>
+                <img
+                  src={ariaWorkshopImage}
+                  alt="Team collaborating on an ARIA onboarding workflow mapping session with sticky notes on a wall"
+                  className="w-full h-full max-h-[480px] object-cover rounded-2xl shadow-soft"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
