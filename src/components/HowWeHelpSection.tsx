@@ -1,62 +1,181 @@
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 import circleImg from '@/assets/element-circle.png';
 import diamondImg from '@/assets/element-diamond.png';
 import starImg from '@/assets/element-star.png';
+import ariaImg from '@/assets/aria-workflow.jpg';
 
-const services: {title: string;description: string;iconSrc: string;}[] = [
-{
-  title: 'AI Strategy & Planning',
-  description: 'We analyze your business operations and organizational context to design AI components that deliver measurable results. You get a comprehensive action plan grounded in your reality and mapped to your actual workflows, not generic best practices.',
-  iconSrc: diamondImg
-},
-{
-  title: 'AI Design & Implementation',
-  description: 'We dive deep into your workflows to build AI interventions that demonstrate real value in your current stack, or help you build an AI-ready foundation if you need one. Starting with focused pilots, we scale to entire products or business lines, regardless of your AI maturity or technical starting point.',
-  iconSrc: circleImg
-},
-{
-  title: 'AI Training & Enablement',
-  description: 'We develop tailored training for every level of your organization, from leadership workshops to frontline upskilling, delivered as in-person sessions, digital modules, or custom content that fits how your people learn.',
-  iconSrc: starImg
-}];
+type Service = {
+  title: string;
+  audience: string;
+  description: string;
+  ctaLabel: string;
+  to?: string;
+  scrollToContact?: boolean;
+  iconSrc: string;
+};
 
+const services: Service[] = [
+  {
+    title: 'Human-Centred AI Transformation Sprint',
+    audience: 'For organizations that need a full AI strategy, roadmap, and business case.',
+    description:
+      'A guided strategy sprint to identify opportunities, prioritize use cases, map workflows, build the business case, and leave with an executive-ready AI transformation plan.',
+    ctaLabel: 'Explore the Transformation Sprint',
+    to: '/services',
+    iconSrc: diamondImg,
+  },
+  {
+    title: 'AI Strategy Advisory',
+    audience: 'For leaders making a specific AI decision or advancing an in-flight initiative.',
+    description:
+      'Focused support for vendor decisions, pilot evaluation, business case development, roadmap refinement, or strategic guidance on what to do next.',
+    ctaLabel: 'Book a Strategy Call',
+    scrollToContact: true,
+    iconSrc: circleImg,
+  },
+  {
+    title: 'Leading Through AI',
+    audience:
+      'For organizations where adoption, trust, resistance, or role change could block success.',
+    description:
+      'Practical support for the human side of AI transformation, including role evolution, communication, adoption readiness, leadership alignment, and change planning.',
+    ctaLabel: 'Explore Change Support',
+    to: '/services',
+    iconSrc: starImg,
+  },
+  {
+    title: 'AI Courses & Leadership Programs',
+    audience:
+      'For teams that need practical AI fluency before or alongside transformation work.',
+    description:
+      "Live courses, private workshops, and partner-delivered programs for leaders and professional teams who need to understand AI's risks, opportunities, and business implications.",
+    ctaLabel: 'View Courses',
+    to: '/courses',
+    iconSrc: diamondImg,
+  },
+];
 
 export const HowWeHelpSection = () => {
+  const scrollToContact = () => {
+    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="py-24 px-6 help-gradient-purple animate-gradient-shift">
       <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <div className="text-center mb-16 space-y-4 animate-fade-in">
-          <h2 className="text-foreground">
+          <p className="text-sm md:text-base font-semibold uppercase tracking-wide text-primary">
             How We Help
+          </p>
+          <h2 className="text-foreground">
+            Start where you are. Build toward measurable AI impact.
           </h2>
-          <p className="text-xl max-w-3xl mx-auto text-gray-800">
-            We meet you where you are and design AI that fits your business reality.
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-800">
+            Whether you are just starting with AI, testing tools, building a business case, or trying to move beyond a stalled pilot, Nucleations helps you choose the right next step and turn it into a practical path forward.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) =>
-          <div
-            key={index}
-            className="rounded-2xl p-8 border-2 transition-all duration-300 hover:-translate-y-1 animate-fade-in bg-card border-secondary/20 shadow-soft hover:shadow-elegant"
-            style={{ animationDelay: `${index * 0.1}s` }}>
-            
-              <div className="inline-flex p-3 rounded-xl mb-6 bg-background">
-                <img
-                src={service.iconSrc}
-                alt=""
-                style={{ width: '37px', height: '37px' }} />
-              
+        {/* Featured ARIA card */}
+        <div className="bg-card rounded-3xl shadow-elegant border-2 border-primary/30 overflow-hidden mb-12 animate-fade-in">
+          <div className="grid lg:grid-cols-2 gap-0">
+            <div className="p-8 md:p-12 flex flex-col justify-center space-y-5">
+              <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full">
+                Featured
+              </span>
+              <h3 className="text-foreground">ARIA Workflow-to-Value Workshop</h3>
+              <p className="text-lg font-semibold text-primary">
+                Not sure where AI belongs? Start with one workflow.
+              </p>
+              <div className="space-y-4 text-gray-800 leading-relaxed">
+                <p>
+                  ARIA helps your team map one priority workflow, identify where AI can create real value, and use the Nucleations IMPACT Model to shape a credible business case for investment.
+                </p>
+                <p>
+                  You leave with clarity on what should be automated or augmented, where human judgment and accountability matter most, and whether the opportunity is worth pursuing.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">
+              <div className="pt-2">
+                <Button
+                  asChild
+                  size="lg"
+                  className="rounded-full shadow-soft hover:shadow-elegant transition-all"
+                >
+                  <Link to="/aria">Try the ARIA Workflow Mapping Tool</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-primary/10 to-secondary/20 flex items-center justify-center p-6 min-h-[280px]">
+              <img
+                src={ariaImg}
+                alt="ARIA workflow mapping illustration"
+                loading="lazy"
+                width={1024}
+                height={768}
+                className="w-full h-full object-contain max-h-[420px] rounded-2xl"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Service cards */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="rounded-2xl p-8 border-2 transition-all duration-300 hover:-translate-y-1 animate-fade-in bg-card border-secondary/20 shadow-soft hover:shadow-elegant flex flex-col"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="inline-flex p-3 rounded-xl mb-6 bg-background self-start">
+                <img
+                  src={service.iconSrc}
+                  alt=""
+                  style={{ width: '37px', height: '37px' }}
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-foreground">
                 {service.title}
               </h3>
-              <p className="leading-relaxed text-gray-800">
+              <p className="text-sm font-semibold text-primary mb-4">
+                {service.audience}
+              </p>
+              <p className="leading-relaxed text-gray-800 mb-6 flex-grow">
                 {service.description}
               </p>
+              <div>
+                {service.scrollToContact ? (
+                  <Button
+                    onClick={scrollToContact}
+                    variant="outline"
+                    className="rounded-xl"
+                  >
+                    {service.ctaLabel} →
+                  </Button>
+                ) : (
+                  <Button asChild variant="outline" className="rounded-xl">
+                    <Link to={service.to!}>{service.ctaLabel} →</Link>
+                  </Button>
+                )}
+              </div>
             </div>
-          )}
+          ))}
+        </div>
+
+        {/* CTA strip */}
+        <div className="bg-card rounded-3xl p-8 md:p-10 shadow-elegant border-2 border-secondary/20 flex flex-col md:flex-row items-center justify-between gap-6 animate-fade-in">
+          <h3 className="text-foreground text-2xl md:text-3xl text-center md:text-left">
+            Not sure where to start?
+          </h3>
+          <Button
+            onClick={scrollToContact}
+            size="lg"
+            className="text-base md:text-lg px-8 py-6 rounded-full shadow-soft hover:shadow-elegant transition-all duration-300 hover:scale-105 shrink-0"
+          >
+            Book an AI Opportunity Call
+          </Button>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
