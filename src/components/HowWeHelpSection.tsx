@@ -119,32 +119,22 @@ export const HowWeHelpSection = () => {
           </div>
         </div>
 
-        {/* Service cards — 4 alternative designs (one per card) for review */}
+        {/* Service cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* Variant A — Numbered minimalist (Transformation Sprint) */}
-          {(() => {
-            const s = services[0];
+          {/* Variant B style — applied to first three services */}
+          {services.slice(0, 3).map((s, index) => {
+            const eyebrow =
+              s.title === 'AI Strategy Advisory'
+                ? 'Advisory'
+                : s.title === 'Leading Through AI'
+                ? 'Change'
+                : 'Strategy';
             return (
-              <div className="relative bg-card rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-fade-in flex flex-col border border-border">
-                <div className="flex items-baseline gap-4 mb-6">
-                  <span className="text-5xl font-bold text-primary/20 leading-none">01</span>
-                  <div className="h-px bg-border flex-1" />
-                </div>
-                <h3 className="text-2xl font-bold mb-3 text-foreground">{s.title}</h3>
-                <p className="text-sm font-semibold text-primary mb-4">{s.audience}</p>
-                <p className="leading-relaxed text-gray-800 mb-6 flex-grow">{s.description}</p>
-                <Button asChild variant="outline" className="rounded-xl self-start">
-                  <Link to={s.to!}>{s.ctaLabel} →</Link>
-                </Button>
-              </div>
-            );
-          })()}
-
-          {/* Variant B — Top accent bar + icon chip (AI Strategy Advisory) */}
-          {(() => {
-            const s = services[1];
-            return (
-              <div className="relative bg-card rounded-2xl shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-fade-in flex flex-col overflow-hidden">
+              <div
+                key={index}
+                className="relative bg-card rounded-2xl shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-fade-in flex flex-col overflow-hidden"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <div className="h-2 bg-gradient-to-r from-primary via-secondary to-accent" />
                 <div className="p-8 flex flex-col flex-grow">
                   <div className="flex items-center gap-3 mb-6">
@@ -152,43 +142,27 @@ export const HowWeHelpSection = () => {
                       <img src={s.iconSrc} alt="" style={{ width: '28px', height: '28px' }} />
                     </div>
                     <span className="text-xs font-bold uppercase tracking-wider text-primary">
-                      Advisory
+                      {eyebrow}
                     </span>
                   </div>
                   <h3 className="text-2xl font-bold mb-3 text-foreground">{s.title}</h3>
                   <p className="text-sm font-semibold text-primary mb-4">{s.audience}</p>
                   <p className="leading-relaxed text-gray-800 mb-6 flex-grow">{s.description}</p>
-                  <Button onClick={scrollToContact} variant="outline" className="rounded-xl self-start">
-                    {s.ctaLabel} →
-                  </Button>
+                  {s.scrollToContact ? (
+                    <Button onClick={scrollToContact} variant="outline" className="rounded-xl self-start">
+                      {s.ctaLabel} →
+                    </Button>
+                  ) : (
+                    <Button asChild variant="outline" className="rounded-xl self-start">
+                      <Link to={s.to!}>{s.ctaLabel} →</Link>
+                    </Button>
+                  )}
                 </div>
               </div>
             );
-          })()}
+          })}
 
-          {/* Variant C — Side-bar accent + icon left (Leading Through AI) */}
-          {(() => {
-            const s = services[2];
-            return (
-              <div className="relative bg-card rounded-2xl shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-fade-in flex overflow-hidden border-l-4 border-primary">
-                <div className="p-8 flex flex-col flex-grow">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="inline-flex p-3 rounded-xl bg-primary/10 shrink-0">
-                      <img src={s.iconSrc} alt="" style={{ width: '32px', height: '32px' }} />
-                    </div>
-                    <h3 className="text-2xl font-bold text-foreground leading-tight">{s.title}</h3>
-                  </div>
-                  <p className="text-sm font-semibold text-primary mb-4">{s.audience}</p>
-                  <p className="leading-relaxed text-gray-800 mb-6 flex-grow">{s.description}</p>
-                  <Button asChild className="rounded-full self-start shadow-soft hover:shadow-elegant">
-                    <Link to={s.to!}>{s.ctaLabel} →</Link>
-                  </Button>
-                </div>
-              </div>
-            );
-          })()}
-
-          {/* Variant D — Gradient background card (AI Courses & Leadership Programs) */}
+          {/* Variant D — gradient card for AI Courses & Leadership Programs */}
           {(() => {
             const s = services[3];
             return (
