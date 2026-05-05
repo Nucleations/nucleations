@@ -10,7 +10,7 @@ export const HeroSection = () => {
   const stats = [
     { value: '10%+', label: 'Revenue increase' },
     { value: '1.5x', label: 'Average products per client' },
-    { value: 'Human-led', label: 'Every client recommendation reviewed by a professional', valueClassName: 'text-2xl md:text-[1.75rem]' },
+    { value: 'Human-led', label: 'Every client recommendation reviewed by a professional', valueClassName: 'text-[1.2rem] md:text-[1.4rem]' },
   ];
 
   return (
