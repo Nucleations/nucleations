@@ -10,29 +10,39 @@ import starImg from '@/assets/element-star.png';
 
 const faqs = [
   {
-    question: 'Where do I even start with AI?',
-    answer: 'In our decades of experience, we\'ve learned that each organization starts from a different place: different data maturity, technology stack, AI familiarity, and industry context. Our goal is to enhance your organization with the right AI enablement for where you are today.\n\nTogether, we shape the right approach for your business. For some organizations, that means starting with bespoke leadership workshops on AI opportunity identification and integration. For others, it\'s pinpointing optimal opportunities and redesigning specific workflows with measurable outcomes. And for others, they are already primed for building and introducing new AI-enabled workflows.',
+    question: 'Do we need to know which AI tool we want before working with you?',
+    answer: 'No. In fact, we recommend starting before the tool decision. Our work helps you identify the right workflow, clarify the business case, and determine what kind of technology is actually needed.',
     icon: circleImg,
   },
   {
-    question: 'How disruptive is this to our day-to-day operations?',
-    answer: 'We take a light-touch, embedded approach focusing on minimal meetings, observation instead of new documentation, and working sessions with the right team members to progress quickly vs. pulling all team members in for every discussion.\n\nYour team should feel relief, not pressure. We adapt to how you work, not the other way around.',
+    question: 'What if we are already using AI tools?',
+    answer: 'That is common. Many organizations are experimenting with tools but have not connected them to measurable business value. We help assess what is working, where adoption is weak, and which workflows are worth redesigning.',
     icon: diamondImg,
   },
   {
-    question: 'What prerequisites do we need?',
-    answer: 'You don\'t need advanced tools or perfect data. AI does not require perfect systems.\n\nWe design solutions that work with what you have today and improve as you modernize naturally.',
+    question: 'What if we already ran a pilot and did not see impact?',
+    answer: 'A stalled pilot often means the workflow, adoption plan, business case, or governance model was not strong enough. We can help diagnose the gap and determine whether to improve, reposition, or stop the initiative.',
     icon: starImg,
   },
   {
-    question: 'Can you help us navigate privacy and risk?',
-    answer: 'Yes. We embed practical safeguards from the start: how data is handled, who reviews outputs, what guardrails are needed, and how to document decisions and create auditability. Risk management isn\'t an afterthought; it\'s built into the design.',
+    question: 'Who should be involved from our organization?',
+    answer: 'The right group depends on the workflow. Typically, we involve a business sponsor, operational leaders, people close to the day-to-day work, and anyone accountable for technology, risk, or change.',
     icon: circleImg,
   },
   {
-    question: 'Will AI replace my people or change how I hire?',
-    answer: 'AI helps reduce burnout, clear bottlenecks, avoid unnecessary hiring, and improve quality and consistency. Ultimately, it augments your people, helping boost their capacity to spend more time on the activities requiring their valuable judgment and experience. AI becomes a force multiplier.',
+    question: 'Do you implement AI tools?',
+    answer: 'We help define what should be implemented, how the workflow should change, and what conditions are required for success. Depending on the engagement, we may support implementation planning, vendor evaluation, pilot design, and delivery partnerships.',
     icon: diamondImg,
+  },
+  {
+    question: 'How is Nucleations different from a SaaS vendor?',
+    answer: 'SaaS vendors show what their tools can do. We help you decide what your organization should do. Our work comes before or alongside tool selection, so AI investments are tied to real workflows, business value, adoption, and accountability.',
+    icon: starImg,
+  },
+  {
+    question: 'Can you train our team while helping us build the strategy?',
+    answer: 'Yes. Capability transfer is central to our approach. We teach the frameworks as we apply them, so your team can continue identifying and evaluating future AI opportunities independently.',
+    icon: circleImg,
   },
 ];
 
@@ -41,7 +51,7 @@ export const FAQSection = () => {
     <section className="py-24 px-6 opportunity-gradient animate-gradient-shift">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-foreground text-center mb-16 animate-fade-in">
-          FAQs
+          Questions leaders ask before starting with AI
         </h2>
 
         <Accordion type="single" collapsible className="space-y-4">

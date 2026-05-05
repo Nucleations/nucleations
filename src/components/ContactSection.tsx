@@ -14,14 +14,42 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { toast } from 'sonner';
 import logoOutline from '@/assets/nucleations-logo-outline.png';
 
+const describeOptions = [
+  'We are just starting with AI',
+  'We are using AI tools but not seeing business impact',
+  'We have a pilot and need a business case',
+  'We need AI training for our team',
+  'We are interested in ARIA',
+  'We are interested in partnership',
+  'Other',
+] as const;
+
+const nextStepOptions = [
+  'Book a call',
+  'Send me the ARIA Workflow Check',
+  'Tell me about courses',
+  'Discuss a partnership',
+] as const;
+
 const formSchema = z.object({
-  fullName: z.string().trim().min(1, 'Full name is required').max(100, 'Name must be less than 100 characters'),
-  email: z.string().trim().email('Invalid email address').max(255, 'Email must be less than 255 characters'),
-  company: z.string().trim().min(1, 'Company name is required').max(100, 'Company name must be less than 100 characters'),
-  message: z.string().trim().min(1, 'Message is required').max(1000, 'Message must be less than 1000 characters'),
+  name: z.string().trim().min(1, 'Name is required').max(100),
+  email: z.string().trim().email('Invalid email address').max(255),
+  organization: z.string().trim().min(1, 'Organization is required').max(100),
+  role: z.string().trim().max(100).optional(),
+  describe: z.enum(describeOptions, { required_error: 'Please select an option' }),
+  workflow: z.string().trim().max(1000).optional(),
+  nextStep: z.enum(nextStepOptions, { required_error: 'Please select a next step' }),
+  message: z.string().trim().max(1000).optional(),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -33,37 +61,35 @@ export const ContactSection = () => {
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      fullName: '',
+      name: '',
       email: '',
-      company: '',
+      organization: '',
+      role: '',
+      workflow: '',
       message: '',
     },
   });
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    
     try {
-      // Prepare mailto link with form data
-      const subject = encodeURIComponent(`New Contact Form Submission from ${data.fullName}`);
+      const subject = encodeURIComponent('New Nucleations Website Inquiry');
       const body = encodeURIComponent(
-        `Full Name: ${data.fullName}\n` +
+        `Name: ${data.name}\n` +
         `Email: ${data.email}\n` +
-        `Company: ${data.company}\n\n` +
-        `Message:\n${data.message}`
+        `Organization: ${data.organization}\n` +
+        `Role / Title: ${data.role || '-'}\n\n` +
+        `What best describes you?\n${data.describe}\n\n` +
+        `Workflow or business area:\n${data.workflow || '-'}\n\n` +
+        `Preferred next step:\n${data.nextStep}\n\n` +
+        `Message:\n${data.message || '-'}`
       );
-      
-      const mailtoLink = `mailto:vanessa@nucleations.com?subject=${subject}&body=${body}`;
-      
-      // Open mailto link
-      window.location.href = mailtoLink;
-      
-      // Show success state
+      window.location.href = `mailto:vanessa@nucleations.com?subject=${subject}&body=${body}`;
       setIsSubmitted(true);
-      toast.success('Thank you! Your message has been sent. We will get back to you shortly.');
+      toast.success("Thank you. We'll review your response and follow up with the most relevant next step.");
       form.reset();
-    } catch (error) {
-      toast.error('Something went wrong. Please try again or email us directly at info@nucleations.com');
+    } catch {
+      toast.error('Something went wrong. Please email us directly at vanessa@nucleations.com');
     } finally {
       setIsSubmitting(false);
     }
@@ -74,147 +100,204 @@ export const ContactSection = () => {
       id="contact-section"
       className="py-24 px-6 bg-gradient-to-br from-secondary/20 via-accent/10 to-primary/10 relative overflow-hidden"
     >
-      {/* Subtle particle accents */}
       <div className="absolute top-20 left-10 w-8 h-8 bg-secondary/20 rounded-full blur-xl" aria-hidden="true" />
       <div className="absolute bottom-20 right-10 w-12 h-12 bg-accent/20 rounded-full blur-xl" aria-hidden="true" />
-      
-      <div className="max-w-2xl mx-auto relative z-10">
-        {/* Alternative logo treatment */}
-        <div className="text-center mb-12 animate-fade-in">
-          <img
-            src={logoOutline}
-            alt="Nucleations"
-            className="w-24 h-24 mx-auto mb-8 opacity-80"
-          />
-          
-          <h2 className="text-foreground mb-6">
-            Ready to Unlock Your AI Advantage?
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Book a 30-minute intro call to discuss how we can help you accelerate your AI journey.
-          </p>
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Left: CTA copy */}
+          <div className="animate-fade-in lg:sticky lg:top-24">
+            <img
+              src={logoOutline}
+              alt="Nucleations"
+              className="w-20 h-20 mb-8 opacity-80"
+            />
+            <h2 className="text-foreground mb-6">
+              Ready to move from AI experimentation to business impact?
+            </h2>
+            <p className="text-xl text-muted-foreground mb-6">
+              Whether you are just starting, already testing tools, or trying to rescue a stalled pilot, Nucleations can help you identify the right next step.
+            </p>
+            <p className="text-base text-muted-foreground">
+              Tell us where you are in your AI journey, and we'll help determine the best way to move forward.
+            </p>
+          </div>
+
+          {/* Right: Form */}
+          <div>
+            {isSubmitted ? (
+              <div className="bg-card/80 backdrop-blur-sm rounded-3xl p-12 shadow-elegant text-center space-y-6 animate-fade-in">
+                <div className="w-16 h-16 mx-auto bg-accent rounded-full flex items-center justify-center">
+                  <svg className="w-8 h-8 text-accent-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">Thank You!</h3>
+                <p className="text-muted-foreground">
+                  We'll review your response and follow up with the most relevant next step.
+                </p>
+                <Button onClick={() => setIsSubmitted(false)} variant="outline" className="mt-4">
+                  Send Another Inquiry
+                </Button>
+              </div>
+            ) : (
+              <div className="bg-card/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-elegant animate-fade-in">
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-foreground font-semibold">Name *</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Your name" className="rounded-xl border-2 focus:border-primary" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-foreground font-semibold">Email *</FormLabel>
+                          <FormControl>
+                            <Input type="email" placeholder="your.email@company.com" className="rounded-xl border-2 focus:border-primary" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="organization"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-foreground font-semibold">Organization *</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Your organization" className="rounded-xl border-2 focus:border-primary" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="role"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-foreground font-semibold">Role / Title</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Your role or title" className="rounded-xl border-2 focus:border-primary" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="describe"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-foreground font-semibold">What best describes you? *</FormLabel>
+                          <Select onValueChange={field.onChange} value={field.value}>
+                            <FormControl>
+                              <SelectTrigger className="rounded-xl border-2 focus:border-primary">
+                                <SelectValue placeholder="Select an option" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              {describeOptions.map((opt) => (
+                                <SelectItem key={opt} value={opt}>{opt}</SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="workflow"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-foreground font-semibold">What workflow or business area are you thinking about?</FormLabel>
+                          <FormControl>
+                            <Textarea
+                              placeholder="Example: client onboarding, document review, reporting, finance operations, customer support, sales enablement, internal knowledge management"
+                              className="rounded-xl border-2 focus:border-primary min-h-24 resize-none"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="nextStep"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-foreground font-semibold">Preferred next step *</FormLabel>
+                          <Select onValueChange={field.onChange} value={field.value}>
+                            <FormControl>
+                              <SelectTrigger className="rounded-xl border-2 focus:border-primary">
+                                <SelectValue placeholder="Select a next step" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              {nextStepOptions.map((opt) => (
+                                <SelectItem key={opt} value={opt}>{opt}</SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-foreground font-semibold">Message</FormLabel>
+                          <FormControl>
+                            <Textarea
+                              placeholder="Tell us anything else that would help us understand your goals, current AI activity, or where you feel stuck."
+                              className="rounded-xl border-2 focus:border-primary min-h-28 resize-none"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full text-lg py-6 rounded-xl shadow-soft hover:shadow-elegant transition-all duration-300"
+                      size="lg"
+                    >
+                      {isSubmitting ? 'Sending...' : 'Send Inquiry'}
+                    </Button>
+                  </form>
+                </Form>
+              </div>
+            )}
+          </div>
         </div>
 
-        {isSubmitted ? (
-          <div className="bg-card/80 backdrop-blur-sm rounded-3xl p-12 shadow-elegant text-center space-y-6 animate-fade-in">
-            <div className="w-16 h-16 mx-auto bg-accent rounded-full flex items-center justify-center">
-              <svg
-                className="w-8 h-8 text-accent-foreground"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold text-foreground">Thank You!</h3>
-            <p className="text-muted-foreground">
-              Your message has been sent. We will get back to you shortly.
-            </p>
-            <Button
-              onClick={() => setIsSubmitted(false)}
-              variant="outline"
-              className="mt-4"
-            >
-              Send Another Message
-            </Button>
-          </div>
-        ) : (
-          <div className="bg-card/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-elegant animate-fade-in">
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="fullName"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground font-semibold">Full Name *</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="Your full name"
-                          className="rounded-xl border-2 focus:border-primary"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground font-semibold">Email *</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="email"
-                          placeholder="your.email@company.com"
-                          className="rounded-xl border-2 focus:border-primary"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="company"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground font-semibold">Company *</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="Your company name"
-                          className="rounded-xl border-2 focus:border-primary"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground font-semibold">How can we help? *</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder="Tell us about your AI needs and goals..."
-                          className="rounded-xl border-2 focus:border-primary min-h-32 resize-none"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full text-lg py-6 rounded-xl shadow-soft hover:shadow-elegant transition-all duration-300"
-                  size="lg"
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </Button>
-              </form>
-            </Form>
-          </div>
-        )}
-
-        <div className="flex flex-col items-center gap-3 mt-12 text-xs md:text-sm text-muted-foreground">
+        <div className="flex flex-col items-center gap-3 mt-16 text-xs md:text-sm text-muted-foreground">
           <div className="flex flex-wrap items-center justify-center gap-x-2">
             <span>Industries: Small & Medium Business</span>
             <Link to="/accounting" className="hover:text-primary transition-colors">Accounting</Link>
