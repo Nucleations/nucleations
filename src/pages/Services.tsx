@@ -6,6 +6,7 @@ import { PartnerSection } from '@/components/PartnerSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Button } from '@/components/ui/button';
 import ariaWorkshopImage from '@/assets/aria-onboarding-workflow.png';
+import leadingChangeImage from '@/assets/leading-through-ai-change.png';
 
 const scrollToContact = (e?: React.MouseEvent) => {
   e?.preventDefault();
