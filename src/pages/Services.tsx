@@ -234,7 +234,7 @@ const Services = () => {
           >
             <div className="pt-2">
               <h4 className="text-lg font-bold text-foreground mb-4">Examples include</h4>
-              <ul className="space-y-2">
+              <ul className="space-y-2 pl-5 list-disc marker:text-primary">
                 {advisoryExamples.map((ex) => (
                   <li key={ex} className="text-gray-800 leading-relaxed">
                     {ex}
