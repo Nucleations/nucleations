@@ -103,48 +103,28 @@ const Services = () => {
           <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
             Nucleations helps organizations move from AI uncertainty to practical, measurable transformation. Whether you need a full roadmap, a business case, change support, or targeted advisory, our work is designed to transfer capability — not create dependency.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 pt-2 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="text-base md:text-lg px-8 py-6 rounded-full shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
-            >
-              <a href="#contact-section" onClick={scrollToContact}>Book an AI Opportunity Call</a>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="text-base md:text-lg px-8 py-6 rounded-full border-2"
-            >
-              <Link to="/aria">Explore ARIA</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
 
-      {/* SECTION 2: CAPABILITY TRANSFER MESSAGE */}
-      <section className="py-20 px-6 bg-background">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-card rounded-3xl shadow-elegant border-2 border-primary/20 overflow-hidden animate-fade-in">
-            <div className="grid lg:grid-cols-5 gap-0">
-              <div className="lg:col-span-2 bg-gradient-to-br from-primary/10 via-secondary/15 to-accent/10 p-8 md:p-12 flex flex-col justify-center">
-                <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full mb-4">
-                  Capability Transfer
-                </span>
-                <h2 className="text-foreground text-3xl md:text-4xl font-bold leading-tight">
-                  We don't just deliver the strategy. We teach the method.
-                </h2>
-              </div>
-              <div className="lg:col-span-3 p-8 md:p-12 flex items-center">
-                <p className="text-lg text-gray-800 leading-relaxed">
-                  Every Nucleations engagement pairs strategic delivery with practical learning. We share our frameworks, methods, and decision tools as we work, so your team leaves with more than a plan — they leave with the confidence and capability to lead the next AI initiative.
-                </p>
+          <div className="pt-8 max-w-5xl mx-auto text-left">
+            <div className="bg-card rounded-3xl shadow-elegant border-2 border-primary/20 overflow-hidden">
+              <div className="grid lg:grid-cols-5 gap-0">
+                <div className="lg:col-span-2 bg-gradient-to-br from-primary/10 via-secondary/15 to-accent/10 p-8 md:p-12 flex flex-col justify-center">
+                  <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full mb-4">
+                    Capability Transfer
+                  </span>
+                  <h2 className="text-foreground text-3xl md:text-4xl font-bold leading-tight">
+                    We don't just deliver the strategy. We teach the method.
+                  </h2>
+                </div>
+                <div className="lg:col-span-3 p-8 md:p-12 flex items-center">
+                  <p className="text-lg text-gray-800 leading-relaxed">
+                    Every Nucleations engagement pairs strategic delivery with practical learning. We share our frameworks, methods, and decision tools as we work, so your team leaves with more than a plan — they leave with the confidence and capability to lead the next AI initiative.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </header>
 
       {/* SECTIONS 3–6: SERVICES */}
       <section className="py-24 px-6 help-gradient-purple animate-gradient-shift">
