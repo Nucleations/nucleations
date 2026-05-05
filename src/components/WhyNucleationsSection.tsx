@@ -23,7 +23,7 @@ export const WhyNucleationsSection = () => {
             Why Human-Centred AI
           </p>
           <h2 className="text-foreground">
-            AI value does not come from tools alone. It comes from redesigning how work gets done.
+            AI value does not come from tools alone.<br />It comes from redesigning how work gets done.
           </h2>
         </div>
 
