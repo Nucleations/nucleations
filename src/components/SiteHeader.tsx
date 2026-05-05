@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logo from '@/assets/nucleations-main-logo-1.png';
+import logo from '@/assets/nucleations-main-logo-2.png';
 
 const navLinks = [
   { label: 'ARIA', to: '/aria' },
