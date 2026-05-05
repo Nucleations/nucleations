@@ -141,7 +141,7 @@ const Services = () => {
             bestFor="Organizations that may start with a single use case but are ready to define their broader AI direction. Ideal for leaders starting their AI journey, or those who have stalled and need a structured path from initial use case to prioritized roadmap."
             ctaLabel="Explore the Transformation Program"
           >
-            <div className="grid md:grid-cols-2 gap-6 items-center">
+            <div className="grid md:grid-cols-[3fr_2fr] gap-10 items-center">
               <div className="space-y-4 text-gray-800 leading-relaxed">
                 <p>A four-week design sprint that turns AI ambition into an investment-ready transformation plan.</p>
                 <p>Leadership teams move from opportunity identification to workflow redesign, business case development, pilot planning, and roadmap creation. The result is a fully scoped AI transformation plan with a clear path into execution.</p>
