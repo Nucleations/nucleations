@@ -363,11 +363,6 @@ const Aria = () => {
               </div>
             ))}
           </div>
-
-          <Placeholder
-            className="min-h-[300px] md:min-h-[380px]"
-            label="Current state vs future state ARIA map with lanes for actions, decisions, roles, burden, AI opportunity, and role evolution."
-          />
         </div>
       </section>
 
