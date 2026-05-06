@@ -297,10 +297,14 @@ const Aria = () => {
               </Button>
             </div>
           </div>
-          <Placeholder
-            className="min-h-[360px] lg:min-h-[460px]"
-            label="ARIA workflow intelligence dashboard showing current state, future state, burden scores, AI opportunities, and role evolution."
-          />
+          <div className="rounded-3xl overflow-hidden shadow-elegant border-2 border-secondary/20 bg-card animate-fade-in">
+            <img
+              src={ariaSample}
+              alt="ARIA workflow intelligence sample showing lanes for actions, decisions, roles, burden index, and AI opportunities"
+              loading="lazy"
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
       </section>
 
