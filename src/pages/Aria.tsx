@@ -512,7 +512,7 @@ const Aria = () => {
                   <h3 className="text-2xl font-bold text-foreground mb-3">{c.title}</h3>
                   <p className="text-foreground/75 leading-relaxed mb-6 flex-grow">{c.body}</p>
                   <Button asChild variant="outline" className="rounded-xl self-start">
-                    <Link to="/services">Learn more \u2192</Link>
+                    <Link to="/services">Learn more</Link>
                   </Button>
                 </div>
               </div>
