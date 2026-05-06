@@ -485,28 +485,6 @@ const Aria = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 px-6 hero-gradient-green animate-gradient-shift">
-        <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
-          <h2 className="text-foreground">Stop Guessing Where AI Fits.</h2>
-          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
-            ARIA makes workflows visible, measurable, and actionable, helping organizations
-            implement AI with clarity, accountability, and human-centred design.
-          </p>
-          <div className="pt-2">
-            <Button
-              asChild
-              size="lg"
-              className="text-base md:text-lg px-8 py-6 rounded-full shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
-            >
-              <a href="#early-access" onClick={scrollToEarlyAccess}>
-                Request Early Access
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       <ContactSection />
     </main>
   );
