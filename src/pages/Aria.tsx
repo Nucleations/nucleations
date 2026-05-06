@@ -345,7 +345,7 @@ const Aria = () => {
             <p className="text-sm font-semibold uppercase tracking-wide text-primary">
               Why Traditional Workflow Mapping Falls Short
             </p>
-            <h2 className="text-foreground">Process maps weren\u2019t built for AI</h2>
+            <h2 className="text-foreground">Process maps weren't built for AI</h2>
             <p className="text-lg text-gray-800">
               Traditional process maps show steps, systems, handoffs, and timelines. They rarely
               reveal decision complexity, emotional labour, operational burden, AI governance
