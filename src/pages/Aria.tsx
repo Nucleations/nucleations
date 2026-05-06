@@ -338,42 +338,6 @@ const Aria = () => {
         </div>
       </section>
 
-      {/* Why traditional mapping falls short */}
-      <section className="py-24 px-6 help-gradient-purple animate-gradient-shift">
-        <div className="max-w-5xl mx-auto space-y-10">
-          <div className="text-center space-y-4 animate-fade-in max-w-3xl mx-auto">
-            <p className="text-sm font-semibold uppercase tracking-wide text-primary">
-              Why Traditional Workflow Mapping Falls Short
-            </p>
-            <h2 className="text-foreground">Process maps weren't built for AI</h2>
-            <p className="text-lg text-gray-800">
-              Traditional process maps show steps, systems, handoffs, and timelines. They rarely
-              reveal decision complexity, emotional labour, operational burden, AI governance
-              needs, or how roles evolve when AI changes the work.
-            </p>
-          </div>
-
-          <div className="bg-card rounded-3xl shadow-elegant border-2 border-primary/20 overflow-hidden animate-fade-in">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="text-foreground font-bold text-base">Traditional Mapping</TableHead>
-                  <TableHead className="text-primary font-bold text-base">ARIA</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {comparisonRows.map(([a, b]) => (
-                  <TableRow key={a}>
-                    <TableCell className="text-foreground/80">{a}</TableCell>
-                    <TableCell className="text-foreground font-medium">{b}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </div>
-        </div>
-      </section>
-
       {/* What makes ARIA different */}
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto space-y-12">
