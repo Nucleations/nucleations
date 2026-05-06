@@ -275,7 +275,7 @@ const Aria = () => {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
             <p className="text-sm md:text-base font-semibold uppercase tracking-wide text-primary">
-              ARIA \u2014 Workflow Intelligence Platform
+              ARIA Workflow Intelligence Platform
             </p>
             <h1 className="text-foreground text-4xl md:text-5xl lg:text-6xl text-balance">
               ARIA: Workflow Intelligence for Human-Centred AI Transformation
