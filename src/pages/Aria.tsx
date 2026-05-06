@@ -452,8 +452,8 @@ const Aria = () => {
           </div>
 
           <p className="text-lg text-foreground/75 max-w-2xl mx-auto italic">
-            Especially for organizations asking: \u201CHow do we introduce AI responsibly and
-            practically into real workflows?\u201D
+            Especially for organizations asking: How do we introduce AI responsibly and
+            practically into real workflows?
           </p>
         </div>
       </section>
