@@ -41,7 +41,7 @@ const services: Service[] = [
     description:
       'Practical support for the human side of AI transformation, including role evolution, communication, adoption readiness, leadership alignment, and change planning.',
     ctaLabel: 'Explore Change Support',
-    to: '/services',
+    to: '/services#change-and-adoption',
     iconSrc: starImg,
   },
   {
