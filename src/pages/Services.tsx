@@ -176,6 +176,7 @@ const Services = () => {
               </div>
             </div>
           </ServiceBlock>
+          </div>
 
           {/* SECTION 4: ARIA — Signature treatment */}
           <div className="bg-card rounded-3xl shadow-elegant border-2 border-primary/30 overflow-hidden animate-fade-in">
