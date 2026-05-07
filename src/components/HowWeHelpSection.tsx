@@ -22,7 +22,7 @@ const services: Service[] = [
     description:
       'A guided strategy sprint to identify opportunities, prioritize use cases, map workflows, build the business case, and leave with an executive-ready AI transformation plan.',
     ctaLabel: 'Explore the Transformation Sprint',
-    to: '/services',
+    to: '/services#flagship-program',
     iconSrc: diamondImg,
   },
   {
@@ -41,7 +41,7 @@ const services: Service[] = [
     description:
       'Practical support for the human side of AI transformation, including role evolution, communication, adoption readiness, leadership alignment, and change planning.',
     ctaLabel: 'Explore Change Support',
-    to: '/services',
+    to: '/services#change-and-adoption',
     iconSrc: starImg,
   },
   {

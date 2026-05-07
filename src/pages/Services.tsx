@@ -133,6 +133,7 @@ const Services = () => {
       <section className="py-24 px-6 help-gradient-purple animate-gradient-shift">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* SECTION 3: HUMAN-CENTRED AI TRANSFORMATION PROGRAM */}
+          <div id="flagship-program" className="scroll-mt-24">
           <ServiceBlock
             eyebrow="Flagship Program"
             title="Human-Centred AI Transformation Program"
@@ -175,6 +176,7 @@ const Services = () => {
               </div>
             </div>
           </ServiceBlock>
+          </div>
 
           {/* SECTION 4: ARIA — Signature treatment */}
           <div className="bg-card rounded-3xl shadow-elegant border-2 border-primary/30 overflow-hidden animate-fade-in">
@@ -221,7 +223,7 @@ const Services = () => {
           </div>
 
           {/* SECTION 5: LEADING THROUGH AI */}
-          <div className="bg-card rounded-3xl shadow-soft hover:shadow-elegant transition-all duration-300 overflow-hidden animate-fade-in">
+          <div id="change-and-adoption" className="bg-card rounded-3xl shadow-soft hover:shadow-elegant transition-all duration-300 overflow-hidden animate-fade-in scroll-mt-24">
             <div className="h-2 bg-gradient-to-r from-primary via-secondary to-accent" />
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="bg-gradient-to-br from-primary/10 to-secondary/20 flex items-center justify-center p-8 min-h-[320px]">
