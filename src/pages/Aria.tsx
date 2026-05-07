@@ -138,7 +138,7 @@ const burdenScores: { acronym: string; label: string; score: number; colorClass:
 ];
 
 const BurdenIndexGraphic = () => (
-  <div className="mt-6 rounded-xl border-2 border-secondary/20 bg-background/40 p-5">
+  <div className="rounded-xl border-2 border-secondary/20 bg-background/40 p-5">
     <div className="space-y-4">
       {burdenScores.map((b) => (
         <div key={b.acronym} className="grid grid-cols-[auto,1fr,auto] items-center gap-4">
@@ -394,7 +394,7 @@ const Aria = () => {
                 <div
                   key={d.title}
                   className={`bg-card rounded-2xl p-7 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-2 border-secondary/20 animate-fade-in ${
-                    isBurden ? 'lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 items-center' : 'flex flex-col'
+                    isBurden ? 'lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 items-start' : 'flex flex-col'
                   }`}
                   style={{ animationDelay: `${i * 0.05}s` }}
                 >
