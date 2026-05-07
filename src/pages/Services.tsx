@@ -133,6 +133,7 @@ const Services = () => {
       <section className="py-24 px-6 help-gradient-purple animate-gradient-shift">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* SECTION 3: HUMAN-CENTRED AI TRANSFORMATION PROGRAM */}
+          <div id="flagship-program" className="scroll-mt-24">
           <ServiceBlock
             eyebrow="Flagship Program"
             title="Human-Centred AI Transformation Program"
