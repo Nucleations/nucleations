@@ -151,9 +151,13 @@ const EarlyAccessForm = () => {
           `Role: ${data.role}\n\n` +
           `Workflow they want to transform:\n${data.message || '-'}`
       );
-      window.location.href = `mailto:vanessa@nucleations.com?subject=${subject}&body=${body}`;
+      const mailtoUrl = `mailto:vanessa@nucleations.com?subject=${subject}&body=${body}`;
+      const opened = window.open(mailtoUrl, '_self');
+      if (!opened) {
+        window.location.href = mailtoUrl;
+      }
       setIsSubmitted(true);
-      toast.success('Thanks! We\u2019ll be in touch about ARIA early access.');
+      toast.success('Your email client should open. If it doesn\u2019t, please email vanessa@nucleations.com directly.');
       form.reset();
     } catch {
       toast.error('Something went wrong. Please email vanessa@nucleations.com');
