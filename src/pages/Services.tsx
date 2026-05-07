@@ -223,7 +223,7 @@ const Services = () => {
           </div>
 
           {/* SECTION 5: LEADING THROUGH AI */}
-          <div className="bg-card rounded-3xl shadow-soft hover:shadow-elegant transition-all duration-300 overflow-hidden animate-fade-in">
+          <div id="change-and-adoption" className="bg-card rounded-3xl shadow-soft hover:shadow-elegant transition-all duration-300 overflow-hidden animate-fade-in scroll-mt-24">
             <div className="h-2 bg-gradient-to-r from-primary via-secondary to-accent" />
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="bg-gradient-to-br from-primary/10 to-secondary/20 flex items-center justify-center p-8 min-h-[320px]">
