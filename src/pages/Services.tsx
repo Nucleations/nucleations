@@ -179,7 +179,7 @@ const Services = () => {
           </div>
 
           {/* SECTION 4: ARIA — Signature treatment */}
-          <div className="bg-card rounded-3xl shadow-elegant border-2 border-primary/30 overflow-hidden animate-fade-in">
+          <div id="aria-workshop" className="bg-card rounded-3xl shadow-elegant border-2 border-primary/30 overflow-hidden animate-fade-in scroll-mt-24">
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="p-8 md:p-12 flex flex-col justify-center space-y-6">
                 <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full">
