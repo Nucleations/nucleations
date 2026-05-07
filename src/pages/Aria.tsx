@@ -171,7 +171,7 @@ const EarlyAccessForm = () => {
       <div className="bg-card/80 backdrop-blur-sm rounded-3xl p-12 shadow-elegant text-center space-y-6 animate-fade-in">
         <h3 className="text-2xl font-bold text-foreground">Request received</h3>
         <p className="text-muted-foreground">
-          We\u2019ll review your request and follow up about ARIA early access.
+          We will be in touch with you about ARIA early access.
         </p>
         <Button onClick={() => setIsSubmitted(false)} variant="outline">
           Submit another request
