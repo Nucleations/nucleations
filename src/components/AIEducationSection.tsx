@@ -36,7 +36,7 @@ export const AIEducationSection = () => {
               A practical on-demand session for accounting and finance professionals on AI use cases, risks, and responsible first steps.
             </p>
             <Button asChild variant="outline" className="rounded-xl self-start">
-              <Link to="/courses">Learn more →</Link>
+              <a href="https://www.gtaaccountantsnetwork.com/courses/getting-started-with-ai" target="_blank" rel="noopener noreferrer">Learn more →</a>
             </Button>
           </div>
 
@@ -57,7 +57,7 @@ export const AIEducationSection = () => {
               A strategic, non-technical seminar for accounting leaders moving beyond AI experiments toward responsible adoption and measurable impact.
             </p>
             <Button asChild variant="outline" className="rounded-xl self-start">
-              <Link to="/courses">Learn more →</Link>
+              <a href="https://pd.cpaontario.ca/seminars/beyond-the-tools-a-strategic-approach-to-ai-in-accounting/E003475.html" target="_blank" rel="noopener noreferrer">Learn more →</a>
             </Button>
           </div>
 
