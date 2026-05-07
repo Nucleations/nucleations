@@ -393,17 +393,31 @@ const Aria = () => {
               return (
                 <div
                   key={d.title}
-                  className={`bg-card rounded-2xl p-7 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-2 border-secondary/20 animate-fade-in flex flex-col ${
-                    isBurden ? 'lg:col-span-2' : ''
+                  className={`bg-card rounded-2xl p-7 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-2 border-secondary/20 animate-fade-in ${
+                    isBurden ? 'lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 items-center' : 'flex flex-col'
                   }`}
                   style={{ animationDelay: `${i * 0.05}s` }}
                 >
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary text-primary-foreground font-bold text-sm mb-4">
-                    {i + 1}
-                  </span>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{d.title}</h3>
-                  <p className="text-sm text-foreground/75 leading-relaxed">{d.body}</p>
-                  {isBurden && <BurdenIndexGraphic />}
+                  {isBurden ? (
+                    <>
+                      <div className="flex flex-col">
+                        <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary text-primary-foreground font-bold text-sm mb-4">
+                          {i + 1}
+                        </span>
+                        <h3 className="text-xl font-bold text-foreground mb-3">{d.title}</h3>
+                        <p className="text-sm text-foreground/75 leading-relaxed">{d.body}</p>
+                      </div>
+                      <BurdenIndexGraphic />
+                    </>
+                  ) : (
+                    <>
+                      <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary text-primary-foreground font-bold text-sm mb-4">
+                        {i + 1}
+                      </span>
+                      <h3 className="text-xl font-bold text-foreground mb-3">{d.title}</h3>
+                      <p className="text-sm text-foreground/75 leading-relaxed">{d.body}</p>
+                    </>
+                  )}
                 </div>
               );
             })}
