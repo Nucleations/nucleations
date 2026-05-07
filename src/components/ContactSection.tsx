@@ -84,9 +84,13 @@ export const ContactSection = () => {
         `Preferred next step:\n${data.nextStep}\n\n` +
         `Message:\n${data.message || '-'}`
       );
-      window.location.href = `mailto:vanessa@nucleations.com?subject=${subject}&body=${body}`;
+      const mailtoUrl = `mailto:vanessa@nucleations.com?subject=${subject}&body=${body}`;
+      const opened = window.open(mailtoUrl, '_self');
+      if (!opened) {
+        window.location.href = mailtoUrl;
+      }
       setIsSubmitted(true);
-      toast.success("Thank you. We'll review your response and follow up with the most relevant next step.");
+      toast.success("Your email client should open. If it doesn't, please email vanessa@nucleations.com directly.");
       form.reset();
     } catch {
       toast.error('Something went wrong. Please email us directly at vanessa@nucleations.com');
