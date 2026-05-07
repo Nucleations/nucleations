@@ -131,6 +131,36 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>;
 
+const burdenScores: { acronym: string; label: string; score: number; colorClass: string; textClass: string }[] = [
+  { acronym: 'CPL', label: 'Cognitive and Physical Load', score: 4, colorClass: 'bg-indigo-500', textClass: 'text-indigo-500' },
+  { acronym: 'SEW', label: 'Staff Emotional Weight', score: 5, colorClass: 'bg-emerald-600', textClass: 'text-emerald-600' },
+  { acronym: 'CEW', label: 'Customer Emotional Weight', score: 4, colorClass: 'bg-rose-600', textClass: 'text-rose-600' },
+];
+
+const BurdenIndexGraphic = () => (
+  <div className="mt-6 rounded-xl border-2 border-secondary/20 bg-background/40 p-5">
+    <div className="space-y-4">
+      {burdenScores.map((b) => (
+        <div key={b.acronym} className="grid grid-cols-[auto,1fr,auto] items-center gap-4">
+          <div className="min-w-0">
+            <div className={`font-bold text-sm ${b.textClass}`}>{b.acronym}</div>
+            <div className="text-[11px] text-foreground/60 leading-tight">{b.label}</div>
+          </div>
+          <div className="flex gap-1.5 justify-start">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <span
+                key={i}
+                className={`h-2.5 w-2.5 rounded-full ${i < b.score ? b.colorClass : 'bg-muted'}`}
+              />
+            ))}
+          </div>
+          <div className={`text-sm font-semibold ${b.textClass}`}>{b.score}/5</div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
 const EarlyAccessForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -358,19 +388,25 @@ const Aria = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {differentiators.map((d, i) => (
-              <div
-                key={d.title}
-                className="bg-card rounded-2xl p-7 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-2 border-secondary/20 animate-fade-in flex flex-col"
-                style={{ animationDelay: `${i * 0.05}s` }}
-              >
-                <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary text-primary-foreground font-bold text-sm mb-4">
-                  {i + 1}
-                </span>
-                <h3 className="text-xl font-bold text-foreground mb-3">{d.title}</h3>
-                <p className="text-sm text-foreground/75 leading-relaxed">{d.body}</p>
-              </div>
-            ))}
+            {differentiators.map((d, i) => {
+              const isBurden = d.title === 'Burden Index';
+              return (
+                <div
+                  key={d.title}
+                  className={`bg-card rounded-2xl p-7 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-2 border-secondary/20 animate-fade-in flex flex-col ${
+                    isBurden ? 'lg:col-span-2' : ''
+                  }`}
+                  style={{ animationDelay: `${i * 0.05}s` }}
+                >
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary text-primary-foreground font-bold text-sm mb-4">
+                    {i + 1}
+                  </span>
+                  <h3 className="text-xl font-bold text-foreground mb-3">{d.title}</h3>
+                  <p className="text-sm text-foreground/75 leading-relaxed">{d.body}</p>
+                  {isBurden && <BurdenIndexGraphic />}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
