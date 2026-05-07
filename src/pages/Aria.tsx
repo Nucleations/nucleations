@@ -464,10 +464,12 @@ const Aria = () => {
               {
                 title: 'Human-Centred AI Transformation Sprint',
                 body: 'A guided executive and operational transformation program focused on practical AI adoption.',
+                href: '/services#flagship-program',
               },
               {
                 title: 'ARIA Workflow-to-Value Workshop',
                 body: 'A hands-on workshop teaching teams how to map workflows, identify AI opportunities, and redesign operations using the ARIA framework.',
+                href: '/services#aria-workshop',
               },
             ].map((c, i) => (
               <div
@@ -480,7 +482,7 @@ const Aria = () => {
                   <h3 className="text-2xl font-bold text-foreground mb-3">{c.title}</h3>
                   <p className="text-foreground/75 leading-relaxed mb-6 flex-grow">{c.body}</p>
                   <Button asChild variant="outline" className="rounded-xl self-start">
-                    <Link to="/services">Learn more</Link>
+                    <Link to={c.href}>Learn more</Link>
                   </Button>
                 </div>
               </div>
