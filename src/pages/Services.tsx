@@ -205,9 +205,12 @@ const Services = () => {
                     Organizations looking to identify where AI can truly improve workflows through redesign, not just add-on tools. Ideal for teams not seeing results from existing AI tools, or leaders who need a strong business case to unlock investment.
                   </p>
                 </div>
-                <div className="pt-2">
+                <div className="pt-2 flex flex-wrap gap-3">
                   <Button asChild size="lg" className="rounded-full shadow-soft hover:shadow-elegant transition-all">
                     <Link to="/aria">Explore ARIA →</Link>
+                  </Button>
+                  <Button onClick={() => scrollToContact()} size="lg" variant="outline" className="rounded-full shadow-soft hover:shadow-elegant transition-all">
+                    Inquire about workshop →
                   </Button>
                 </div>
               </div>
