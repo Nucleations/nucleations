@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Aria from "./pages/Aria";
 import Services from "./pages/Services";
 import Courses from "./pages/Courses";
+import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/aria" element={<Aria />} />
           <Route path="/services" element={<Services />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

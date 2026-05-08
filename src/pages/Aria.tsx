@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { toast } from 'sonner';
+import { supabase } from '@/integrations/supabase/client';
 import ariaSample from '@/assets/aria-sample.png';
 
 import { SiteHeader } from '@/components/SiteHeader';
@@ -173,24 +174,47 @@ const EarlyAccessForm = () => {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      const subject = encodeURIComponent('ARIA Early Access Request');
-      const body = encodeURIComponent(
-        `Full Name: ${data.name}\n` +
-          `Work Email: ${data.email}\n` +
-          `Company: ${data.company}\n` +
-          `Role: ${data.role}\n\n` +
-          `Workflow they want to transform:\n${data.message || '-'}`
+      const submissionId = crypto.randomUUID();
+      const internalRecipients = ['vanessa@nucleations.com', 'info@nucleations.com'];
+
+      const internalSends = internalRecipients.map((to) =>
+        supabase.functions.invoke('send-transactional-email', {
+          body: {
+            templateName: 'aria-early-access-internal',
+            recipientEmail: to,
+            idempotencyKey: `aria-internal-${submissionId}-${to}`,
+            templateData: {
+              name: data.name,
+              email: data.email,
+              company: data.company,
+              role: data.role,
+              message: data.message,
+            },
+          },
+        })
       );
-      const mailtoUrl = `mailto:vanessa@nucleations.com?subject=${subject}&body=${body}`;
-      const opened = window.open(mailtoUrl, '_self');
-      if (!opened) {
-        window.location.href = mailtoUrl;
+
+      const confirmationSend = supabase.functions.invoke('send-transactional-email', {
+        body: {
+          templateName: 'aria-early-access-confirmation',
+          recipientEmail: data.email,
+          idempotencyKey: `aria-confirm-${submissionId}`,
+          templateData: { name: data.name },
+        },
+      });
+
+      const results = await Promise.all([...internalSends, confirmationSend]);
+      const internalFailed = results.slice(0, internalRecipients.length).every((r) => r.error);
+      if (internalFailed) {
+        throw new Error('Internal notification failed');
       }
+
       setIsSubmitted(true);
-      toast.success('Your email client should open. If it doesn\u2019t, please email vanessa@nucleations.com directly.');
+      toast.success('Thanks! Your request is in — we will be in touch about ARIA early access.');
       form.reset();
-    } catch {
-      toast.error('Something went wrong. Please email vanessa@nucleations.com');
+    } catch (err) {
+      console.error('ARIA early access send failed', err);
+      toast.error('Something went wrong sending your request. Please email vanessa@nucleations.com directly.');
     } finally {
       setIsSubmitting(false);
     }

@@ -22,6 +22,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { toast } from 'sonner';
+import { supabase } from '@/integrations/supabase/client';
 import logoOutline from '@/assets/nucleations-logo-outline.png';
 
 const describeOptions = [
@@ -73,27 +74,50 @@ export const ContactSection = () => {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      const subject = encodeURIComponent('New Nucleations Website Inquiry');
-      const body = encodeURIComponent(
-        `Name: ${data.name}\n` +
-        `Email: ${data.email}\n` +
-        `Organization: ${data.organization}\n` +
-        `Role / Title: ${data.role || '-'}\n\n` +
-        `What best describes you?\n${data.describe}\n\n` +
-        `Workflow or business area:\n${data.workflow || '-'}\n\n` +
-        `Preferred next step:\n${data.nextStep}\n\n` +
-        `Message:\n${data.message || '-'}`
+      const submissionId = crypto.randomUUID();
+      const internalRecipients = ['vanessa@nucleations.com', 'info@nucleations.com'];
+
+      const internalSends = internalRecipients.map((to) =>
+        supabase.functions.invoke('send-transactional-email', {
+          body: {
+            templateName: 'contact-internal-notification',
+            recipientEmail: to,
+            idempotencyKey: `contact-internal-${submissionId}-${to}`,
+            templateData: {
+              name: data.name,
+              email: data.email,
+              organization: data.organization,
+              role: data.role,
+              describe: data.describe,
+              workflow: data.workflow,
+              nextStep: data.nextStep,
+              message: data.message,
+            },
+          },
+        })
       );
-      const mailtoUrl = `mailto:vanessa@nucleations.com?subject=${subject}&body=${body}`;
-      const opened = window.open(mailtoUrl, '_self');
-      if (!opened) {
-        window.location.href = mailtoUrl;
+
+      const confirmationSend = supabase.functions.invoke('send-transactional-email', {
+        body: {
+          templateName: 'contact-submitter-confirmation',
+          recipientEmail: data.email,
+          idempotencyKey: `contact-confirm-${submissionId}`,
+          templateData: { name: data.name },
+        },
+      });
+
+      const results = await Promise.all([...internalSends, confirmationSend]);
+      const internalFailed = results.slice(0, internalRecipients.length).every((r) => r.error);
+      if (internalFailed) {
+        throw new Error('Internal notification failed');
       }
+
       setIsSubmitted(true);
-      toast.success("Your email client should open. If it doesn't, please email vanessa@nucleations.com directly.");
+      toast.success("Thanks! Your message is on its way — we'll be in touch shortly.");
       form.reset();
-    } catch {
-      toast.error('Something went wrong. Please email us directly at vanessa@nucleations.com');
+    } catch (err) {
+      console.error('Contact form send failed', err);
+      toast.error('Something went wrong sending your message. Please email vanessa@nucleations.com directly.');
     } finally {
       setIsSubmitting(false);
     }
