@@ -23,7 +23,7 @@ export const TopBanner = () => {
           Join our webinar: Beyond the Tools: A Strategic Approach to AI in Accounting
         </a>
         <span className="text-primary-foreground/80 text-[15px]">
-          May 19, 2026 at 9–11 AM EST
+          ​
         </span>
         <a href={WEBINAR_URL} target="_blank" rel="noopener noreferrer">
           <Button
