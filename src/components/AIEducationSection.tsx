@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import gtaafnLogo from '@/assets/gtaafn-logo.png';
-import cpaOntarioLogo from '@/assets/cpa-ontario-logo.png';
+import mavenLogo from '@/assets/maven-logo.png';
+import cpabcLogoAsset from '@/assets/cpabc-logo.png.asset.json';
+
+const MAVEN_LIGHTNING_URL = 'https://maven.com/p/137650/the-missing-method-map-your-work-before-you-build-with-ai';
 
 export const AIEducationSection = () => {
   const scrollToContact = () => {
@@ -18,67 +20,91 @@ export const AIEducationSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Course 1 — GTAAFN */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {/* Box 1 — Maven Lightning Lesson */}
           <div className="bg-card/90 backdrop-blur-sm rounded-2xl p-8 border-2 border-secondary/20 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 flex flex-col animate-fade-in">
-            <img
-              src={gtaafnLogo}
-              alt="GTA Accountants & Finance Network"
-              className="h-20 w-auto object-contain mb-6"
-            />
+            <div className="flex justify-center mb-6">
+              <img
+                src={mavenLogo}
+                alt="Maven"
+                className="h-14 w-auto object-contain"
+              />
+            </div>
             <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full mb-4">
-              On Demand
+              Free
             </span>
             <h3 className="text-xl font-bold text-foreground mb-3 leading-snug">
-              Getting Started with AI: Practical Uses, Real Risks, and What's Changing Fast
+              The Missing Method: Map Your Work Before You Build with AI
             </h3>
             <p className="text-gray-800 leading-relaxed mb-6 flex-grow">
-              A practical on-demand session for accounting and finance professionals on AI use cases, risks, and responsible first steps.
+              Want to build better AI workflows? Learn our unique ARIA mapping protocol in a quick, 30-minute Lightning Lesson—part of Maven's curated The AI-Powered Professional series.
             </p>
             <Button asChild variant="outline" className="rounded-xl self-start">
-              <a href="https://www.gtaaccountantsnetwork.com/courses/getting-started-with-ai" target="_blank" rel="noopener noreferrer">Learn more →</a>
+              <a href={MAVEN_LIGHTNING_URL} target="_blank" rel="noopener noreferrer">Learn more</a>
             </Button>
           </div>
 
-          {/* Course 2 — CPA Ontario */}
+          {/* Box 2 — Maven AI Workflow Design Lab */}
           <div className="bg-card/90 backdrop-blur-sm rounded-2xl p-8 border-2 border-secondary/20 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 flex flex-col animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <img
-              src={cpaOntarioLogo}
-              alt="CPA Ontario"
-              className="h-20 w-auto object-contain mb-6"
-            />
+            <div className="flex justify-center mb-6">
+              <img
+                src={mavenLogo}
+                alt="Maven"
+                className="h-14 w-auto object-contain"
+              />
+            </div>
             <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full mb-4">
-              Coming Soon
+              Sept. 21 – Oct. 2
             </span>
             <h3 className="text-xl font-bold text-foreground mb-3 leading-snug">
-              Beyond the Tools: A Strategic Approach to AI in Accounting
+              AI Workflow Design Lab: From Workflow to Business Case
             </h3>
-            <p className="text-gray-800 leading-relaxed mb-6 flex-grow">
-              A strategic, non-technical seminar for accounting leaders moving beyond AI experiments toward responsible adoption and measurable impact.
+            <p className="text-gray-800 leading-relaxed mb-4 flex-grow">
+              Bring your own workflow and learn where AI can be added in it. Identify many use cases, build your business case, and prepare for the impact that AI brings.
+            </p>
+            <p className="text-sm font-semibold text-primary mb-6">
+              Use OPEN50 for 50% off till Aug. 1
             </p>
             <Button asChild variant="outline" className="rounded-xl self-start">
-              <a href="https://pd.cpaontario.ca/seminars/beyond-the-tools-a-strategic-approach-to-ai-in-accounting/E003475.html" target="_blank" rel="noopener noreferrer">Learn more →</a>
+              <Link to="/courses">Learn more</Link>
             </Button>
           </div>
 
-          {/* Speaking engagements */}
-          <div className="relative rounded-2xl shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 flex flex-col overflow-hidden border-2 border-primary/20 bg-gradient-to-br from-primary/15 via-secondary/20 to-accent/15 text-foreground p-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full mb-6">
-              Speaking Engagements
+          {/* Box 3 — CPA BC */}
+          <div className="bg-card/90 backdrop-blur-sm rounded-2xl p-8 border-2 border-secondary/20 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 flex flex-col animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="flex justify-center mb-6">
+              <img
+                src={cpabcLogoAsset.url}
+                alt="CPA British Columbia"
+                className="h-14 w-auto object-contain"
+              />
+            </div>
+            <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full mb-4">
+              Aug. 18
             </span>
             <h3 className="text-xl font-bold text-foreground mb-3 leading-snug">
-              Bring Nucleations to Your Audience
+              The State of AI: What Accounting Leaders Need to Know Right Now
             </h3>
             <p className="text-gray-800 leading-relaxed mb-6 flex-grow">
-              Book us for practical, human-centred AI talks, webinars, panels, and leadership sessions for business, accounting, finance, and professional services audiences.
+              Move beyond tech-first failures. Get a strategic roadmap for accounting leaders to align data, people, and processes for successful AI adoption.
             </p>
-            <Button
-              onClick={scrollToContact}
-              className="rounded-full self-start shadow-soft hover:shadow-elegant"
-            >
-              Inquire about speaking →
+            <Button asChild variant="outline" className="rounded-xl self-start">
+              <Link to="/courses">Learn more</Link>
             </Button>
           </div>
+        </div>
+
+        {/* Speaking engagements — centered below the 3 boxes */}
+        <div className="max-w-3xl mx-auto text-center bg-card/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 border-2 border-primary/20 shadow-soft animate-fade-in">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            Bring Nucleations to Your Audience
+          </h3>
+          <p className="text-gray-800 leading-relaxed mb-6">
+            Book us for practical, human-centred AI talks, webinars, panels, and leadership sessions for business, accounting, finance, and professional services audiences.
+          </p>
+          <Button asChild className="rounded-full shadow-soft hover:shadow-elegant">
+            <Link to="/courses">Inquire about speaking</Link>
+          </Button>
         </div>
       </div>
     </section>
