@@ -14,7 +14,7 @@ export const TopBanner = () => {
           <img
             src={mavenLogo}
             alt="Maven"
-            className="h-10 w-auto object-contain"
+            className="h-6 w-auto object-contain"
           />
         </a>
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
