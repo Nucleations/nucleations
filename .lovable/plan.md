@@ -1,41 +1,25 @@
-# Fix: forms not delivering email
+## Plan: Update Top Banner to Maven Lightning Lesson
 
-## Root cause
+### Goal
+Replace the current CPA Ontario webinar banner on the homepage with a Maven-promoted Lightning Lesson banner.
 
-Both the main contact form (`src/components/ContactSection.tsx`) and the ARIA Early Access form (`src/pages/Aria.tsx`) use a `mailto:` link to "send" submissions. `mailto:` does not send anything itself — it only tries to open the visitor's default email app. On most modern browsers (especially mobile and Chrome/Safari users on Gmail-in-browser), nothing opens, the user sees the success toast, and the message is silently lost. That is why submissions are not arriving at vanessa@nucleations.com.
+### Changes
+1. **Add Maven logo asset**
+   - Copy `maven_logo.png` from user uploads to `src/assets/maven-logo.png`.
 
-## Fix
+2. **Rewrite `src/components/TopBanner.tsx`**
+   - Import the Maven logo instead of the CPA Ontario logo.
+   - Update the external link constant to `https://maven.com/p/137650/the-missing-method-map-your-work-before-you-build-with-ai`.
+   - Update layout to show:
+     - Maven logo (left)
+     - Headline: "Watch our free 30-minute Lightning Lesson, The Missing Method: Map Your Work Before You Build with AI"
+     - Subheading: "Selected by Maven for The AI-Powered Professional curated series."
+     - CTA button: "Watch now"
+   - Keep the existing primary background and responsive wrapping behavior.
 
-Switch both forms to true server-side email delivery using Lovable's built-in email infrastructure. Each submission will reliably send:
-1. An internal notification to **vanessa@nucleations.com** and **info@nucleations.com**
-2. A branded confirmation back to the person who submitted
+3. **Verify**
+   - Check the homepage preview to confirm the banner renders correctly at desktop and mobile widths.
 
-Sender domain: **notify.nucleations.com** (subdomain of nucleations.com).
-
-## Steps
-
-1. **Set up email sender domain**
-   - Configure `notify.nucleations.com` as the sender domain via Lovable Cloud's email setup (one-time DNS step — you'll add a couple of NS records at your domain registrar; emails start sending automatically once verified).
-
-2. **Set up email infrastructure** (queue, retry, suppression, logs).
-
-3. **Create 4 email templates** (branded, matching the Nucleations look — gradient accents, current typography, white email body):
-   - `contact-internal-notification` → to Vanessa + info@, contains the full submission
-   - `contact-submitter-confirmation` → to the person who submitted the contact form
-   - `aria-early-access-internal` → to Vanessa + info@, contains the early access submission
-   - `aria-early-access-confirmation` → to the submitter ("Thanks for requesting early access to ARIA…")
-
-4. **Wire the forms to send via the backend**
-   - `ContactSection.tsx`: replace the `mailto:` block with two `supabase.functions.invoke('send-transactional-email', …)` calls (internal + confirmation) using the form data.
-   - `Aria.tsx` (Early Access form, line ~184): same pattern with the ARIA templates.
-   - Keep the existing success / error toasts and "Thank You" UI; just drive them from the real send result instead of `window.open`.
-
-5. **Verify**
-   - Submit each form from the live site once DNS is verified.
-   - Confirm: vanessa@ and info@ receive the notification, submitter receives the confirmation, and entries appear in the email send log.
-
-## Notes
-
-- No database tables for storing submissions are added in this plan (current behavior doesn't store them either). If you'd like a record kept in the backend as well, say the word and I'll add a `submissions` table.
-- DNS verification can take anywhere from minutes to a few hours. Code will be ready immediately; emails start flowing as soon as the domain shows verified.
-- This change is frontend wiring + backend email setup only — no visual/UI changes to the forms themselves.
+### Files touched
+- `src/components/TopBanner.tsx`
+- New asset: `src/assets/maven-logo.png`
