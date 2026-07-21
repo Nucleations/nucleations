@@ -40,7 +40,7 @@ export const AIEducationSection = () => {
               Want to build better AI workflows? Learn our unique ARIA mapping protocol in a quick, 30-minute Lightning Lesson—part of Maven's curated The AI-Powered Professional series.
             </p>
             <Button asChild variant="outline" className="rounded-xl self-start">
-              <a href={MAVEN_LIGHTNING_URL} target="_blank" rel="noopener noreferrer">Learn more</a>
+              <a href={MAVEN_LIGHTNING_URL} target="_blank" rel="noopener noreferrer">Watch on demand</a>
             </Button>
           </div>
 
