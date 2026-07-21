@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import mavenLogo from '@/assets/maven-logo.png';
 
 const MAVEN_URL = 'https://maven.com/p/137650/the-missing-method-map-your-work-before-you-build-with-ai';
 
@@ -10,13 +9,6 @@ export const TopBanner = () => {
       style={{ backgroundColor: '#D8E8E0' }}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-center gap-4 flex-wrap">
-        <a href={MAVEN_URL} target="_blank" rel="noopener noreferrer">
-          <img
-            src={mavenLogo}
-            alt="Maven"
-            className="h-6 w-auto object-contain"
-          />
-        </a>
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
           <a
             href={MAVEN_URL}
