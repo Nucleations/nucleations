@@ -27,7 +27,7 @@ export const AIEducationSection = () => {
               <img
                 src={mavenLogo}
                 alt="Maven"
-                className="h-14 w-auto object-contain"
+                className="h-7 w-auto object-contain"
               />
             </div>
             <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full mb-4">
@@ -50,7 +50,7 @@ export const AIEducationSection = () => {
               <img
                 src={mavenLogo}
                 alt="Maven"
-                className="h-14 w-auto object-contain"
+                className="h-7 w-auto object-contain"
               />
             </div>
             <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full mb-4">
