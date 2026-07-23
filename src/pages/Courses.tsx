@@ -9,6 +9,7 @@ import cpaOntarioLogoAsset from '@/assets/courses-cpa-ontario-logo.png.asset.jso
 import cpaAlbertaLogoAsset from '@/assets/courses-cpa-alberta-logo.png.asset.json';
 import gtaafnLogoAsset from '@/assets/courses-gtaafn-logo.jpg.asset.json';
 import featuredCourseAsset from '@/assets/courses-featured-workshop.png.asset.json';
+import ariaLogoAsset from '@/assets/ARIA_logo.png.asset.json';
 
 const LOGOS: Record<string, { src: string; alt: string }> = {
   Maven: { src: mavenLogoAsset.url, alt: 'Maven' },
@@ -94,13 +95,17 @@ const Courses = () => {
                   </Button>
                 </div>
 
-                <div className="bg-card/90 backdrop-blur-sm rounded-2xl p-6 border border-border shadow-soft flex items-center gap-4">
-                  <div className="shrink-0 w-16 h-16 rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center">
-                    <span className="text-xs text-muted-foreground text-center leading-tight">Image</span>
+                <div className="bg-primary/95 backdrop-blur-sm rounded-2xl p-6 border border-primary/50 shadow-soft flex items-center gap-4">
+                  <div className="shrink-0 w-16 h-16 rounded-xl bg-white flex items-center justify-center p-2">
+                    <img
+                      src={ariaLogoAsset.url}
+                      alt="ARIA"
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-                  <p className="text-base text-foreground/80 leading-relaxed">
+                  <p className="text-base text-primary-foreground/90 leading-relaxed">
                     Included in this course: Exclusive access to Nucleation's AI-workflow tool,{' '}
-                    <Link to="/aria" className="font-semibold text-primary hover:underline">
+                    <Link to="/aria" className="font-semibold text-primary-foreground underline hover:no-underline">
                       ARIA
                     </Link>
                     .
