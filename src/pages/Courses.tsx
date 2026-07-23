@@ -93,6 +93,19 @@ const Courses = () => {
                     </a>
                   </Button>
                 </div>
+
+                <div className="bg-card/90 backdrop-blur-sm rounded-2xl p-6 border border-border shadow-soft flex items-center gap-4">
+                  <div className="shrink-0 w-16 h-16 rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center">
+                    <span className="text-xs text-muted-foreground text-center leading-tight">Image</span>
+                  </div>
+                  <p className="text-base text-foreground/80 leading-relaxed">
+                    Included in this course: Exclusive access to Nucleation's AI-workflow tool,{' '}
+                    <Link to="/aria" className="font-semibold text-primary hover:underline">
+                      ARIA
+                    </Link>
+                    .
+                  </p>
+                </div>
               </div>
 
               {/* Course content */}
