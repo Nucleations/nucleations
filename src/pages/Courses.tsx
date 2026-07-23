@@ -52,7 +52,7 @@ const Courses = () => {
           <p className="text-sm font-semibold uppercase tracking-wide text-primary">Courses</p>
           <h1 className="text-foreground">AI courses and talks for what's next</h1>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
-            Practical, human-centred AI education for business, accounting, finance, and professional services leaders.
+            Practical, human-centred AI education and training for professionals, business leaders and innovators leading AI transformation.
           </p>
         </div>
       </section>
