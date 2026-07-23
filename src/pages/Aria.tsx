@@ -357,11 +357,14 @@ const Aria = () => {
             </div>
           </div>
           <div className="rounded-3xl overflow-hidden shadow-elegant border-2 border-secondary/20 bg-card animate-fade-in">
-            <img
-              src={ariaSample}
-              alt="ARIA workflow intelligence sample showing lanes for actions, decisions, roles, burden index, and AI opportunities"
-              loading="lazy"
-              className="w-full h-auto object-cover"
+            <video
+              src={ariaHeroVideo.url}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-auto"
+              aria-label="ARIA workflow intelligence sample showing lanes for actions, decisions, roles, burden index, and AI opportunities"
             />
           </div>
         </div>
