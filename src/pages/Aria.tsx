@@ -5,7 +5,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
-import ariaSample from '@/assets/aria-sample.png';
+import ariaHeroVideo from '@/assets/aria-hero-video.mp4.asset.json';
+import ariaPoster from '@/assets/aria-sample.png';
 
 import { SiteHeader } from '@/components/SiteHeader';
 import { TopBanner } from '@/components/TopBanner';
@@ -357,11 +358,15 @@ const Aria = () => {
             </div>
           </div>
           <div className="rounded-3xl overflow-hidden shadow-elegant border-2 border-secondary/20 bg-card animate-fade-in">
-            <img
-              src={ariaSample}
-              alt="ARIA workflow intelligence sample showing lanes for actions, decisions, roles, burden index, and AI opportunities"
-              loading="lazy"
-              className="w-full h-auto object-cover"
+            <video
+              src={ariaHeroVideo.url}
+              poster={ariaPoster}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-auto"
+              aria-label="ARIA workflow intelligence sample showing lanes for actions, decisions, roles, burden index, and AI opportunities"
             />
           </div>
         </div>
