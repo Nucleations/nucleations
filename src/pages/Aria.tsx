@@ -541,7 +541,7 @@ const Aria = () => {
                 href: '/services#flagship-program',
               },
               {
-                title: 'ARIA Workflow-to-Value Workshop',
+                title: 'AI Workflow Design Lab: From Workflow to Business Case',
                 body: 'A hands-on workshop teaching teams how to map workflows, identify AI opportunities, and redesign operations using the ARIA framework.',
                 href: '/services#aria-workshop',
               },
