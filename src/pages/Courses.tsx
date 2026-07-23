@@ -134,22 +134,6 @@ const Courses = () => {
                   </a>
                 </Button>
 
-                <div className="pt-6 border-t border-border">
-                  <p className="text-base text-foreground/80 leading-relaxed mb-4">
-                    Preview this course by watching a free 30-minute lightning lesson,{' '}
-                    <span className="font-semibold text-foreground">The Missing Method: Map Your Work Before You Build with AI</span>.{' '}
-                    Watch on demand now.
-                  </p>
-                  <Button asChild variant="outline" className="rounded-xl">
-                    <a
-                      href="https://maven.com/p/137650/the-missing-method-map-your-work-before-you-build-with-ai"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Watch now
-                    </a>
-                  </Button>
-                </div>
               </div>
             </div>
           </div>
