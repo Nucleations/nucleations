@@ -123,7 +123,14 @@ const Courses = () => {
                 <DatePill>Sept 21 – Oct 2</DatePill>
 
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
-                  AI Workflow Design Lab: From Workflow to Business Case
+                  <a
+                    href="https://maven.com/vanessa-rementilla/ai-workflow-designlab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    AI Workflow Design Lab: From Workflow to Business Case
+                  </a>
                 </h2>
 
                 <p className="text-gray-800 leading-relaxed mb-6">
@@ -189,7 +196,14 @@ const Courses = () => {
               </div>
               <DatePill>Aug 18 · 1–3 PM EST / 10–12 PM PST</DatePill>
               <h3 className="text-xl font-bold text-foreground mb-3 leading-snug">
-                The State of AI: What Accounting Leaders Need to Know Right Now
+                <a
+                  href="https://pd.bccpa.ca/pd-search/#/c63813a_ol/c3813ol/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  The State of AI: What Accounting Leaders Need to Know Right Now
+                </a>
               </h3>
               <p className="text-gray-800 leading-relaxed mb-4">
                 AI is already reshaping accounting, yet most firm leaders lack a clear picture of what responsible adoption actually looks like in practice. This session delivers a practical, non-technical briefing built around Nucleations' proprietary workflow mapping process and AI Transformation Framework, grounded in real-world case studies. Participants leave with clarity on AI's capabilities and risks, and concrete steps to move forward with confidence.
@@ -221,7 +235,14 @@ const Courses = () => {
               </div>
               <DatePill>Sept 23 · 9–11 AM EST</DatePill>
               <h3 className="text-xl font-bold text-foreground mb-3 leading-snug">
-                Beyond the Tools: A Strategic Approach to AI in Accounting
+                <a
+                  href="https://pd.cpaontario.ca/seminars/beyond-the-tools-a-strategic-approach-to-ai-in-accounting/E003475.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Beyond the Tools: A Strategic Approach to AI in Accounting
+                </a>
               </h3>
               <p className="text-gray-800 leading-relaxed mb-4">
                 Designed for accounting leaders, this webinar provides a strategic, problem-first approach to AI adoption that moves beyond short-term tool experimentation. Drawing on real-world case studies from the financial and professional services sectors, the session explores AI's growing impact on audit, tax, and financial reporting workflows while highlighting why technology-first initiatives often fail. Participants will gain a high-level understanding of AI's capabilities and risks, learning how aligning strategy, governance, processes, people, and data readiness turns AI potential into meaningful, sustainable business outcomes.
