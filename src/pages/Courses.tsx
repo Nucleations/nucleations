@@ -148,7 +148,7 @@ const Courses = () => {
             Bring Nucleations into your organization, professional community or learning institution through AI strategy talks and workshops. We can customize the content to your needs.
           </p>
           <Button asChild size="lg" className="rounded-xl shadow-soft hover:shadow-elegant">
-            <a href="#contact">Contact us</a>
+            <a href="#contact-section">Contact us</a>
           </Button>
         </div>
       </section>
