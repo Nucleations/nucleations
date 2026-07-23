@@ -235,7 +235,14 @@ const Courses = () => {
               </div>
               <DatePill>Sept 23 · 9–11 AM EST</DatePill>
               <h3 className="text-xl font-bold text-foreground mb-3 leading-snug">
-                Beyond the Tools: A Strategic Approach to AI in Accounting
+                <a
+                  href="https://pd.cpaontario.ca/seminars/beyond-the-tools-a-strategic-approach-to-ai-in-accounting/E003475.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Beyond the Tools: A Strategic Approach to AI in Accounting
+                </a>
               </h3>
               <p className="text-gray-800 leading-relaxed mb-4">
                 Designed for accounting leaders, this webinar provides a strategic, problem-first approach to AI adoption that moves beyond short-term tool experimentation. Drawing on real-world case studies from the financial and professional services sectors, the session explores AI's growing impact on audit, tax, and financial reporting workflows while highlighting why technology-first initiatives often fail. Participants will gain a high-level understanding of AI's capabilities and risks, learning how aligning strategy, governance, processes, people, and data readiness turns AI potential into meaningful, sustainable business outcomes.
