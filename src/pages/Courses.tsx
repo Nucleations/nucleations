@@ -140,6 +140,19 @@ const Courses = () => {
         </div>
       </section>
 
+      {/* Custom talks & workshops CTA */}
+      <section className="py-20 px-6 bg-background">
+        <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
+          <h2 className="text-foreground">Bring Nucleations to your audience</h2>
+          <p className="text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
+            Bring Nucleations into your organization, professional community or learning institution through AI strategy talks and workshops. We can customize the content to your needs.
+          </p>
+          <Button asChild size="lg" className="rounded-xl shadow-soft hover:shadow-elegant">
+            <a href="#contact-section">Contact us</a>
+          </Button>
+        </div>
+      </section>
+
       {/* Remaining courses */}
       <section className="py-20 px-6 hero-gradient-green animate-gradient-shift">
         <div className="max-w-7xl mx-auto">
