@@ -209,7 +209,7 @@ const Services = () => {
                   <p className="text-sm text-gray-800">
                     Public cohort starts Sept 21-Oct 2
                   </p>
-                  <p className="text-sm font-bold text-primary bg-primary/10 rounded-lg px-3 py-2 inline-block">
+                  <p className="text-sm font-bold text-primary">
                     Enter code OPEN50 for 50% off program till Aug. 1
                   </p>
                 </div>
