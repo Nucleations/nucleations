@@ -84,7 +84,7 @@ export const HowWeHelpSection = () => {
               <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full">
                 Nucleations Method
               </span>
-              <h3 className="text-foreground">ARIA Workflow-to-Value Workshop</h3>
+              <h3 className="text-foreground">AI Workflow Design Lab: From Workflow to Business Case</h3>
               <p className="text-lg font-semibold text-primary">
                 Not sure where AI belongs? Start with one workflow.
               </p>
@@ -102,7 +102,7 @@ export const HowWeHelpSection = () => {
                   size="lg"
                   className="rounded-full shadow-soft hover:shadow-elegant transition-all"
                 >
-                  <Link to="/aria">Try the ARIA Workflow Mapping Tool</Link>
+                  <Link to="/courses">Learn more about ARIA</Link>
                 </Button>
               </div>
             </div>
