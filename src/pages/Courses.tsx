@@ -73,7 +73,7 @@ const Courses = () => {
               <div className="space-y-6">
                 <div className="rounded-2xl overflow-hidden border-2 border-secondary/20">
                   <img
-                    src={featuredCourseImg}
+                    src={featuredCourseAsset.url}
                     alt="AI Workflow Design Lab: From Workflow to Business Case promotional banner"
                     className="w-full h-auto object-cover"
                   />
