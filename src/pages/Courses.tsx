@@ -123,7 +123,14 @@ const Courses = () => {
                 <DatePill>Sept 21 – Oct 2</DatePill>
 
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
-                  AI Workflow Design Lab: From Workflow to Business Case
+                  <a
+                    href="https://maven.com/vanessa-rementilla/ai-workflow-designlab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    AI Workflow Design Lab: From Workflow to Business Case
+                  </a>
                 </h2>
 
                 <p className="text-gray-800 leading-relaxed mb-6">
