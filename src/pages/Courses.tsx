@@ -67,12 +67,30 @@ const Courses = () => {
 
             <div className="grid md:grid-cols-2 gap-8 items-start">
               {/* Featured hero image */}
-              <div className="rounded-2xl overflow-hidden border-2 border-secondary/20">
-                <img
-                  src={featuredCourseAsset.url}
-                  alt="AI Workflow Design Lab: From Workflow to Business Case promotional banner"
-                  className="w-full h-auto object-cover"
-                />
+              <div className="space-y-6">
+                <div className="rounded-2xl overflow-hidden border-2 border-secondary/20">
+                  <img
+                    src={featuredCourseAsset.url}
+                    alt="AI Workflow Design Lab: From Workflow to Business Case promotional banner"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <div className="bg-card/90 backdrop-blur-sm rounded-2xl p-6 border border-border shadow-soft">
+                  <p className="text-base text-foreground/80 leading-relaxed mb-4">
+                    Preview this course by watching a free 30-minute lightning lesson,{' '}
+                    <span className="font-semibold text-foreground">The Missing Method: Map Your Work Before You Build with AI</span>.{' '}
+                    Watch on demand now.
+                  </p>
+                  <Button asChild variant="outline" className="rounded-xl">
+                    <a
+                      href="https://maven.com/p/137650/the-missing-method-map-your-work-before-you-build-with-ai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Watch now
+                    </a>
+                  </Button>
+                </div>
               </div>
 
               {/* Course content */}
@@ -116,22 +134,6 @@ const Courses = () => {
                   </a>
                 </Button>
 
-                <div className="pt-6 border-t border-border">
-                  <p className="text-base text-foreground/80 leading-relaxed mb-4">
-                    Preview this course by watching a free 30-minute lightning lesson,{' '}
-                    <span className="font-semibold text-foreground">The Missing Method: Map Your Work Before You Build with AI</span>.{' '}
-                    Watch on demand now.
-                  </p>
-                  <Button asChild variant="outline" className="rounded-xl">
-                    <a
-                      href="https://maven.com/p/137650/the-missing-method-map-your-work-before-you-build-with-ai"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Watch now
-                    </a>
-                  </Button>
-                </div>
               </div>
             </div>
           </div>
