@@ -7,6 +7,7 @@ import mavenLogoAsset from '@/assets/courses-maven-logo.png.asset.json';
 import cpabcLogoAsset from '@/assets/courses-cpabc-logo.png.asset.json';
 import cpaAlbertaLogoAsset from '@/assets/courses-cpa-alberta-logo.png.asset.json';
 import gtaafnLogoAsset from '@/assets/courses-gtaafn-logo.jpg.asset.json';
+import featuredCourseAsset from '@/assets/ai-workflow-design-lab.png.asset.json';
 
 const LOGOS: Record<string, { src: string; alt: string }> = {
   Maven: { src: mavenLogoAsset.url, alt: 'Maven' },
@@ -64,50 +65,69 @@ const Courses = () => {
               Featured Course
             </span>
 
-            <div className="grid md:grid-cols-2 gap-10 items-start">
-              {/* Left: Featured hero image placeholder */}
-              <div className="aspect-video w-full rounded-2xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center text-sm text-muted-foreground">
-                Featured image
+            {/* Featured hero image */}
+            <div className="w-full rounded-2xl overflow-hidden border-2 border-secondary/20 mb-8">
+              <img
+                src={featuredCourseAsset.url}
+                alt="AI Workflow Design Lab: From Workflow to Business Case promotional banner"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+
+            {/* Course content */}
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-4 mb-4">
+                <LogoPlaceholder label="Maven" />
+                <p className="text-sm text-muted-foreground">Virtual multi-day hands-on workshop · Maven</p>
               </div>
 
-              {/* Right: content */}
-              <div className="flex flex-col">
-                <div className="flex items-center gap-4 mb-4">
-                  <LogoPlaceholder label="Maven" />
-                  <p className="text-sm text-muted-foreground">Virtual multi-day hands-on workshop · Maven</p>
-                </div>
+              <DatePill>Sept 21 – Oct 2</DatePill>
 
-                <DatePill>Sept 21 – Oct 2</DatePill>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
+                AI Workflow Design Lab: From Workflow to Business Case
+              </h2>
 
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
-                  AI Workflow Design Lab: From Workflow to Business Case
-                </h2>
+              <p className="text-gray-800 leading-relaxed mb-6">
+                Most organizations rush to implement AI before understanding how work actually happens, layering tools onto broken processes and blaming poor adoption on the technology. You'll bring a real workflow from your organization or client work, and we'll guide you through ARIA, Nucleations' Workflow Intelligence methodology, to redesign it for AI, evaluate readiness, and build a credible business case for investment. Along the way, you'll apply our Human Dividend lens to find where AI can reduce burden and strengthen human judgment. You leave with a human centred AI workflow blueprint, a prioritized AI opportunity, a decision ready business case, and a repeatable methodology for your organization.
+              </p>
 
-                <p className="text-gray-800 leading-relaxed mb-6">
-                  Most organizations rush to implement AI before understanding how work actually happens, layering tools onto broken processes and blaming poor adoption on the technology. You'll bring a real workflow from your organization or client work, and we'll guide you through ARIA, Nucleations' Workflow Intelligence methodology, to redesign it for AI, evaluate readiness, and build a credible business case for investment. Along the way, you'll apply our Human Dividend lens to find where AI can reduce burden and strengthen human judgment. You leave with a human centred AI workflow blueprint, a prioritized AI opportunity, a decision ready business case, and a repeatable methodology for your organization.
+              <h3 className="text-lg font-bold text-foreground mb-3">What you'll learn</h3>
+              <ul className="list-disc pl-5 space-y-2 text-gray-800 mb-6">
+                <li>Identify what's essential for successful AI adoption</li>
+                <li>Map a real workflow to determine what AI needs to succeed</li>
+                <li>Redesign workflows with intention: where AI should automate, augment, or defer to human judgment</li>
+                <li>Plan for the human side of the transformation</li>
+                <li>Build a business case that justifies investment</li>
+                <li>Walk away with a repeatable capability you can apply across any workflow</li>
+              </ul>
+
+              <p className="text-sm font-semibold text-primary mb-6">
+                Use code OPEN50 for 50% off till Aug 1. Limited seats.
+              </p>
+
+              <Button asChild size="lg" className="rounded-xl self-start shadow-soft hover:shadow-elegant mb-8">
+                <a
+                  href="https://maven.com/vanessa-rementilla/ai-workflow-designlab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Enroll now
+                </a>
+              </Button>
+
+              <div className="pt-6 border-t border-border">
+                <p className="text-base text-foreground/80 leading-relaxed mb-4">
+                  Preview this course by watching a free 30-minute lightning lesson,{' '}
+                  <span className="font-semibold text-foreground">The Missing Method: Map Your Work Before You Build with AI</span>.{' '}
+                  Watch on demand now.
                 </p>
-
-                <h3 className="text-lg font-bold text-foreground mb-3">What you'll learn</h3>
-                <ul className="list-disc pl-5 space-y-2 text-gray-800 mb-6">
-                  <li>Identify what's essential for successful AI adoption</li>
-                  <li>Map a real workflow to determine what AI needs to succeed</li>
-                  <li>Redesign workflows with intention: where AI should automate, augment, or defer to human judgment</li>
-                  <li>Plan for the human side of the transformation</li>
-                  <li>Build a business case that justifies investment</li>
-                  <li>Walk away with a repeatable capability you can apply across any workflow</li>
-                </ul>
-
-                <p className="text-sm font-semibold text-primary mb-6">
-                  Use code OPEN50 for 50% off till Aug 1. Limited seats.
-                </p>
-
-                <Button asChild size="lg" className="rounded-xl self-start shadow-soft hover:shadow-elegant">
+                <Button asChild variant="outline" className="rounded-xl">
                   <a
-                    href="https://maven.com/vanessa-rementilla/ai-workflow-designlab"
+                    href="https://maven.com/p/137650/the-missing-method-map-your-work-before-you-build-with-ai"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Enroll now
+                    Watch now
                   </a>
                 </Button>
               </div>
