@@ -510,9 +510,12 @@ const Aria = () => {
             <p className="text-sm font-semibold uppercase tracking-wide text-primary">Early Access</p>
             <h2 className="text-foreground">Join the ARIA Early Access Program</h2>
             <p className="text-lg text-foreground/80">
-              ARIA is currently being released in limited early access. We are inviting
-              transformation leaders, innovation teams, consultants, and enterprise operators to
-              help shape the platform.
+              ARIA is currently available in early access, with priority given to our clients and{' '}
+              <Link to="/courses" className="text-primary hover:underline font-medium">
+                program participants
+              </Link>
+              . Limited access is also available to transformation leaders, innovators, consultants,
+              and operations professionals. Contact us through this form to request access.
             </p>
           </div>
           <EarlyAccessForm />
