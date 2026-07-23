@@ -58,7 +58,7 @@ const Courses = () => {
       </section>
 
       {/* Featured course */}
-      <section className="py-20 px-6 bg-background">
+      <section className="pt-20 pb-10 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="bg-card/90 backdrop-blur-sm rounded-3xl p-8 md:p-10 border-2 border-primary shadow-elegant animate-fade-in">
             <span className="inline-block text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full mb-6">
@@ -141,7 +141,7 @@ const Courses = () => {
       </section>
 
       {/* Custom talks & workshops CTA */}
-      <section className="py-20 px-6 bg-background">
+      <section className="pt-10 pb-20 px-6 bg-background">
         <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
           <h2 className="text-foreground">Bring Nucleations to your audience</h2>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
