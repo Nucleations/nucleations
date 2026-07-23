@@ -157,7 +157,7 @@ const Courses = () => {
       <section className="py-20 px-6 hero-gradient-green animate-gradient-shift">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4 animate-fade-in">
-            <h2 className="text-foreground">More upcoming courses</h2>
+            <h2 className="text-foreground">Upcoming Courses in partnership with CPA</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
