@@ -6,6 +6,7 @@ import * as z from 'zod';
 import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
 import ariaHeroVideo from '@/assets/aria-hero-video.mp4.asset.json';
+import ariaPoster from '@/assets/aria-sample.png';
 
 import { SiteHeader } from '@/components/SiteHeader';
 import { TopBanner } from '@/components/TopBanner';
