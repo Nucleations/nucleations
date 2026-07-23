@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import mavenLogo from '@/assets/maven-logo.png';
-import cpabcLogoAsset from '@/assets/cpabc-logo.png.asset.json';
+import cpabcLogo from '@/assets/cpabc-logo.png';
 
 const MAVEN_LIGHTNING_URL = 'https://maven.com/p/137650/the-missing-method-map-your-work-before-you-build-with-ai';
 
