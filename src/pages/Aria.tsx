@@ -360,6 +360,7 @@ const Aria = () => {
           <div className="rounded-3xl overflow-hidden shadow-elegant border-2 border-secondary/20 bg-card animate-fade-in">
             <video
               src={ariaHeroVideo.url}
+              poster={ariaPoster}
               autoPlay
               muted
               loop
