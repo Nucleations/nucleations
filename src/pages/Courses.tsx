@@ -73,7 +73,7 @@ const Courses = () => {
               <div className="space-y-6">
                 <div className="rounded-2xl overflow-hidden border-2 border-secondary/20">
                   <img
-                    src={featuredCourseAsset.url}
+                    src={featuredCourseImg}
                     alt="AI Workflow Design Lab: From Workflow to Business Case promotional banner"
                     className="w-full h-auto object-cover"
                   />
@@ -98,7 +98,7 @@ const Courses = () => {
                 <div className="bg-primary/95 backdrop-blur-sm rounded-2xl p-6 border border-primary/50 shadow-soft flex items-center gap-4">
                   <div className="shrink-0 w-16 h-16 rounded-xl bg-white flex items-center justify-center p-2">
                     <img
-                      src={ariaLogoAsset.url}
+                      src={ariaLogo}
                       alt="ARIA"
                       className="w-full h-full object-contain"
                     />
