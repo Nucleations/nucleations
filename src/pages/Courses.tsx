@@ -12,6 +12,7 @@ import featuredCourseAsset from '@/assets/courses-featured-workshop.png.asset.js
 const LOGOS: Record<string, { src: string; alt: string }> = {
   Maven: { src: mavenLogoAsset.url, alt: 'Maven' },
   'CPA BC': { src: cpabcLogoAsset.url, alt: 'CPA British Columbia' },
+  'CPA Ontario': { src: '', alt: 'CPA Ontario' },
   'CPA Alberta': { src: cpaAlbertaLogoAsset.url, alt: 'CPA Alberta' },
   GTAAFN: { src: gtaafnLogoAsset.url, alt: 'GTAAFN' },
 };
@@ -193,7 +194,39 @@ const Courses = () => {
               </Button>
             </article>
 
-            {/* Course 3 — CPA Alberta — Oct 23 */}
+            {/* Course 3 — CPA Ontario — Sept 23 */}
+            <article className="bg-card/90 backdrop-blur-sm rounded-2xl p-8 border-2 border-secondary/20 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 flex flex-col animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="flex items-center gap-4 mb-4">
+                <LogoPlaceholder label="CPA Ontario" />
+                <p className="text-sm text-muted-foreground">Live Online Webinar · CPA Ontario</p>
+              </div>
+              <DatePill>Sept 23 · 9–11 AM EST</DatePill>
+              <h3 className="text-xl font-bold text-foreground mb-3 leading-snug">
+                Beyond the Tools: A Strategic Approach to AI in Accounting
+              </h3>
+              <p className="text-gray-800 leading-relaxed mb-4">
+                Designed for accounting leaders, this webinar provides a strategic, problem-first approach to AI adoption that moves beyond short-term tool experimentation. Drawing on real-world case studies from the financial and professional services sectors, the session explores AI's growing impact on audit, tax, and financial reporting workflows while highlighting why technology-first initiatives often fail. Participants will gain a high-level understanding of AI's capabilities and risks, learning how aligning strategy, governance, processes, people, and data readiness turns AI potential into meaningful, sustainable business outcomes.
+              </p>
+              <p className="text-sm font-semibold text-foreground mb-2">What you'll learn:</p>
+              <ul className="list-disc pl-5 space-y-2 text-gray-800 mb-6 flex-grow">
+                <li>Understand recent AI advancements and their impact on audit, tax, and financial reporting.</li>
+                <li>Recognize key limitations, risks, and governance considerations in professional practice.</li>
+                <li>Distinguish where AI adds value and where human judgment remains essential.</li>
+                <li>Assess the business, workforce, and regulatory implications of AI adoption.</li>
+                <li>Apply a structured readiness framework and receive a practical AI adoption roadmap tailored for accounting firms.</li>
+              </ul>
+              <Button asChild variant="outline" className="rounded-xl self-start">
+                <a
+                  href="https://pd.cpaontario.ca/seminars/beyond-the-tools-a-strategic-approach-to-ai-in-accounting/E003475.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Register
+                </a>
+              </Button>
+            </article>
+
+            {/* Course 4 — CPA Alberta — Oct 23 */}
             <article className="bg-card/90 backdrop-blur-sm rounded-2xl p-8 border-2 border-secondary/20 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 flex flex-col animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="flex items-center gap-4 mb-4">
                 <LogoPlaceholder label="CPA Alberta" />
