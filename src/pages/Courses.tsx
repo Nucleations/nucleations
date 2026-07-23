@@ -3,12 +3,33 @@ import { TopBanner } from '@/components/TopBanner';
 import { SiteHeader } from '@/components/SiteHeader';
 import { ContactSection } from '@/components/ContactSection';
 import { Button } from '@/components/ui/button';
+import mavenLogoAsset from '@/assets/courses-maven-logo.png.asset.json';
+import cpabcLogoAsset from '@/assets/courses-cpabc-logo.png.asset.json';
+import cpaAlbertaLogoAsset from '@/assets/courses-cpa-alberta-logo.png.asset.json';
 
-const LogoPlaceholder = ({ label = 'Logo' }: { label?: string }) => (
-  <div className="h-12 w-32 rounded-md border-2 border-dashed border-border bg-muted/40 flex items-center justify-center text-xs text-muted-foreground shrink-0">
-    {label}
-  </div>
-);
+const LOGOS: Record<string, { src: string; alt: string }> = {
+  Maven: { src: mavenLogoAsset.url, alt: 'Maven' },
+  'CPA BC': { src: cpabcLogoAsset.url, alt: 'CPA British Columbia' },
+  'CPA Alberta': { src: cpaAlbertaLogoAsset.url, alt: 'CPA Alberta' },
+};
+
+const LogoPlaceholder = ({ label = 'Logo' }: { label?: string }) => {
+  const logo = LOGOS[label];
+  if (logo) {
+    return (
+      <img
+        src={logo.src}
+        alt={logo.alt}
+        className="h-12 w-auto max-w-[128px] object-contain shrink-0"
+      />
+    );
+  }
+  return (
+    <div className="h-12 w-32 rounded-md border-2 border-dashed border-border bg-muted/40 flex items-center justify-center text-xs text-muted-foreground shrink-0">
+      {label}
+    </div>
+  );
+};
 
 const DatePill = ({ children }: { children: React.ReactNode }) => (
   <span className="inline-block self-start text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full mb-4">
