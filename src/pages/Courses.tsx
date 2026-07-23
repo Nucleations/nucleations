@@ -196,7 +196,14 @@ const Courses = () => {
               </div>
               <DatePill>Aug 18 · 1–3 PM EST / 10–12 PM PST</DatePill>
               <h3 className="text-xl font-bold text-foreground mb-3 leading-snug">
-                The State of AI: What Accounting Leaders Need to Know Right Now
+                <a
+                  href="https://pd.bccpa.ca/pd-search/#/c63813a_ol/c3813ol/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  The State of AI: What Accounting Leaders Need to Know Right Now
+                </a>
               </h3>
               <p className="text-gray-800 leading-relaxed mb-4">
                 AI is already reshaping accounting, yet most firm leaders lack a clear picture of what responsible adoption actually looks like in practice. This session delivers a practical, non-technical briefing built around Nucleations' proprietary workflow mapping process and AI Transformation Framework, grounded in real-world case studies. Participants leave with clarity on AI's capabilities and risks, and concrete steps to move forward with confidence.
