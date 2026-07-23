@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import mavenLogo from '@/assets/maven-logo.png';
-import cpabcLogoAsset from '@/assets/cpabc-logo.png.asset.json';
+import cpabcLogo from '@/assets/cpabc-logo.png';
 
 const MAVEN_LIGHTNING_URL = 'https://maven.com/p/137650/the-missing-method-map-your-work-before-you-build-with-ai';
 
@@ -74,7 +74,7 @@ export const AIEducationSection = () => {
           <div className="bg-card/90 backdrop-blur-sm rounded-2xl p-8 border-2 border-secondary/20 shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 flex flex-col animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="flex justify-center mb-6">
               <img
-                src={cpabcLogoAsset.url}
+                src={cpabcLogo}
                 alt="CPA British Columbia"
                 className="h-14 w-auto object-contain"
               />
