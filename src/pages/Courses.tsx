@@ -8,7 +8,7 @@ import cpabcLogo from '@/assets/courses-cpabc-logo.png';
 import cpaOntarioLogo from '@/assets/courses-cpa-ontario-logo.png';
 import cpaAlbertaLogo from '@/assets/courses-cpa-alberta-logo.png';
 import gtaafnLogo from '@/assets/courses-gtaafn-logo.jpg';
-import featuredCourseImg from '@/assets/courses-featured-workshop.png';
+import featuredCourseAsset from '@/assets/courses-featured-workshop.png.asset.json';
 import ariaLogo from '@/assets/ARIA_logo.png';
 
 const LOGOS: Record<string, { src: string; alt: string }> = {
@@ -73,7 +73,7 @@ const Courses = () => {
               <div className="space-y-6">
                 <div className="rounded-2xl overflow-hidden border-2 border-secondary/20">
                   <img
-                    src={featuredCourseImg}
+                    src={featuredCourseAsset.url}
                     alt="AI Workflow Design Lab: From Workflow to Business Case promotional banner"
                     className="w-full h-auto object-cover"
                   />
