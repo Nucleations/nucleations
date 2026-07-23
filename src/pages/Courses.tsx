@@ -3,20 +3,20 @@ import { TopBanner } from '@/components/TopBanner';
 import { SiteHeader } from '@/components/SiteHeader';
 import { ContactSection } from '@/components/ContactSection';
 import { Button } from '@/components/ui/button';
-import mavenLogoAsset from '@/assets/courses-maven-logo.png.asset.json';
-import cpabcLogoAsset from '@/assets/courses-cpabc-logo.png.asset.json';
-import cpaOntarioLogoAsset from '@/assets/courses-cpa-ontario-logo.png.asset.json';
-import cpaAlbertaLogoAsset from '@/assets/courses-cpa-alberta-logo.png.asset.json';
-import gtaafnLogoAsset from '@/assets/courses-gtaafn-logo.jpg.asset.json';
-import featuredCourseAsset from '@/assets/courses-featured-workshop.png.asset.json';
-import ariaLogoAsset from '@/assets/ARIA_logo.png.asset.json';
+import mavenLogo from '@/assets/courses-maven-logo.png';
+import cpabcLogo from '@/assets/courses-cpabc-logo.png';
+import cpaOntarioLogo from '@/assets/courses-cpa-ontario-logo.png';
+import cpaAlbertaLogo from '@/assets/courses-cpa-alberta-logo.png';
+import gtaafnLogo from '@/assets/courses-gtaafn-logo.jpg';
+import featuredCourseImg from '@/assets/courses-featured-workshop.png';
+import ariaLogo from '@/assets/ARIA_logo.png';
 
 const LOGOS: Record<string, { src: string; alt: string }> = {
-  Maven: { src: mavenLogoAsset.url, alt: 'Maven' },
-  'CPA BC': { src: cpabcLogoAsset.url, alt: 'CPA British Columbia' },
-  'CPA Ontario': { src: cpaOntarioLogoAsset.url, alt: 'CPA Ontario' },
-  'CPA Alberta': { src: cpaAlbertaLogoAsset.url, alt: 'CPA Alberta' },
-  GTAAFN: { src: gtaafnLogoAsset.url, alt: 'GTAAFN' },
+  Maven: { src: mavenLogo, alt: 'Maven' },
+  'CPA BC': { src: cpabcLogo, alt: 'CPA British Columbia' },
+  'CPA Ontario': { src: cpaOntarioLogo, alt: 'CPA Ontario' },
+  'CPA Alberta': { src: cpaAlbertaLogo, alt: 'CPA Alberta' },
+  GTAAFN: { src: gtaafnLogo, alt: 'GTAAFN' },
 };
 
 const LogoPlaceholder = ({ label = 'Logo' }: { label?: string }) => {
