@@ -79,7 +79,7 @@ const Courses = () => {
                   <p className="text-base text-foreground/80 leading-relaxed mb-4">
                     Preview this course by watching a free 30-minute lightning lesson,{' '}
                     <span className="font-semibold text-foreground">The Missing Method: Map Your Work Before You Build with AI</span>.{' '}
-                    Watch on demand now.
+                    Available on demand
                   </p>
                   <Button asChild variant="outline" className="rounded-xl">
                     <a
