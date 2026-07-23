@@ -6,11 +6,13 @@ import { Button } from '@/components/ui/button';
 import mavenLogoAsset from '@/assets/courses-maven-logo.png.asset.json';
 import cpabcLogoAsset from '@/assets/courses-cpabc-logo.png.asset.json';
 import cpaAlbertaLogoAsset from '@/assets/courses-cpa-alberta-logo.png.asset.json';
+import gtaafnLogoAsset from '@/assets/courses-gtaafn-logo.jpg.asset.json';
 
 const LOGOS: Record<string, { src: string; alt: string }> = {
   Maven: { src: mavenLogoAsset.url, alt: 'Maven' },
   'CPA BC': { src: cpabcLogoAsset.url, alt: 'CPA British Columbia' },
   'CPA Alberta': { src: cpaAlbertaLogoAsset.url, alt: 'CPA Alberta' },
+  GTAAFN: { src: gtaafnLogoAsset.url, alt: 'GTAAFN' },
 };
 
 const LogoPlaceholder = ({ label = 'Logo' }: { label?: string }) => {
