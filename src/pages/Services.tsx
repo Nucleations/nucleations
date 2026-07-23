@@ -186,7 +186,7 @@ const Services = () => {
                   Signature Method
                 </span>
                 <h3 className="text-foreground text-2xl md:text-3xl font-bold">
-                  ARIA Workflow-to-Value Workshop
+                  AI Workflow Design Lab: From Workflow to Business Case
                 </h3>
                 <p className="text-lg font-semibold text-primary">
                   See where AI genuinely fits, and whether it is worth investing in.
@@ -205,12 +205,23 @@ const Services = () => {
                     Organizations looking to identify where AI can truly improve workflows through redesign, not just add-on tools. Ideal for teams not seeing results from existing AI tools, or leaders who need a strong business case to unlock investment.
                   </p>
                 </div>
+                <div className="space-y-3">
+                  <p className="text-sm text-gray-800">
+                    Public cohort starts Sept 21-Oct 2
+                  </p>
+                  <p className="text-sm text-gray-800">
+                    Enter code OPEN50 for 50% off program till Aug. 1
+                  </p>
+                </div>
                 <div className="pt-2 flex flex-wrap gap-3">
                   <Button asChild size="lg" className="rounded-full shadow-soft hover:shadow-elegant transition-all">
-                    <Link to="/aria">Explore ARIA →</Link>
+                    <a href="https://maven.com/vanessa-rementilla/ai-workflow-designlab" target="_blank" rel="noopener noreferrer">Enroll Now, Limited Seats →</a>
                   </Button>
+                </div>
+                <div className="pt-2 border-t border-border/50">
+                  <p className="text-sm text-gray-800 mb-3">Book a private cohort for your company</p>
                   <Button onClick={() => scrollToContact()} size="lg" variant="outline" className="rounded-full shadow-soft hover:shadow-elegant transition-all">
-                    Inquire about workshop →
+                    Contact Us →
                   </Button>
                 </div>
               </div>
