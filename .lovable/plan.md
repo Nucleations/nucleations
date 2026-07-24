@@ -1,18 +1,16 @@
-## Diagnosis (confirmed)
+## Plan: Replace /courses featured course image
 
-The featured course image on `/courses` is a CDN-hosted asset served from the `/__l5e/...` path. On `nucleations.lovable.app` it loads correctly (HTTP 200, `content-type: image/png`). On the custom domain `nucleations.ai`, that same URL returns the SPA's `index.html` (HTTP 200 but `content-type: text/html`, served by Vercel), so the browser shows a broken image.
+### What we'll do
+1. Upload the new image `Maven_Course_image.jpg` as a Lovable Asset so it is served from the CDN.
+2. Create a new asset pointer file in `src/assets/` (e.g., `courses-featured-workshop.jpg.asset.json`).
+3. Update `src/pages/Courses.tsx` to import the new asset pointer instead of the current `courses-featured-workshop.png.asset.json`.
+4. Keep the existing `ASSET_ORIGIN` absolute-URL logic so the image loads correctly on both `nucleations.lovable.app` and the custom domain.
+5. Verify the build passes.
+6. Publish the site so the change is live.
 
-This is the exact same root cause as the ARIA hero video issue we already fixed — the custom domain doesn't proxy `/__l5e/*` asset paths, only the Lovable subdomain does.
+### No changes to
+- Page layout, copy, or other sections on `/courses`.
+- Other image assets or logos.
 
-## Fix
-
-Apply the same absolute-URL pattern in `src/pages/Courses.tsx` that we used in `src/pages/Aria.tsx`:
-
-- Add `const ASSET_ORIGIN = 'https://nucleations.lovable.app';`
-- Compute the featured image URL as `ASSET_ORIGIN + featuredCourseAsset.url` (when the pointer path starts with `/__l5e/`), and use that in the `<img src>`.
-
-No other `.asset.json` references on `/courses` need changes (the other logos are Vite-bundled from `/assets/*` and already work on both domains).
-
-## After the code change
-
-Publish so it goes live on the custom domain.
+### After publishing
+- I'll check the live `/courses` page to confirm the new image appears correctly.
