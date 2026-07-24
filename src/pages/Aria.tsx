@@ -36,6 +36,11 @@ const scrollToEarlyAccess = (e?: React.MouseEvent) => {
   document.getElementById('early-access')?.scrollIntoView({ behavior: 'smooth' });
 };
 
+const ASSET_ORIGIN = 'https://nucleations.lovable.app';
+const ariaHeroVideoUrl = ariaHeroVideo.url.startsWith('/__l5e/')
+  ? `${ASSET_ORIGIN}${ariaHeroVideo.url}`
+  : ariaHeroVideo.url;
+
 const Placeholder = ({ label, className = '' }: { label: string; className?: string }) => (
   <div
     className={`w-full rounded-3xl border-2 border-dashed border-primary/30 bg-gradient-to-br from-secondary/20 via-card to-primary/10 flex items-center justify-center p-8 text-center ${className}`}
@@ -359,13 +364,12 @@ const Aria = () => {
           </div>
           <div className="rounded-3xl overflow-hidden shadow-elegant border-2 border-secondary/20 bg-card animate-fade-in">
             <video
-              ref={(el) => {
-                if (el) {
-                  el.muted = true;
-                  const tryPlay = () => el.play().catch(() => {});
-                  tryPlay();
-                  el.addEventListener('loadeddata', tryPlay, { once: true });
-                }
+              key={ariaHeroVideoUrl}
+              onLoadedMetadata={(event) => {
+                event.currentTarget.play().catch(() => {});
+              }}
+              onCanPlay={(event) => {
+                event.currentTarget.play().catch(() => {});
               }}
               poster={ariaPoster}
               autoPlay
@@ -378,7 +382,7 @@ const Aria = () => {
               className="w-full h-auto"
               aria-label="ARIA workflow intelligence sample showing lanes for actions, decisions, roles, burden index, and AI opportunities"
             >
-              <source src={ariaHeroVideo.url} type="video/mp4" />
+              <source src={ariaHeroVideoUrl} type="video/mp4" />
             </video>
           </div>
         </div>
