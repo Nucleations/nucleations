@@ -359,15 +359,27 @@ const Aria = () => {
           </div>
           <div className="rounded-3xl overflow-hidden shadow-elegant border-2 border-secondary/20 bg-card animate-fade-in">
             <video
-              src={ariaHeroVideo.url}
+              ref={(el) => {
+                if (el) {
+                  el.muted = true;
+                  const tryPlay = () => el.play().catch(() => {});
+                  tryPlay();
+                  el.addEventListener('loadeddata', tryPlay, { once: true });
+                }
+              }}
               poster={ariaPoster}
               autoPlay
               muted
               loop
               playsInline
+              preload="auto"
+              controls={false}
+              disablePictureInPicture
               className="w-full h-auto"
               aria-label="ARIA workflow intelligence sample showing lanes for actions, decisions, roles, burden index, and AI opportunities"
-            />
+            >
+              <source src={ariaHeroVideo.url} type="video/mp4" />
+            </video>
           </div>
         </div>
       </section>
