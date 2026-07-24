@@ -11,6 +11,11 @@ import gtaafnLogo from '@/assets/courses-gtaafn-logo.jpg';
 import featuredCourseAsset from '@/assets/courses-featured-workshop.png.asset.json';
 import ariaLogo from '@/assets/ARIA_logo.png';
 
+const ASSET_ORIGIN = 'https://nucleations.lovable.app';
+const featuredCourseUrl = featuredCourseAsset.url.startsWith('/__l5e/')
+  ? `${ASSET_ORIGIN}${featuredCourseAsset.url}`
+  : featuredCourseAsset.url;
+
 const LOGOS: Record<string, { src: string; alt: string }> = {
   Maven: { src: mavenLogo, alt: 'Maven' },
   'CPA BC': { src: cpabcLogo, alt: 'CPA British Columbia' },
