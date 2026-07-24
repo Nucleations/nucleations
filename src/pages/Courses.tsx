@@ -8,7 +8,7 @@ import cpabcLogo from '@/assets/courses-cpabc-logo.png';
 import cpaOntarioLogo from '@/assets/courses-cpa-ontario-logo.png';
 import cpaAlbertaLogo from '@/assets/courses-cpa-alberta-logo.png';
 import gtaafnLogo from '@/assets/courses-gtaafn-logo.jpg';
-import featuredCourseAsset from '@/assets/courses-featured-workshop.png.asset.json';
+import featuredCourseAsset from '@/assets/maven-course-image.jpg.asset.json';
 import ariaLogo from '@/assets/ARIA_logo.png';
 
 const ASSET_ORIGIN = 'https://nucleations.lovable.app';
